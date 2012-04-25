@@ -1,0 +1,1280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+   <extension
+         id="rbacUML UMLProfiles"
+         name="rbacUML UMLProfiles"
+         point="org.eclipse.gmf.runtime.emf.core.Pathmaps">
+      <pathmap
+            name="RBACUML"
+            plugin="uk.ac.open.rbacuml.plugin"
+            path="profiles">
+      </pathmap>
+   </extension>
+   
+   <extension
+         id="rbacUML UMLProfiles"
+         name="rbacUML UMLProfiles"
+         point="com.ibm.xtools.uml.msl.UMLProfiles">
+      <UMLProfile
+            id="uk.ac.open.rbacuml.plugin.rbacUML"
+            name="rbacUML"
+            path="pathmap://RBACUML/rbacUML.epx"
+            required="false"
+            visible="true">
+      </UMLProfile>
+   </extension>
+
+   <extension
+         id="rbacUML ElementTypes"
+         name="rbacUML ElementTypes"
+         point="org.eclipse.gmf.runtime.emf.type.core.elementTypes">
+
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RestrictedMessage"
+               name="%_UI_ElementType__Restricted__Message_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RestrictedMessageEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::Restricted"/>
+            <specializes id="com.ibm.xtools.uml.synchCallMessage"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RestrictedMessageMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RBACUserActivityPartition"
+               name="%_UI_ElementType__RBACUser__ActivityPartition_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RBACUserActivityPartitionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::RBACUser"/>
+            <specializes id="com.ibm.xtools.uml.activityPartition"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RBACUserActivityPartitionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RBACUserClass"
+               name="%_UI_ElementType__RBACUser__Class_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RBACUserClassEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::RBACUser"/>
+            <specializes id="com.ibm.xtools.uml.class"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RBACUserClassMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RBACUserStereotype"
+               name="%_UI_ElementType__RBACUser__Stereotype_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RBACUserStereotypeEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::RBACUser"/>
+            <specializes id="com.ibm.xtools.uml.stereotype"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RBACUserStereotypeMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RBACRoleClass"
+               name="%_UI_ElementType__RBACRole__Class_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RBACRoleClassEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::RBACRole"/>
+            <specializes id="com.ibm.xtools.uml.class"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RBACRoleClassMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RBACRoleStereotype"
+               name="%_UI_ElementType__RBACRole__Stereotype_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RBACRoleStereotypeEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::RBACRole"/>
+            <specializes id="com.ibm.xtools.uml.stereotype"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RBACRoleStereotypeMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.PermissionClass"
+               name="%_UI_ElementType__Permission__Class_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.PermissionClassEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::Permission"/>
+            <specializes id="com.ibm.xtools.uml.class"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.PermissionClassMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.PermissionStereotype"
+               name="%_UI_ElementType__Permission__Stereotype_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.PermissionStereotypeEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::Permission"/>
+            <specializes id="com.ibm.xtools.uml.stereotype"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.PermissionStereotypeMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RestrictedOperation"
+               name="%_UI_ElementType__Restricted__Operation_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RestrictedOperationEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::Restricted"/>
+            <specializes id="com.ibm.xtools.uml.operation"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RestrictedOperationMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.GrantedOpaqueAction"
+               name="%_UI_ElementType__Granted__OpaqueAction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.GrantedOpaqueActionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::Granted"/>
+            <specializes id="com.ibm.xtools.uml.action"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.GrantedOpaqueActionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.GrantedCallOperationAction"
+               name="%_UI_ElementType__Granted__CallOperationAction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.GrantedCallOperationActionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::Granted"/>
+            <specializes id="com.ibm.xtools.uml.callOperationAction"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.GrantedCallOperationActionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.GrantedCallBehaviorAction"
+               name="%_UI_ElementType__Granted__CallBehaviorAction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.GrantedCallBehaviorActionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::Granted"/>
+            <specializes id="com.ibm.xtools.uml.callBehaviorAction"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.GrantedCallBehaviorActionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.ForbiddenOpaqueAction"
+               name="%_UI_ElementType__Forbidden__OpaqueAction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.ForbiddenOpaqueActionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::Forbidden"/>
+            <specializes id="com.ibm.xtools.uml.action"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.ForbiddenOpaqueActionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.ForbiddenCallOperationAction"
+               name="%_UI_ElementType__Forbidden__CallOperationAction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.ForbiddenCallOperationActionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::Forbidden"/>
+            <specializes id="com.ibm.xtools.uml.callOperationAction"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.ForbiddenCallOperationActionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.ForbiddenCallBehaviorAction"
+               name="%_UI_ElementType__Forbidden__CallBehaviorAction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.ForbiddenCallBehaviorActionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::Forbidden"/>
+            <specializes id="com.ibm.xtools.uml.callBehaviorAction"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.ForbiddenCallBehaviorActionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.ActivateRolesOpaqueAction"
+               name="%_UI_ElementType__ActivateRoles__OpaqueAction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.ActivateRolesOpaqueActionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::ActivateRoles"/>
+            <specializes id="com.ibm.xtools.uml.action"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.ActivateRolesOpaqueActionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.ActivateRolesCallOperationAction"
+               name="%_UI_ElementType__ActivateRoles__CallOperationAction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.ActivateRolesCallOperationActionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::ActivateRoles"/>
+            <specializes id="com.ibm.xtools.uml.callOperationAction"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.ActivateRolesCallOperationActionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.ActivateRolesCallBehaviorAction"
+               name="%_UI_ElementType__ActivateRoles__CallBehaviorAction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.ActivateRolesCallBehaviorActionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::ActivateRoles"/>
+            <specializes id="com.ibm.xtools.uml.callBehaviorAction"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.ActivateRolesCallBehaviorActionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.DeactivateRolesOpaqueAction"
+               name="%_UI_ElementType__DeactivateRoles__OpaqueAction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.DeactivateRolesOpaqueActionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::DeactivateRoles"/>
+            <specializes id="com.ibm.xtools.uml.action"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.DeactivateRolesOpaqueActionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.DeactivateRolesCallOperationAction"
+               name="%_UI_ElementType__DeactivateRoles__CallOperationAction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.DeactivateRolesCallOperationActionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::DeactivateRoles"/>
+            <specializes id="com.ibm.xtools.uml.callOperationAction"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.DeactivateRolesCallOperationActionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.DeactivateRolesCallBehaviorAction"
+               name="%_UI_ElementType__DeactivateRoles__CallBehaviorAction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.DeactivateRolesCallBehaviorActionEditHelperAdvice"
+               kind="com.ibm.xtools.uml.type.IStereotypedElementType">
+            <param
+                  name="stereotype"
+                  value="rbacUML::DeactivateRoles"/>
+            <specializes id="com.ibm.xtools.uml.callBehaviorAction"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.DeactivateRolesCallBehaviorActionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RBACUserrBACRoleRBACRole"
+               icon="/icons/default.gif"
+               name="%_UI_ElementType_RBACUser_rBACRole_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RBACUserrBACRoleRBACRoleEditHelperAdvice">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RBACUserrBACRoleRBACRoleMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RBACUseraliasUserRBACUser"
+               icon="/icons/default.gif"
+               name="%_UI_ElementType_RBACUser_aliasUser_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RBACUseraliasUserRBACUserEditHelperAdvice">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RBACUseraliasUserRBACUserMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RBACRolepermissionPermission"
+               icon="/icons/default.gif"
+               name="%_UI_ElementType_RBACRole_permission_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RBACRolepermissionPermissionEditHelperAdvice">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RBACRolepermissionPermissionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RBACRolessod1RBACRole"
+               icon="/icons/default.gif"
+               name="%_UI_ElementType_RBACRole_ssod1_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RBACRolessod1RBACRoleEditHelperAdvice">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RBACRolessod1RBACRoleMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RBACRoledsod1RBACRole"
+               icon="/icons/default.gif"
+               name="%_UI_ElementType_RBACRole_dsod1_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RBACRoledsod1RBACRoleEditHelperAdvice">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RBACRoledsod1RBACRoleMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.RestrictedpermissionPermission"
+               icon="/icons/default.gif"
+               name="%_UI_ElementType_Restricted_permission_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.RestrictedpermissionPermissionEditHelperAdvice">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.RestrictedpermissionPermissionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.ActivateRolesrBACRoleRBACRole"
+               icon="/icons/default.gif"
+               name="%_UI_ElementType_ActivateRoles_rBACRole_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.ActivateRolesrBACRoleRBACRoleEditHelperAdvice">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.ActivateRolesrBACRoleRBACRoleMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.DeactivateRolesrBACRoleRBACRole"
+               icon="/icons/default.gif"
+               name="%_UI_ElementType_DeactivateRoles_rBACRole_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.DeactivateRolesrBACRoleRBACRoleEditHelperAdvice">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.DeactivateRolesrBACRoleRBACRoleMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.GrantedoperationOperation"
+               icon="/icons/default.gif"
+               name="%_UI_ElementType_Granted_operation_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.GrantedoperationOperationEditHelperAdvice">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.GrantedoperationOperationMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.GrantedinteractionInteraction"
+               icon="/icons/default.gif"
+               name="%_UI_ElementType_Granted_interaction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.GrantedinteractionInteractionEditHelperAdvice">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.GrantedinteractionInteractionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.ForbiddenoperationOperation"
+               icon="/icons/default.gif"
+               name="%_UI_ElementType_Forbidden_operation_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.ForbiddenoperationOperationEditHelperAdvice">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.ForbiddenoperationOperationMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <specializationType
+               id="uk.ac.open.rbacuml.plugin.ForbiddeninteractionInteraction"
+               icon="/icons/default.gif"
+               name="%_UI_ElementType_Forbidden_interaction_name"
+               edithelperadvice="uk.ac.open.rbacuml.plugin.edithelpers.ForbiddeninteractionInteractionEditHelperAdvice">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <matcher class="uk.ac.open.rbacuml.plugin.types.ForbiddeninteractionInteractionMatcher"/>
+         </specializationType>
+      </metamodel>
+      <metamodel
+             nsURI="http://www.eclipse.org/uml2/3.0.0/UML">
+         <adviceBinding
+            id="uk.ac.open.rbacuml.plugin.applyProfileAdvice"
+            typeId="com.ibm.xtools.uml.package"
+            class="uk.ac.open.rbacuml.plugin.edithelpers.RbacUMLApplyProfileAdvice"
+            inheritance="all">
+         </adviceBinding>
+      </metamodel>
+   </extension>
+
+   <extension id="DefaultEditPartEditPolicyProvider" point="org.eclipse.gmf.runtime.diagram.ui.editpolicyProviders">
+      <editpolicyProvider class="uk.ac.open.rbacuml.plugin.providers.RbacUMLEditPolicyProvider">
+         <Priority name="High">
+         </Priority>             
+      </editpolicyProvider>
+   </extension>
+   
+   <extension
+         point="org.eclipse.emf.transaction.listeners">
+      <listener
+            class="uk.ac.open.rbacuml.plugin.utils.RbacUMLResourceSetListener">
+         <editingDomain
+               id="org.eclipse.gmf.runtime.emf.core.compatibility.MSLEditingDomain">
+         </editingDomain>
+      </listener>
+   </extension>
+
+   <extension
+         id="rbacUML ElementTypeBindings"
+         name="rbacUML ElementTypeBindings"
+         point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings">
+      <binding context="com.ibm.xtools.uml.type.context">
+         <elementType ref="uk.ac.open.rbacuml.plugin.RestrictedMessage"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.RBACUserActivityPartition"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.RBACUserClass"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.RBACUserStereotype"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.RBACRoleClass"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.RBACRoleStereotype"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.PermissionClass"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.PermissionStereotype"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.RestrictedOperation"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.GrantedOpaqueAction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.GrantedCallOperationAction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.GrantedCallBehaviorAction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.ForbiddenOpaqueAction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.ForbiddenCallOperationAction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.ForbiddenCallBehaviorAction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.ActivateRolesOpaqueAction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.ActivateRolesCallOperationAction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.ActivateRolesCallBehaviorAction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.DeactivateRolesOpaqueAction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.DeactivateRolesCallOperationAction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.DeactivateRolesCallBehaviorAction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.RBACUserrBACRoleRBACRole"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.RBACUseraliasUserRBACUser"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.RBACRolepermissionPermission"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.RBACRolessod1RBACRole"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.RBACRoledsod1RBACRole"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.RestrictedpermissionPermission"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.ActivateRolesrBACRoleRBACRole"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.DeactivateRolesrBACRoleRBACRole"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.GrantedoperationOperation"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.GrantedinteractionInteraction"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.ForbiddenoperationOperation"/>
+         <elementType ref="uk.ac.open.rbacuml.plugin.ForbiddeninteractionInteraction"/>
+         <advice ref="uk.ac.open.rbacuml.plugin.applyProfileAdvice"/>
+      </binding>
+   </extension>
+
+   <extension
+         id="rbacUML ContributionItemProvider"
+         name="rbacUML ContributionItemProvider"
+         point="org.eclipse.gmf.runtime.common.ui.services.action.contributionItemProviders">
+      <contributionItemProvider
+            class="uk.ac.open.rbacuml.plugin.providers.RbacUMLContributionItemProvider"
+            checkPluginLoaded="false">
+         <Priority
+               name="Medium">
+         </Priority>
+         <popupContribution
+               class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramContextMenuProvider">
+            <popupStructuredContributionCriteria
+                  objectClass="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <method
+                     name="getDiagramEditDomain().getEditorPart().getSite().getId()"
+                     value="ModelerDiagramEditor">
+               </method>
+            </popupStructuredContributionCriteria>
+            <popupMenu
+                  path="/umlAddGroup"
+                  id="Add_rbacUML">
+            </popupMenu>
+            <popupMenuGroup
+                  path="/Add_rbacUML/"
+                  id="defaultGroup">
+            </popupMenuGroup>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_RBACUser__ActivityPartition">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_DeactivateRoles__CallOperationAction">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_DeactivateRoles__OpaqueAction">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_ActivateRoles__OpaqueAction">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_RBACUser__Class">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_Permission__Class">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_RBACUser__Stereotype">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_Granted__OpaqueAction">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_ActivateRoles__CallOperationAction">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_Forbidden__CallOperationAction">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_Granted__CallBehaviorAction">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_Restricted__Operation">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_DeactivateRoles__CallBehaviorAction">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_Granted__CallOperationAction">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_ActivateRoles__CallBehaviorAction">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_Forbidden__CallBehaviorAction">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_Forbidden__OpaqueAction">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_RBACRole__Stereotype">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_RBACRole__Class">
+            </popupAction>
+            <popupAction
+                  path="/Add_rbacUML/defaultGroup"
+                  id="_Permission__Stereotype">
+            </popupAction>
+         </popupContribution>
+      </contributionItemProvider>
+   </extension>
+
+   <extension
+         id="rbacUML PaletteProviders"
+         name="rbacUML PaletteProviders"
+         point="org.eclipse.gmf.runtime.diagram.ui.paletteProviders">
+      <paletteProvider class="uk.ac.open.rbacuml.plugin.palette.RbacUMLPaletteProvider">
+         <Priority name="Medium"/>
+         <editor id="ModelerDiagramEditor"/>
+         <content>
+            <method
+                  name="getDiagram().getType()"
+                  value="Class, Freeform"/>
+         </content>
+      </paletteProvider>
+   </extension>  
+   <extension
+         id="rbacUML ViewProviders"
+         name="rbacUML ViewProviders"
+         point="org.eclipse.gmf.runtime.diagram.core.viewProviders">
+      <viewProvider class="uk.ac.open.rbacuml.plugin.providers.RbacUMLViewProvider">
+         <Priority name="Medium"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge"/>
+      </viewProvider>
+   </extension>
+
+   <extension
+         id="rbacUML EditpartProviders"
+         name="rbacUML EditpartProviders"
+         point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+      <editpartProvider class="uk.ac.open.rbacuml.plugin.providers.RbacUMLEditPartProvider">
+         <Priority name="Medium"/>
+      </editpartProvider>
+   </extension>   
+
+   <extension
+         id="rbacUML DefaultViewProviders"
+         name="rbacUML DefaultViewProviders"
+         point="org.eclipse.gmf.runtime.diagram.core.viewProviders">
+      <viewProvider class="uk.ac.open.rbacuml.plugin.providers.RbacUMLDefaultViewProvider">
+         <Priority name="High"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge"/>
+      </viewProvider>
+   </extension>
+
+   <extension
+         id="rbacUML ModelingAssistantProviders"
+         name="rbacUML ModelingAssistantProviders"
+         point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders">
+      <modelingAssistantProvider class="uk.ac.open.rbacuml.plugin.providers.RbacUMLModelingAssistant">
+         <Priority name="Medium"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension
+         id="rbacUML Activities"
+         name="rbacUML Activities"
+         point="org.eclipse.ui.activities">
+      <category
+            id="uk.ac.open.rbacuml.plugin.activities.category"
+            name="%_UI_ActivityCategoryName">
+      </category>
+   </extension>
+   <extension
+         id="rbacUML EditingCapabilities"
+         name="rbacUML EditingCapabilities"
+         point="com.ibm.xtools.common.ui.reduction.editingCapabilities">
+      <activity
+            match="equals"
+            ref="uk.ac.open.rbacuml.plugin.uireduction.activity">
+      </activity>
+   </extension>
+
+   <extension
+         id="rbacUML Activities"
+         name="rbacUML Activities"
+         point="org.eclipse.ui.activities">
+      <activity
+            id="uk.ac.open.rbacuml.plugin.uireduction.activity"
+            name="%_UI_Activity_uiReduction_name"
+            description="%_UI_Activity_uiReduction_description">
+      </activity>
+      <activityPatternBinding
+            activityId="uk.ac.open.rbacuml.plugin.uireduction.activity"
+            pattern="uk\.ac\.open\.rbacuml\.plugin/.*[^uk.ac.open.rbacuml.plugin.core.templates.*].*">
+      </activityPatternBinding>
+      <activityRequirementBinding
+            activityId="uk.ac.open.rbacuml.plugin.uireduction.activity"
+            requiredActivityId="uk.ac.open.rbacuml.plugin.core.activity">
+      </activityRequirementBinding>
+      <categoryActivityBinding
+            activityId="uk.ac.open.rbacuml.plugin.uireduction.activity"
+            categoryId="uk.ac.open.rbacuml.plugin.activities.category">
+      </categoryActivityBinding>
+   </extension>
+
+   <extension
+         id="rbacUML Activities"
+         name="rbacUML Activities"
+         point="org.eclipse.ui.activities">
+      <activity
+            id="uk.ac.open.rbacuml.plugin.core.activity"
+            name="%_UI_Activity_template_name"
+            description="%_UI_Activity_template_description">
+      </activity>
+      <activityPatternBinding
+            activityId="uk.ac.open.rbacuml.plugin.core.activity"
+            
+            
+            pattern="uk\.ac\.open\.rbacuml\.plugin/uk\.ac\.open\.rbacuml\.plugin\.core\.templates\.*">
+      </activityPatternBinding>
+      <categoryActivityBinding
+            activityId="uk.ac.open.rbacuml.plugin.core.activity"
+            categoryId="uk.ac.open.rbacuml.plugin.activities.category">
+      </categoryActivityBinding>
+   </extension>
+
+   <extension
+         id="rbacUML NewModelWizard"
+         name="rbacUML NewModelWizard"
+         point="com.ibm.xtools.common.ui.wizards.newModelWizard">
+      <templateDirectory
+            path="templates"
+            handler="uk.ac.open.rbacuml.plugin.wizards.RbacUMLTemplateModelHandler">
+      </templateDirectory>
+      <category
+            id="uk.ac.open.rbacuml.plugin.core.category"
+            label="%_UI_NewModelWizard_CategoryName">
+      </category>
+      <templateCategoryBinding
+            categoryRef="uk.ac.open.rbacuml.plugin.core.category">                  
+         	<template
+          		match="equals"
+            	ref="uk.ac.open.rbacuml.plugin.core.templates.RbacUMLModel">
+        	</template>
+      </templateCategoryBinding>
+		
+		      <activityTemplateBinding
+		            required="true">
+		         <template
+		               match="equals"
+		               ref="uk.ac.open.rbacuml.plugin.core.templates.RbacUMLModel">
+		         </template>
+		         <activity
+		               match="equals"
+		               ref="uk.ac.open.rbacuml.plugin.uireduction.activity">
+		         </activity>
+		      </activityTemplateBinding>
+		           	
+		
+		      <activityTemplateBinding
+		            required="false">
+		         <template
+		               match="equals"
+		               ref="uk.ac.open.rbacuml.plugin.core.templates.RbacUMLModel">
+		         </template>
+		
+		         <activity
+		               match="equals"
+		               ref="com.ibm.xtools.activities.umlBBFreeFormDiagram">
+		         </activity>
+		
+		         <activity
+		               match="equals"
+		               ref="com.ibm.xtools.activities.umlBBClassDiagram">
+		         </activity>
+		        
+		      </activityTemplateBinding>
+				      		     
+
+      <templateConfigurationPageGroup
+            afterRef=".*"
+            afterMatch="pattern"
+            class="com.ibm.xtools.common.ui.wizards.pagegroups.ActivitiesTemplateConfigurationPageGroup"
+            id="uk.ac.open.rbacuml.plugin.wizards.pagegroups.ActivitiesTemplateConfigurationPageGroup">
+		            
+         <template
+               ref="uk.ac.open.rbacuml.plugin.core.templates.RbacUMLModel"
+               match="equals"/>
+		               
+      </templateConfigurationPageGroup>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="com.ibm.xtools.modeler.ui.properties">
+	         <propertyCategory category="rbacUML"/>
+      </propertyContributor>  
+   </extension>
+   
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+		<propertyTabs contributorId="com.ibm.xtools.modeler.ui.properties">
+	         <propertyTab
+	            label="%_UI_PropertyTab__RBACUser__Stereotype_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.RBACUserStereotypePropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__DeactivateRoles__CallOperationAction_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.DeactivateRolesCallOperationActionPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__ActivateRoles__CallOperationAction_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.ActivateRolesCallOperationActionPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__RBACRole__Stereotype_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.RBACRoleStereotypePropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__DeactivateRoles__CallBehaviorAction_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.DeactivateRolesCallBehaviorActionPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__Restricted__Operation_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.RestrictedOperationPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__RBACRole__Class_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.RBACRoleClassPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__Permission__Class_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.PermissionClassPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__ActivateRoles__OpaqueAction_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.ActivateRolesOpaqueActionPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__Restricted__Message_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.RestrictedMessagePropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__Permission__Stereotype_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.PermissionStereotypePropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__Granted__CallOperationAction_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.GrantedCallOperationActionPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__Granted__OpaqueAction_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.GrantedOpaqueActionPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__Forbidden__CallOperationAction_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.ForbiddenCallOperationActionPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__Granted__CallBehaviorAction_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.GrantedCallBehaviorActionPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__DeactivateRoles__OpaqueAction_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.DeactivateRolesOpaqueActionPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__RBACUser__Class_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.RBACUserClassPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__RBACUser__ActivityPartition_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.RBACUserActivityPartitionPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__ActivateRoles__CallBehaviorAction_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.ActivateRolesCallBehaviorActionPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__Forbidden__CallBehaviorAction_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.ForbiddenCallBehaviorActionPropertyTab"/>
+	         <propertyTab
+	            label="%_UI_PropertyTab__Forbidden__OpaqueAction_name"
+	            category="rbacUML"	            
+	            id="uk.ac.open.rbacuml.plugin.properties.tabs.ForbiddenOpaqueActionPropertyTab"/>   
+		</propertyTabs>	
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections contributorId="com.ibm.xtools.modeler.ui.properties">
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.RBACUserStereotypePropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.RBACUserStereotypePropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.RBACUserStereotypePropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.RBACUserStereotypePropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.DeactivateRolesCallOperationActionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.DeactivateRolesCallOperationActionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.DeactivateRolesCallOperationActionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.DeactivateRolesCallOperationActionPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.ActivateRolesCallOperationActionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.ActivateRolesCallOperationActionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.ActivateRolesCallOperationActionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.ActivateRolesCallOperationActionPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.RBACRoleStereotypePropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.RBACRoleStereotypePropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.RBACRoleStereotypePropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.RBACRoleStereotypePropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.DeactivateRolesCallBehaviorActionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.DeactivateRolesCallBehaviorActionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.DeactivateRolesCallBehaviorActionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.DeactivateRolesCallBehaviorActionPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.RestrictedOperationPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.RestrictedOperationPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.RestrictedOperationPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.RestrictedOperationPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.RBACRoleClassPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.RBACRoleClassPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.RBACRoleClassPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.RBACRoleClassPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.PermissionClassPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.PermissionClassPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.PermissionClassPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.PermissionClassPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.ActivateRolesOpaqueActionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.ActivateRolesOpaqueActionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.ActivateRolesOpaqueActionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.ActivateRolesOpaqueActionPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.RestrictedMessagePropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.RestrictedMessagePropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.RestrictedMessagePropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.RestrictedMessagePropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.PermissionStereotypePropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.PermissionStereotypePropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.PermissionStereotypePropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.PermissionStereotypePropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.GrantedCallOperationActionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.GrantedCallOperationActionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.GrantedCallOperationActionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.GrantedCallOperationActionPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.GrantedOpaqueActionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.GrantedOpaqueActionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.GrantedOpaqueActionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.GrantedOpaqueActionPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.ForbiddenCallOperationActionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.ForbiddenCallOperationActionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.ForbiddenCallOperationActionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.ForbiddenCallOperationActionPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.GrantedCallBehaviorActionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.GrantedCallBehaviorActionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.GrantedCallBehaviorActionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.GrantedCallBehaviorActionPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.DeactivateRolesOpaqueActionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.DeactivateRolesOpaqueActionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.DeactivateRolesOpaqueActionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.DeactivateRolesOpaqueActionPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.RBACUserClassPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.RBACUserClassPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.RBACUserClassPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.RBACUserClassPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.RBACUserActivityPartitionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.RBACUserActivityPartitionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.RBACUserActivityPartitionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.RBACUserActivityPartitionPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.ActivateRolesCallBehaviorActionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.ActivateRolesCallBehaviorActionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.ActivateRolesCallBehaviorActionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.ActivateRolesCallBehaviorActionPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.ForbiddenCallBehaviorActionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.ForbiddenCallBehaviorActionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.ForbiddenCallBehaviorActionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.ForbiddenCallBehaviorActionPropertySection" />
+         <propertySection 
+         	filter="uk.ac.open.rbacuml.plugin.properties.filters.ForbiddenOpaqueActionPropertyFilter"
+         	tab="uk.ac.open.rbacuml.plugin.properties.tabs.ForbiddenOpaqueActionPropertyTab" 
+         	class="uk.ac.open.rbacuml.plugin.properties.sections.ForbiddenOpaqueActionPropertySection" 
+         	id="uk.ac.open.rbacuml.plugin.properties.sections.ForbiddenOpaqueActionPropertySection" />
+      </propertySections>
+   </extension>
+
+	<extension point="org.eclipse.ui.popupMenus">
+	   <objectContribution id="PopupMenu Contributor" objectClass="com.ibm.xtools.uml.navigator.ModelServerElement">
+	      <visibility>
+	         <objectState name="isProfiledModel" value="visibility"/>
+	      </visibility>         
+        	<menu
+        	      id="Add_rbacUML"
+        	      label="Add rbacUML"
+        	      path="shortcutGroup">
+        	   <separator
+        	         name="defaultGroup">
+        	   </separator>  
+        	</menu> 		
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_Permission__Stereotype"
+					icon="icons/_Permission__Stereotype.ico"
+					label="&lt;Permission&gt; Stereotype"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_RBACRole__Class"
+					icon="icons/_RBACRole__Class.ico"
+					label="&lt;RBACRole&gt; Class"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_RBACRole__Stereotype"
+					icon="icons/_RBACRole__Stereotype.ico"
+					label="&lt;RBACRole&gt; Stereotype"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_Forbidden__OpaqueAction"
+					icon="icons/_Forbidden__OpaqueAction.ico"
+					label="&lt;Forbidden&gt; OpaqueAction"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_Forbidden__CallBehaviorAction"
+					icon="icons/_Forbidden__CallBehaviorAction.ico"
+					label="&lt;Forbidden&gt; CallBehaviorAction"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_ActivateRoles__CallBehaviorAction"
+					icon="icons/_ActivateRoles__CallBehaviorAction.ico"
+					label="&lt;ActivateRoles&gt; CallBehaviorAction"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_Granted__CallOperationAction"
+					icon="icons/_Granted__CallOperationAction.ico"
+					label="&lt;Granted&gt; CallOperationAction"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_DeactivateRoles__CallBehaviorAction"
+					icon="icons/_DeactivateRoles__CallBehaviorAction.ico"
+					label="&lt;DeactivateRoles&gt; CallBehaviorAction"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_Restricted__Operation"
+					icon="icons/_Restricted__Operation.ico"
+					label="&lt;Restricted&gt; Operation"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_Granted__CallBehaviorAction"
+					icon="icons/_Granted__CallBehaviorAction.ico"
+					label="&lt;Granted&gt; CallBehaviorAction"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_Forbidden__CallOperationAction"
+					icon="icons/_Forbidden__CallOperationAction.ico"
+					label="&lt;Forbidden&gt; CallOperationAction"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_ActivateRoles__CallOperationAction"
+					icon="icons/_ActivateRoles__CallOperationAction.ico"
+					label="&lt;ActivateRoles&gt; CallOperationAction"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_Granted__OpaqueAction"
+					icon="icons/_Granted__OpaqueAction.ico"
+					label="&lt;Granted&gt; OpaqueAction"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_RBACUser__Stereotype"
+					icon="icons/_RBACUser__Stereotype.ico"
+					label="&lt;RBACUser&gt; Stereotype"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_Permission__Class"
+					icon="icons/_Permission__Class.ico"
+					label="&lt;Permission&gt; Class"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_RBACUser__Class"
+					icon="icons/_RBACUser__Class.ico"
+					label="&lt;RBACUser&gt; Class"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_ActivateRoles__OpaqueAction"
+					icon="icons/_ActivateRoles__OpaqueAction.ico"
+					label="&lt;ActivateRoles&gt; OpaqueAction"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_DeactivateRoles__OpaqueAction"
+					icon="icons/_DeactivateRoles__OpaqueAction.ico"
+					label="&lt;DeactivateRoles&gt; OpaqueAction"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_DeactivateRoles__CallOperationAction"
+					icon="icons/_DeactivateRoles__CallOperationAction.ico"
+					label="&lt;DeactivateRoles&gt; CallOperationAction"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+			<action
+					class="uk.ac.open.rbacuml.plugin.popup.actions.ActionDelegate"
+					enablesFor="1"
+					id="_RBACUser__ActivityPartition"
+					icon="icons/_RBACUser__ActivityPartition.ico"
+					label="&lt;RBACUser&gt; ActivityPartition"
+					menubarPath="Add_rbacUML/defaultGroup">
+					
+			</action>
+	      
+	   </objectContribution>
+    <viewerContribution
+          id="uk.ac.open.rbacuml.plugin.selectionViewerContribution"
+          targetID="org.eclipse.ui.navigator.ProjectExplorer#PopupMenu">
+       <menu
+             id="uk.ac.open.rbacuml.plugin.visualisationMenu"
+             label="rbacUML"
+             path="shortcutGroup">
+          <groupMarker
+                name="defaultGroup">
+          </groupMarker>
+       </menu>
+       <action
+             class="uk.ac.open.rbacuml.plugin.visualisation.ConfigSelectionAction"
+             id="uk.ac.open.rbacuml.plugin.visualisationAction"
+             label="Select Related Elements"
+             menubarPath="additions">
+       </action>
+       <action
+             class="uk.ac.open.rbacuml.plugin.ocl.OCLOrderActionDelegate"
+             id="uk.ac.open.rbacuml.plugin.ocl.action2"
+             label="rbacUML ordered validation"
+             menubarPath="additions">
+       </action>
+    </viewerContribution>
+	</extension>
+	<extension id="profiledModelActionFilter"
+			name="profiledModelActionFilter"
+			point="org.eclipse.gmf.runtime.common.ui.services.action.actionFilterProviders">
+	   <ActionFilterProvider
+	   		class="uk.ac.open.rbacuml.plugin.popup.actions.ProfiledModelActionFilterProvider">
+	      <Priority 
+	      		name="Highest">
+	      </Priority>
+	      <Attribute
+	      		name="isProfiledModel"
+	      		value="visibility">
+	      </Attribute>
+	   </ActionFilterProvider>
+	</extension>
+ <extension
+       id="ImportWizards"
+       name="ImportWizards"
+       point="org.eclipse.ui.importWizards">
+    <wizard
+          category="uk.ac.open.rbacuml.plugin.importWizardCategory"
+          class="uk.ac.open.rbacuml.plugin.ldif.wizard.LDIFImportWizard"
+          id="uk.ac.open.rbacuml.plugin.ldifwizard"
+          name="LDIF import">
+    </wizard>
+    <category
+          id="uk.ac.open.rbacuml.plugin.importWizardCategory"
+          name="rbacUML">
+    </category>
+ </extension>
+</plugin>

@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DSLToolProfile="http:///schemas/DSLToolProfile/_IAVnICm0Ed2i6JGuVYCC5A/139" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/DSLToolProfile/_IAVnICm0Ed2i6JGuVYCC5A/139 pathmap://PROFILE_TOOLING/DSLToolProfile.epx#_IAVnISm0Ed2i6JGuVYCC5A?DSLToolProfile/DSLToolProfile?">
+  <uml:Model xmi:id="_i_J2EHjMEeGvz59xscDb_g" name="rbacUML">
+    <eAnnotations xmi:id="_jbOHAHjMEeGvz59xscDb_g" source="toolingModelGenerationPropertiesAnnotation">
+      <details xmi:id="_jbOHAXjMEeGvz59xscDb_g" key="menus" value="true"/>
+      <details xmi:id="_jbOHAnjMEeGvz59xscDb_g" key="palettes" value="true"/>
+      <details xmi:id="_jbOHA3jMEeGvz59xscDb_g" key="properties" value="true"/>
+      <details xmi:id="_jbOHBHjMEeGvz59xscDb_g" key="wizards" value="true"/>
+      <details xmi:id="_jbOuEHjMEeGvz59xscDb_g" key="excludedElements" value="ForbiddenReadIsClassifiedObjectAction,DeactivateRolesRaiseExceptionAction,GrantedReadVariableAction,GrantedAddVariableValueAction,PermissionStateMachine,DeactivateRolesAcceptCallAction,ForbiddenBroadcastSignalAction,GrantedCreateLinkObjectAction,RBACRoleNode,RBACRoleInteraction,RBACUserProtocolStateMachine,DeactivateRolesClearStructuralFeatureAction,GrantedDestroyLinkAction,ActivateRolesReadLinkAction,ForbiddenReadSelfAction,ActivateRolesReadIsClassifiedObjectAction,ActivateRolesReadVariableAction,GrantedAddStructuralFeatureValueAction,GrantedRaiseExceptionAction,ActivateRolesBroadcastSignalAction,ForbiddenAddStructuralFeatureValueAction,RBACRoleActivity,GrantedAcceptCallAction,GrantedClearStructuralFeatureAction,GrantedStructuredActivityNode,PermissionActivity,ActivateRolesReadLinkObjectEndQualifierAction,ActivateRolesDestroyLinkAction,DeactivateRolesStartClassifierBehaviorAction,GrantedReplyAction,PermissionDevice,DeactivateRolesDestroyObjectAction,GrantedReclassifyObjectAction,ForbiddenReplyAction,ForbiddenCreateObjectAction,DeactivateRolesTestIdentityAction,RBACUserOpaqueBehavior,ActivateRolesSendSignalAction,DeactivateRolesReadStructuralFeatureAction,DeactivateRolesClearAssociationAction,RBACRoleProtocolStateMachine,ForbiddenUnmarshallAction,DeactivateRolesClearVariableAction,DeactivateRolesReadLinkObjectEndQualifierAction,DeactivateRolesRemoveVariableValueAction,ForbiddenReadLinkAction,RBACUserComponent,ActivateRolesReadExtentAction,DeactivateRolesStartObjectBehaviorAction,ForbiddenRemoveStructuralFeatureValueAction,DeactivateRolesSendSignalAction,GrantedReadLinkObjectEndQualifierAction,ActivateRolesLoopNode,GrantedStartClassifierBehaviorAction,RBACRoleFunctionBehavior,ForbiddenRaiseExceptionAction,GrantedReadSelfAction,RBACUserStateMachine,ActivateRolesClearAssociationAction,ForbiddenAcceptCallAction,DeactivateRolesBroadcastSignalAction,PermissionFunctionBehavior,ForbiddenClearStructuralFeatureAction,RBACRoleDevice,DeactivateRolesReadExtentAction,GrantedSendSignalAction,PermissionOpaqueBehavior,ActivateRolesRaiseExceptionAction,DeactivateRolesReduceAction,ActivateRolesAddStructuralFeatureValueAction,DeactivateRolesAddStructuralFeatureValueAction,PermissionExecutionEnvironment,ActivateRolesClearStructuralFeatureAction,GrantedCreateObjectAction,RBACUserActivity,GrantedRemoveVariableValueAction,GrantedStartObjectBehaviorAction,DeactivateRolesLoopNode,ForbiddenAcceptEventAction,DeactivateRolesReadVariableAction,GrantedReadExtentAction,ActivateRolesValueSpecificationAction,DeactivateRolesAddVariableValueAction,DeactivateRolesCreateLinkObjectAction,ActivateRolesCreateLinkAction,DeactivateRolesReplyAction,GrantedReduceAction,GrantedExpansionRegion,ForbiddenExpansionRegion,ActivateRolesCreateObjectAction,ActivateRolesRemoveVariableValueAction,RBACRoleStateMachine,ActivateRolesStartObjectBehaviorAction,RBACRoleAssociationClass,ForbiddenTestIdentityAction,GrantedReadLinkAction,GrantedLoopNode,ForbiddenClearAssociationAction,GrantedBroadcastSignalAction,PermissionAssociationClass,GrantedReadLinkObjectEndAction,ActivateRolesSendObjectAction,ForbiddenReadLinkObjectEndAction,DeactivateRolesStructuredActivityNode,DeactivateRolesSequenceNode,GrantedConditionalNode,GrantedRemoveStructuralFeatureValueAction,ForbiddenReadLinkObjectEndQualifierAction,ForbiddenConditionalNode,ForbiddenDestroyLinkAction,PermissionNode,DeactivateRolesValueSpecificationAction,ActivateRolesAddVariableValueAction,RBACUserInteraction,ActivateRolesCreateLinkObjectAction,DeactivateRolesCreateLinkAction,DeactivateRolesReclassifyObjectAction,RBACRoleOpaqueBehavior,ActivateRolesRemoveStructuralFeatureValueAction,GrantedSequenceNode,ForbiddenSendSignalAction,GrantedValueSpecificationAction,PermissionInteraction,ActivateRolesDestroyObjectAction,DeactivateRolesSendObjectAction,RBACUserFunctionBehavior,GrantedCreateLinkAction,ActivateRolesStructuredActivityNode,ForbiddenReadExtentAction,ActivateRolesReadStructuralFeatureAction,DeactivateRolesReadIsClassifiedObjectAction,ForbiddenReduceAction,ActivateRolesClearVariableAction,ActivateRolesReclassifyObjectAction,GrantedSendObjectAction,RBACUserExecutionEnvironment,PermissionProtocolStateMachine,ForbiddenLoopNode,DeactivateRolesAcceptEventAction,ForbiddenReadVariableAction,GrantedTestIdentityAction,DeactivateRolesReadSelfAction,ForbiddenAddVariableValueAction,GrantedReadIsClassifiedObjectAction,ForbiddenCreateLinkObjectAction,GrantedClearAssociationAction,ActivateRolesReduceAction,ActivateRolesUnmarshallAction,ActivateRolesExpansionRegion,DeactivateRolesExpansionRegion,PermissionComponent,ActivateRolesTestIdentityAction,ForbiddenStartClassifierBehaviorAction,RBACUserAssociationClass,GrantedDestroyObjectAction,ForbiddenDestroyObjectAction,ActivateRolesReadLinkObjectEndAction,DeactivateRolesReadLinkObjectEndAction,DeactivateRolesCreateObjectAction,ForbiddenStructuredActivityNode,ForbiddenSequenceNode,GrantedReadStructuralFeatureAction,ActivateRolesConditionalNode,RBACUserNode,DeactivateRolesConditionalNode,ForbiddenReadStructuralFeatureAction,ForbiddenValueSpecificationAction,ActivateRolesStartClassifierBehaviorAction,DeactivateRolesDestroyLinkAction,ActivateRolesReadSelfAction,RBACRoleExecutionEnvironment,GrantedClearVariableAction,ForbiddenReclassifyObjectAction,ForbiddenCreateLinkAction,ForbiddenClearVariableAction,ActivateRolesAcceptCallAction,DeactivateRolesUnmarshallAction,GrantedAcceptEventAction,ActivateRolesSequenceNode,ForbiddenRemoveVariableValueAction,DeactivateRolesReadLinkAction,ForbiddenStartObjectBehaviorAction,RBACUserDevice,RBACRoleComponent,ForbiddenSendObjectAction,ActivateRolesReplyAction,GrantedUnmarshallAction,DeactivateRolesRemoveStructuralFeatureValueAction,ActivateRolesAcceptEventAction"/>
+      <details xmi:id="_jbOuEXjMEeGvz59xscDb_g" key="customShapes" value=""/>
+    </eAnnotations>
+    <eAnnotations xmi:id="_jbOuEnjMEeGvz59xscDb_g" source="com.ibm.xtools.common.ui.reduction.editingCapabilities">
+      <details xmi:id="_jbOuE3jMEeGvz59xscDb_g" key="com.ibm.xtools.activities.umlBBFreeFormDiagram" value="1"/>
+      <details xmi:id="_jbOuFHjMEeGvz59xscDb_g" key="com.ibm.xtools.uml.profile.tooling.ui.editor.uireduction.activity" value="1"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jSTbkHjMEeGvz59xscDb_g" name="rbacUML Tooling"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jSb-cHjMEeGvz59xscDb_g" name="Wizards">
+      <packagedElement xmi:type="uml:Class" xmi:id="_jSeasHjMEeGvz59xscDb_g" name="rbacUML Model"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jSg28HjMEeGvz59xscDb_g" name="rbacUML"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jSisIHjMEeGvz59xscDb_g" name="rbacUML Core"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jSlIYHjMEeGvz59xscDb_g" name="rbacUML"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jS7tsHjMEeGvz59xscDb_g" name="rbacUML"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jS_YEHjMEeGvz59xscDb_g" name="RBACUML"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jTBNQHjMEeGvz59xscDb_g" name="Element Types">
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVTsQHjMEeGvz59xscDb_g" name="&lt;RBACUser> ActivityPartition"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVU6YXjMEeGvz59xscDb_g" name="&lt;RBACUser> Class"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVWIgXjMEeGvz59xscDb_g" name="&lt;RBACUser> Stereotype"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVXWoHjMEeGvz59xscDb_g" name="&lt;RBACRole> Class"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVX9sXjMEeGvz59xscDb_g" name="&lt;RBACRole> Stereotype"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVZL0HjMEeGvz59xscDb_g" name="&lt;Permission> Class"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVZy4XjMEeGvz59xscDb_g" name="&lt;Permission> Stereotype"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVbBAHjMEeGvz59xscDb_g" name="&lt;Restricted> Operation"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVboEHjMEeGvz59xscDb_g" name="&lt;Restricted> Message"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVc2MHjMEeGvz59xscDb_g" name="&lt;Granted> OpaqueAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVddQHjMEeGvz59xscDb_g" name="&lt;Granted> CallOperationAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVeEUXjMEeGvz59xscDb_g" name="&lt;Granted> CallBehaviorAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVerYXjMEeGvz59xscDb_g" name="&lt;Forbidden> OpaqueAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVfScXjMEeGvz59xscDb_g" name="&lt;Forbidden> CallOperationAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVf5gXjMEeGvz59xscDb_g" name="&lt;Forbidden> CallBehaviorAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVhHoHjMEeGvz59xscDb_g" name="&lt;ActivateRoles> OpaqueAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVhusXjMEeGvz59xscDb_g" name="&lt;ActivateRoles> CallOperationAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVi80HjMEeGvz59xscDb_g" name="&lt;ActivateRoles> CallBehaviorAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVjj4HjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> OpaqueAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVkK8XjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> CallOperationAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVlZEHjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> CallBehaviorAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVmAIXjMEeGvz59xscDb_g" name="RBACUser rBACRole"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVmnMXjMEeGvz59xscDb_g" name="RBACUser aliasUser"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVn1UXjMEeGvz59xscDb_g" name="RBACRole permission"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVocYXjMEeGvz59xscDb_g" name="RBACRole ssod1"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVpqgHjMEeGvz59xscDb_g" name="RBACRole dsod1"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVqRkHjMEeGvz59xscDb_g" name="Restricted permission"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVsGwHjMEeGvz59xscDb_g" name="Granted operation"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVtU4HjMEeGvz59xscDb_g" name="Granted interaction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVujAHjMEeGvz59xscDb_g" name="Forbidden operation"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVwYMHjMEeGvz59xscDb_g" name="Forbidden interaction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVxmUHjMEeGvz59xscDb_g" name="ActivateRoles rBACRole"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jVyNYXjMEeGvz59xscDb_g" name="DeactivateRoles rBACRole"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jVzbgHjMEeGvz59xscDb_g" name="Menus">
+      <packagedElement xmi:type="uml:Package" xmi:id="_jV0poHjMEeGvz59xscDb_g" name="Actions">
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV3F4HjMEeGvz59xscDb_g" name="&lt;RBACUser> ActivityPartition"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV4UAHjMEeGvz59xscDb_g" name="&lt;RBACUser> Class"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV47EXjMEeGvz59xscDb_g" name="&lt;RBACUser> Stereotype"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV5iIXjMEeGvz59xscDb_g" name="&lt;RBACRole> Class"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV6JMXjMEeGvz59xscDb_g" name="&lt;RBACRole> Stereotype"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV6wQXjMEeGvz59xscDb_g" name="&lt;Permission> Class"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV7-YHjMEeGvz59xscDb_g" name="&lt;Permission> Stereotype"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV7-YnjMEeGvz59xscDb_g" name="&lt;Restricted> Operation"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV8lcXjMEeGvz59xscDb_g" name="&lt;Granted> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV9MgXjMEeGvz59xscDb_g" name="&lt;Granted> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV9zkXjMEeGvz59xscDb_g" name="&lt;Granted> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV-aoXjMEeGvz59xscDb_g" name="&lt;Forbidden> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV_BsXjMEeGvz59xscDb_g" name="&lt;Forbidden> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jV_owXjMEeGvz59xscDb_g" name="&lt;Forbidden> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jWAP0XjMEeGvz59xscDb_g" name="&lt;ActivateRoles> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jWA24XjMEeGvz59xscDb_g" name="&lt;ActivateRoles> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jWBd8XjMEeGvz59xscDb_g" name="&lt;ActivateRoles> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jWCFAXjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jWCsEXjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jWDTIHjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> CallBehaviorAction"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jWD6MHjMEeGvz59xscDb_g" name="Package1">
+        <packagedElement xmi:type="uml:Class" xmi:id="_jWFIUXjMEeGvz59xscDb_g" name="defaultGroup"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jW95IHjMEeGvz59xscDb_g" name="Add rbacUML"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jXCKkHjMEeGvz59xscDb_g" name="rbacUML"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jXHqIHjMEeGvz59xscDb_g" name="rbacUML">
+      <packagedElement xmi:type="uml:Package" xmi:id="_jXJfUHjMEeGvz59xscDb_g" name="Palette Tools">
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXLUgHjMEeGvz59xscDb_g" name="&lt;RBACUser> ActivityPartition"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXL7kXjMEeGvz59xscDb_g" name="&lt;RBACUser> Class"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXMioXjMEeGvz59xscDb_g" name="&lt;RBACUser> Stereotype"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXNJsXjMEeGvz59xscDb_g" name="&lt;RBACRole> Class"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXNwwXjMEeGvz59xscDb_g" name="&lt;RBACRole> Stereotype"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXOX0XjMEeGvz59xscDb_g" name="&lt;Permission> Class"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXO-4XjMEeGvz59xscDb_g" name="&lt;Permission> Stereotype"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXQNAHjMEeGvz59xscDb_g" name="&lt;Restricted> Operation"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXQ0EXjMEeGvz59xscDb_g" name="&lt;Restricted> Message"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXSCMHjMEeGvz59xscDb_g" name="&lt;Granted> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXSpQXjMEeGvz59xscDb_g" name="&lt;Granted> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXT3YHjMEeGvz59xscDb_g" name="&lt;Granted> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXT3YnjMEeGvz59xscDb_g" name="&lt;Forbidden> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXUecXjMEeGvz59xscDb_g" name="&lt;Forbidden> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXVFgXjMEeGvz59xscDb_g" name="&lt;Forbidden> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXVskXjMEeGvz59xscDb_g" name="&lt;ActivateRoles> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXWToXjMEeGvz59xscDb_g" name="&lt;ActivateRoles> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXW6sHjMEeGvz59xscDb_g" name="&lt;ActivateRoles> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXXhwHjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXXhwnjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXYv4HjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXZW8XjMEeGvz59xscDb_g" name="RBACUser rBACRole"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXZ-AXjMEeGvz59xscDb_g" name="RBACUser aliasUser"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXZ-A3jMEeGvz59xscDb_g" name="RBACRole permission"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXalEXjMEeGvz59xscDb_g" name="RBACRole ssod1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXbMIXjMEeGvz59xscDb_g" name="RBACRole dsod1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXbzMXjMEeGvz59xscDb_g" name="Restricted permission"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXcaQXjMEeGvz59xscDb_g" name="Granted operation"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXdoYHjMEeGvz59xscDb_g" name="Granted interaction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXePcXjMEeGvz59xscDb_g" name="Forbidden operation"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXe2gXjMEeGvz59xscDb_g" name="Forbidden interaction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXfdkXjMEeGvz59xscDb_g" name="ActivateRoles rBACRole"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXgEoXjMEeGvz59xscDb_g" name="DeactivateRoles rBACRole"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jXhSwHjMEeGvz59xscDb_g" name="Palette Stacks">
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXjvAHjMEeGvz59xscDb_g" name="Forbidden"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXkWEXjMEeGvz59xscDb_g" name="Granted"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXk9IXjMEeGvz59xscDb_g" name="DeactivateRoles"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXlkMXjMEeGvz59xscDb_g" name="RBACUser"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXmyUXjMEeGvz59xscDb_g" name="RBACRole"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXnZYXjMEeGvz59xscDb_g" name="Restricted"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXoAcXjMEeGvz59xscDb_g" name="ActivateRoles"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXongXjMEeGvz59xscDb_g" name="Permission"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jXqcsHjMEeGvz59xscDb_g" name="Palette Groups">
+        <packagedElement xmi:type="uml:Class" xmi:id="_jXsR4XjMEeGvz59xscDb_g" name="rbacUML"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jYimcHjMEeGvz59xscDb_g" name="rbacUML"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jYpUIHjMEeGvz59xscDb_g" name="Shapes">
+      <packagedElement xmi:type="uml:Class" xmi:id="_jYqiQXjMEeGvz59xscDb_g" name="RBACUserActivityPartition"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jYtlkHjMEeGvz59xscDb_g" name="Styles">
+        <packagedElement xmi:type="uml:Class" xmi:id="_jYuMoXjMEeGvz59xscDb_g" name="UMLShapeStyle">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jYuzsXjMEeGvz59xscDb_g" name="showStereotype"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jY7oAHjMEeGvz59xscDb_g" name="FontStyle"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jY8PEXjMEeGvz59xscDb_g" name="LineStyle"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jY82IXjMEeGvz59xscDb_g" name="RoutingStyle"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jYvawXjMEeGvz59xscDb_g" name="RBACUserClass"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jYwB0XjMEeGvz59xscDb_g" name="RBACUserStereotype"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jYwo4XjMEeGvz59xscDb_g" name="RBACRoleClass"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jYxP8XjMEeGvz59xscDb_g" name="RBACRoleStereotype"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jYx3AXjMEeGvz59xscDb_g" name="PermissionClass"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jYyeEHjMEeGvz59xscDb_g" name="PermissionStereotype"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jYzFIHjMEeGvz59xscDb_g" name="RestrictedOperation"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jYzFInjMEeGvz59xscDb_g" name="RestrictedMessage"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jYzsMXjMEeGvz59xscDb_g" name="GrantedOpaqueAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY0TQXjMEeGvz59xscDb_g" name="GrantedCallOperationAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY0TQ3jMEeGvz59xscDb_g" name="GrantedCallBehaviorAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY06UXjMEeGvz59xscDb_g" name="ForbiddenOpaqueAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY1hYXjMEeGvz59xscDb_g" name="ForbiddenCallOperationAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY2IcXjMEeGvz59xscDb_g" name="ForbiddenCallBehaviorAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY2Ic3jMEeGvz59xscDb_g" name="ActivateRolesOpaqueAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY2vgXjMEeGvz59xscDb_g" name="ActivateRolesCallOperationAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY39oHjMEeGvz59xscDb_g" name="ActivateRolesCallBehaviorAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY4ksHjMEeGvz59xscDb_g" name="DeactivateRolesOpaqueAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY5LwXjMEeGvz59xscDb_g" name="DeactivateRolesCallOperationAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY5y0XjMEeGvz59xscDb_g" name="DeactivateRolesCallBehaviorAction"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY6Z4XjMEeGvz59xscDb_g" name="RBACUserrBACRoleRBACRole">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_jY9dMXjMEeGvz59xscDb_g" name="RBACUserrBACRoleRBACRole">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jY-rUHjMEeGvz59xscDb_g" name="RBACUserrBACRoleRBACRole"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jY_SYHjMEeGvz59xscDb_g" name="RBACUseraliasUserRBACUser">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_jY_5cXjMEeGvz59xscDb_g" name="RBACUseraliasUserRBACUser">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jZAggXjMEeGvz59xscDb_g" name="RBACUseraliasUserRBACUser"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jZBHkHjMEeGvz59xscDb_g" name="RBACRolepermissionPermission">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_jZBuoXjMEeGvz59xscDb_g" name="RBACRolepermissionPermission">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jZCVsXjMEeGvz59xscDb_g" name="RBACRolepermissionPermission"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jZC8wXjMEeGvz59xscDb_g" name="RBACRolessod1RBACRole">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_jZDj0XjMEeGvz59xscDb_g" name="RBACRolessod1RBACRole">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jZEK4HjMEeGvz59xscDb_g" name="RBACRolessod1RBACRole"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jZEx8HjMEeGvz59xscDb_g" name="RBACRoledsod1RBACRole">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_jZFZAXjMEeGvz59xscDb_g" name="RBACRoledsod1RBACRole">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jZGAEXjMEeGvz59xscDb_g" name="RBACRoledsod1RBACRole"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jZGnIHjMEeGvz59xscDb_g" name="RestrictedpermissionPermission">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_jZHOMXjMEeGvz59xscDb_g" name="RestrictedpermissionPermission">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jZIcUHjMEeGvz59xscDb_g" name="RestrictedpermissionPermission"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jZJDYHjMEeGvz59xscDb_g" name="GrantedoperationOperation">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_jZJqcHjMEeGvz59xscDb_g" name="GrantedoperationOperation">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jZKRgHjMEeGvz59xscDb_g" name="GrantedoperationOperation"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jZKRgnjMEeGvz59xscDb_g" name="GrantedinteractionInteraction">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_jZK4kXjMEeGvz59xscDb_g" name="GrantedinteractionInteraction">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jZLfoXjMEeGvz59xscDb_g" name="GrantedinteractionInteraction"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jZMGsXjMEeGvz59xscDb_g" name="ForbiddenoperationOperation">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_jZMtwXjMEeGvz59xscDb_g" name="ForbiddenoperationOperation">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jZNU0XjMEeGvz59xscDb_g" name="ForbiddenoperationOperation"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jZN74HjMEeGvz59xscDb_g" name="ForbiddeninteractionInteraction">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_jZqn0HjMEeGvz59xscDb_g" name="ForbiddeninteractionInteraction">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jZrO4XjMEeGvz59xscDb_g" name="ForbiddeninteractionInteraction"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jZr18XjMEeGvz59xscDb_g" name="ActivateRolesrBACRoleRBACRole">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_jZsdAXjMEeGvz59xscDb_g" name="ActivateRolesrBACRoleRBACRole">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jZtEEHjMEeGvz59xscDb_g" name="ActivateRolesrBACRoleRBACRole"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jZtrIHjMEeGvz59xscDb_g" name="DeactivateRolesrBACRoleRBACRole">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_jZuSMHjMEeGvz59xscDb_g" name="DeactivateRolesrBACRoleRBACRole">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_jZu5QXjMEeGvz59xscDb_g" name="DeactivateRolesrBACRoleRBACRole"/>
+        </nestedClassifier>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jZvgUXjMEeGvz59xscDb_g" name="Properties">
+      <packagedElement xmi:type="uml:Package" xmi:id="_jZ7tkHjMEeGvz59xscDb_g" name="Property Sections">
+        <packagedElement xmi:type="uml:Class" xmi:id="_jZ8UoXjMEeGvz59xscDb_g" name="&lt;RBACUser> ActivityPartition"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jZ-w4HjMEeGvz59xscDb_g" name="&lt;RBACUser> Class"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jZ_X8njMEeGvz59xscDb_g" name="&lt;RBACUser> Stereotype"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaAmEXjMEeGvz59xscDb_g" name="&lt;RBACRole> Class"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaBNI3jMEeGvz59xscDb_g" name="&lt;RBACRole> Stereotype"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaCbQXjMEeGvz59xscDb_g" name="&lt;Permission> Class"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaDpYXjMEeGvz59xscDb_g" name="&lt;Permission> Stereotype"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaE3gHjMEeGvz59xscDb_g" name="&lt;Restricted> Operation"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaFekXjMEeGvz59xscDb_g" name="&lt;Restricted> Message"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaGssHjMEeGvz59xscDb_g" name="&lt;Granted> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaHTwnjMEeGvz59xscDb_g" name="&lt;Granted> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaIh4XjMEeGvz59xscDb_g" name="&lt;Granted> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaJwAXjMEeGvz59xscDb_g" name="&lt;Forbidden> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaLlMHjMEeGvz59xscDb_g" name="&lt;Forbidden> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaMMQXjMEeGvz59xscDb_g" name="&lt;Forbidden> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaNaYHjMEeGvz59xscDb_g" name="&lt;ActivateRoles> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaOBcXjMEeGvz59xscDb_g" name="&lt;ActivateRoles> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaPPkXjMEeGvz59xscDb_g" name="&lt;ActivateRoles> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaP2onjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaREwXjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaSS4XjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> CallBehaviorAction"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jZ87sXjMEeGvz59xscDb_g" name="Property Tabs">
+        <packagedElement xmi:type="uml:Class" xmi:id="_jZ9iwXjMEeGvz59xscDb_g" name="&lt;RBACUser> ActivityPartition"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jZ_X8HjMEeGvz59xscDb_g" name="&lt;RBACUser> Class"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jZ__AXjMEeGvz59xscDb_g" name="&lt;RBACUser> Stereotype"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaBNIXjMEeGvz59xscDb_g" name="&lt;RBACRole> Class"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaB0MXjMEeGvz59xscDb_g" name="&lt;RBACRole> Stereotype"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaDCUXjMEeGvz59xscDb_g" name="&lt;Permission> Class"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaEQcXjMEeGvz59xscDb_g" name="&lt;Permission> Stereotype"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaE3gnjMEeGvz59xscDb_g" name="&lt;Restricted> Operation"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaGFoHjMEeGvz59xscDb_g" name="&lt;Restricted> Message"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaHTwHjMEeGvz59xscDb_g" name="&lt;Granted> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaH60XjMEeGvz59xscDb_g" name="&lt;Granted> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaJI8XjMEeGvz59xscDb_g" name="&lt;Granted> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaK-IHjMEeGvz59xscDb_g" name="&lt;Forbidden> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaLlMnjMEeGvz59xscDb_g" name="&lt;Forbidden> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaMzUXjMEeGvz59xscDb_g" name="&lt;Forbidden> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaNaYnjMEeGvz59xscDb_g" name="&lt;ActivateRoles> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaOogXjMEeGvz59xscDb_g" name="&lt;ActivateRoles> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaP2oHjMEeGvz59xscDb_g" name="&lt;ActivateRoles> CallBehaviorAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaQdsXjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> OpaqueAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaRr0XjMEeGvz59xscDb_g" name="&lt;DeactivateRoles> CallOperationAction"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaSS43jMEeGvz59xscDb_g" name="&lt;DeactivateRoles> CallBehaviorAction"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jaS58XjMEeGvz59xscDb_g" name="Property Categories">
+        <packagedElement xmi:type="uml:Class" xmi:id="_jaUIEXjMEeGvz59xscDb_g" name="rbacUML"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jbHZUHjMEeGvz59xscDb_g" name="rbacUML"/>
+    </packagedElement>
+    <profileApplication xmi:id="_jJFOIHjMEeGvz59xscDb_g">
+      <eAnnotations xmi:id="_jJbMYHjMEeGvz59xscDb_g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PROFILE_TOOLING/DSLToolProfile.epx#_IAVnISm0Ed2i6JGuVYCC5A?DSLToolProfile/DSLToolProfile?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://PROFILE_TOOLING/DSLToolProfile.epx#_3yOsgKM6EdyoFfoXSVZpEg?DSLToolProfile?"/>
+    </profileApplication>
+  </uml:Model>
+  <DSLToolProfile:ToolingModel xmi:id="_jRZcoHjMEeGvz59xscDb_g" base_Model="_i_J2EHjMEeGvz59xscDb_g" deploymentFolder="profiles" applicationName="rbacUML" projectName="uk.ac.open.rbacuml.plugin.rbacUML.tooling" profileName="rbacUML" profileURI="platform:/resource/uk.ac.open.rbacuml.plugin/profiles/rbacUML.epx" profileVersion="54" basePackage="uk.ac.open.rbacuml.plugin" rsmVersion="8.0"/>
+  <DSLToolProfile:EditHelpers xmi:id="_jRb44HjMEeGvz59xscDb_g" base_Package="_i_J2EHjMEeGvz59xscDb_g" applyProfileAdviceClassName="RbacUMLApplyProfileAdvice" baseEditHelperAdviceClassName="RbacUMLBaseEditHelperAdvice" baseEditHelperClassName="RbacUMLBaseEditHelper"/>
+  <DSLToolProfile:Figures xmi:id="_jRdHAHjMEeGvz59xscDb_g" base_Package="_i_J2EHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:L10N xmi:id="_jRduEHjMEeGvz59xscDb_g" base_Package="_i_J2EHjMEeGvz59xscDb_g" messagesClassName="RbacUMLMessages"/>
+  <DSLToolProfile:Providers xmi:id="_jReVIHjMEeGvz59xscDb_g" base_Package="_i_J2EHjMEeGvz59xscDb_g" viewProviderClassName="RbacUMLViewProvider" editPartProviderClassName="RbacUMLEditPartProvider" modelingAssistantClassName="RbacUMLModelingAssistant" contributionItemProviderClassName="RbacUMLContributionItemProvider" defaultViewProviderClassName="RbacUMLDefaultViewProvider"/>
+  <DSLToolProfile:Utils xmi:id="_jRfjQHjMEeGvz59xscDb_g" base_Package="_i_J2EHjMEeGvz59xscDb_g" semanticHintsClassName="RbacUMLSemanticHints" elementTypesClassName="RbacUMLElementTypes" domainUtilClassName="RbacUMLUtil"/>
+  <DSLToolProfile:Activity xmi:id="_jSZiMHjMEeGvz59xscDb_g" base_Class="_jSTbkHjMEeGvz59xscDb_g" description="" id="uk.ac.open.rbacuml.plugin.uireduction.activity"/>
+  <DSLToolProfile:Wizards xmi:id="_jSdzoHjMEeGvz59xscDb_g" base_Package="_jSb-cHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:Template xmi:id="_jSfo0HjMEeGvz59xscDb_g" base_Class="_jSeasHjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.core.templates.RbacUMLModel" description="Create a rbacUML Model" modelName="rbacUML Model" icon="RbacUMLModel.gif" templateFile="RbacUMLModel.emx"/>
+  <DSLToolProfile:TemplateCategory xmi:id="_jSiFEHjMEeGvz59xscDb_g" base_Class="_jSg28HjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.core.category"/>
+  <DSLToolProfile:Activity xmi:id="_jSj6QHjMEeGvz59xscDb_g" base_Class="_jSisIHjMEeGvz59xscDb_g" description="Activity for uk.ac.open.rbacuml.plugin" id="uk.ac.open.rbacuml.plugin.core.activity"/>
+  <DSLToolProfile:TemplateContribution xmi:id="_jSm9kHjMEeGvz59xscDb_g" base_Class="_jSlIYHjMEeGvz59xscDb_g" template="_jSfo0HjMEeGvz59xscDb_g" category="_jSiFEHjMEeGvz59xscDb_g" templateDirectory="templates" activity="_jSj6QHjMEeGvz59xscDb_g" templateModelHandlerClassName="RbacUMLTemplateModelHandler"/>
+  <DSLToolProfile:Profile xmi:id="_jS870HjMEeGvz59xscDb_g" base_Class="_jS7tsHjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.rbacUML" visible="true"/>
+  <DSLToolProfile:PathMap xmi:id="_jTAmMHjMEeGvz59xscDb_g" base_Class="_jS_YEHjMEeGvz59xscDb_g" location="profiles"/>
+  <DSLToolProfile:ElementTypes xmi:id="_jTCbYHjMEeGvz59xscDb_g" base_Package="_jTBNQHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVU6YHjMEeGvz59xscDb_g" base_Class="_jVTsQHjMEeGvz59xscDb_g" displayName="&lt;RBACUser> ActivityPartition" id="uk.ac.open.rbacuml.plugin.RBACUserActivityPartition" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="RBACUserActivityPartitionEditHelperAdvice" matcherClassName="RBACUserActivityPartitionMatcher" specializesId="com.ibm.xtools.uml.activityPartition">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_bbn9kHioEeGfYppGxhP38A?rbacUML/RBACUser?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVWIgHjMEeGvz59xscDb_g" base_Class="_jVU6YXjMEeGvz59xscDb_g" displayName="&lt;RBACUser> Class" id="uk.ac.open.rbacuml.plugin.RBACUserClass" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="RBACUserClassEditHelperAdvice" matcherClassName="RBACUserClassMatcher" specializesId="com.ibm.xtools.uml.class">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_bbn9kHioEeGfYppGxhP38A?rbacUML/RBACUser?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVWvkHjMEeGvz59xscDb_g" base_Class="_jVWIgXjMEeGvz59xscDb_g" displayName="&lt;RBACUser> Stereotype" id="uk.ac.open.rbacuml.plugin.RBACUserStereotype" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="RBACUserStereotypeEditHelperAdvice" matcherClassName="RBACUserStereotypeMatcher" specializesId="com.ibm.xtools.uml.stereotype">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_bbn9kHioEeGfYppGxhP38A?rbacUML/RBACUser?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVX9sHjMEeGvz59xscDb_g" base_Class="_jVXWoHjMEeGvz59xscDb_g" displayName="&lt;RBACRole> Class" id="uk.ac.open.rbacuml.plugin.RBACRoleClass" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="RBACRoleClassEditHelperAdvice" matcherClassName="RBACRoleClassMatcher" specializesId="com.ibm.xtools.uml.class">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_cGgGkHioEeGfYppGxhP38A?rbacUML/RBACRole?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVYkwHjMEeGvz59xscDb_g" base_Class="_jVX9sXjMEeGvz59xscDb_g" displayName="&lt;RBACRole> Stereotype" id="uk.ac.open.rbacuml.plugin.RBACRoleStereotype" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="RBACRoleStereotypeEditHelperAdvice" matcherClassName="RBACRoleStereotypeMatcher" specializesId="com.ibm.xtools.uml.stereotype">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_cGgGkHioEeGfYppGxhP38A?rbacUML/RBACRole?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVZy4HjMEeGvz59xscDb_g" base_Class="_jVZL0HjMEeGvz59xscDb_g" displayName="&lt;Permission> Class" id="uk.ac.open.rbacuml.plugin.PermissionClass" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="PermissionClassEditHelperAdvice" matcherClassName="PermissionClassMatcher" specializesId="com.ibm.xtools.uml.class">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_ewmVUHioEeGfYppGxhP38A?rbacUML/Permission?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVaZ8HjMEeGvz59xscDb_g" base_Class="_jVZy4XjMEeGvz59xscDb_g" displayName="&lt;Permission> Stereotype" id="uk.ac.open.rbacuml.plugin.PermissionStereotype" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="PermissionStereotypeEditHelperAdvice" matcherClassName="PermissionStereotypeMatcher" specializesId="com.ibm.xtools.uml.stereotype">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_ewmVUHioEeGfYppGxhP38A?rbacUML/Permission?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVbBAXjMEeGvz59xscDb_g" base_Class="_jVbBAHjMEeGvz59xscDb_g" displayName="&lt;Restricted> Operation" id="uk.ac.open.rbacuml.plugin.RestrictedOperation" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="RestrictedOperationEditHelperAdvice" matcherClassName="RestrictedOperationMatcher" specializesId="com.ibm.xtools.uml.operation">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_3JImcHioEeGfYppGxhP38A?rbacUML/Restricted?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeLinkSpecializationElementType xmi:id="_jVcPIHjMEeGvz59xscDb_g" base_Class="_jVboEHjMEeGvz59xscDb_g" displayName="&lt;Restricted> Message" id="uk.ac.open.rbacuml.plugin.RestrictedMessage" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="RestrictedMessageEditHelperAdvice" matcherClassName="RestrictedMessageMatcher" specializesId="com.ibm.xtools.uml.synchCallMessage">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_3JImcHioEeGfYppGxhP38A?rbacUML/Restricted?"/>
+  </DSLToolProfile:StereotypeLinkSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVc2MXjMEeGvz59xscDb_g" base_Class="_jVc2MHjMEeGvz59xscDb_g" displayName="&lt;Granted> OpaqueAction" id="uk.ac.open.rbacuml.plugin.GrantedOpaqueAction" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="GrantedOpaqueActionEditHelperAdvice" matcherClassName="GrantedOpaqueActionMatcher" specializesId="com.ibm.xtools.uml.action">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_KEe2IHipEeGfYppGxhP38A?rbacUML/Granted?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVeEUHjMEeGvz59xscDb_g" base_Class="_jVddQHjMEeGvz59xscDb_g" displayName="&lt;Granted> CallOperationAction" id="uk.ac.open.rbacuml.plugin.GrantedCallOperationAction" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="GrantedCallOperationActionEditHelperAdvice" matcherClassName="GrantedCallOperationActionMatcher" specializesId="com.ibm.xtools.uml.callOperationAction">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_KEe2IHipEeGfYppGxhP38A?rbacUML/Granted?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVerYHjMEeGvz59xscDb_g" base_Class="_jVeEUXjMEeGvz59xscDb_g" displayName="&lt;Granted> CallBehaviorAction" id="uk.ac.open.rbacuml.plugin.GrantedCallBehaviorAction" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="GrantedCallBehaviorActionEditHelperAdvice" matcherClassName="GrantedCallBehaviorActionMatcher" specializesId="com.ibm.xtools.uml.callBehaviorAction">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_KEe2IHipEeGfYppGxhP38A?rbacUML/Granted?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVfScHjMEeGvz59xscDb_g" base_Class="_jVerYXjMEeGvz59xscDb_g" displayName="&lt;Forbidden> OpaqueAction" id="uk.ac.open.rbacuml.plugin.ForbiddenOpaqueAction" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="ForbiddenOpaqueActionEditHelperAdvice" matcherClassName="ForbiddenOpaqueActionMatcher" specializesId="com.ibm.xtools.uml.action">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_K47x4HipEeGfYppGxhP38A?rbacUML/Forbidden?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVf5gHjMEeGvz59xscDb_g" base_Class="_jVfScXjMEeGvz59xscDb_g" displayName="&lt;Forbidden> CallOperationAction" id="uk.ac.open.rbacuml.plugin.ForbiddenCallOperationAction" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="ForbiddenCallOperationActionEditHelperAdvice" matcherClassName="ForbiddenCallOperationActionMatcher" specializesId="com.ibm.xtools.uml.callOperationAction">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_K47x4HipEeGfYppGxhP38A?rbacUML/Forbidden?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVggkHjMEeGvz59xscDb_g" base_Class="_jVf5gXjMEeGvz59xscDb_g" displayName="&lt;Forbidden> CallBehaviorAction" id="uk.ac.open.rbacuml.plugin.ForbiddenCallBehaviorAction" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="ForbiddenCallBehaviorActionEditHelperAdvice" matcherClassName="ForbiddenCallBehaviorActionMatcher" specializesId="com.ibm.xtools.uml.callBehaviorAction">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_K47x4HipEeGfYppGxhP38A?rbacUML/Forbidden?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVhusHjMEeGvz59xscDb_g" base_Class="_jVhHoHjMEeGvz59xscDb_g" displayName="&lt;ActivateRoles> OpaqueAction" id="uk.ac.open.rbacuml.plugin.ActivateRolesOpaqueAction" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="ActivateRolesOpaqueActionEditHelperAdvice" matcherClassName="ActivateRolesOpaqueActionMatcher" specializesId="com.ibm.xtools.uml.action">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_AC61IHiqEeGfYppGxhP38A?rbacUML/ActivateRoles?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jViVwHjMEeGvz59xscDb_g" base_Class="_jVhusXjMEeGvz59xscDb_g" displayName="&lt;ActivateRoles> CallOperationAction" id="uk.ac.open.rbacuml.plugin.ActivateRolesCallOperationAction" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="ActivateRolesCallOperationActionEditHelperAdvice" matcherClassName="ActivateRolesCallOperationActionMatcher" specializesId="com.ibm.xtools.uml.callOperationAction">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_AC61IHiqEeGfYppGxhP38A?rbacUML/ActivateRoles?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVi80XjMEeGvz59xscDb_g" base_Class="_jVi80HjMEeGvz59xscDb_g" displayName="&lt;ActivateRoles> CallBehaviorAction" id="uk.ac.open.rbacuml.plugin.ActivateRolesCallBehaviorAction" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="ActivateRolesCallBehaviorActionEditHelperAdvice" matcherClassName="ActivateRolesCallBehaviorActionMatcher" specializesId="com.ibm.xtools.uml.callBehaviorAction">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_AC61IHiqEeGfYppGxhP38A?rbacUML/ActivateRoles?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVkK8HjMEeGvz59xscDb_g" base_Class="_jVjj4HjMEeGvz59xscDb_g" displayName="&lt;DeactivateRoles> OpaqueAction" id="uk.ac.open.rbacuml.plugin.DeactivateRolesOpaqueAction" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="DeactivateRolesOpaqueActionEditHelperAdvice" matcherClassName="DeactivateRolesOpaqueActionMatcher" specializesId="com.ibm.xtools.uml.action">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_Ce4hQHiqEeGfYppGxhP38A?rbacUML/DeactivateRoles?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVkyAHjMEeGvz59xscDb_g" base_Class="_jVkK8XjMEeGvz59xscDb_g" displayName="&lt;DeactivateRoles> CallOperationAction" id="uk.ac.open.rbacuml.plugin.DeactivateRolesCallOperationAction" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="DeactivateRolesCallOperationActionEditHelperAdvice" matcherClassName="DeactivateRolesCallOperationActionMatcher" specializesId="com.ibm.xtools.uml.callOperationAction">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_Ce4hQHiqEeGfYppGxhP38A?rbacUML/DeactivateRoles?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:StereotypeSpecializationElementType xmi:id="_jVmAIHjMEeGvz59xscDb_g" base_Class="_jVlZEHjMEeGvz59xscDb_g" displayName="&lt;DeactivateRoles> CallBehaviorAction" id="uk.ac.open.rbacuml.plugin.DeactivateRolesCallBehaviorAction" kind="com.ibm.xtools.uml.type.IStereotypedElementType" adviceClassName="DeactivateRolesCallBehaviorActionEditHelperAdvice" matcherClassName="DeactivateRolesCallBehaviorActionMatcher" specializesId="com.ibm.xtools.uml.callBehaviorAction">
+    <stereotypeGenClass href="../profiles/rbacUML.epx#_Ce4hQHiqEeGfYppGxhP38A?rbacUML/DeactivateRoles?"/>
+  </DSLToolProfile:StereotypeSpecializationElementType>
+  <DSLToolProfile:LinkSpecializationElementType xmi:id="_jVmnMHjMEeGvz59xscDb_g" base_Class="_jVmAIXjMEeGvz59xscDb_g" displayName="RBACUser rBACRole" icon="/icons/default.gif" id="uk.ac.open.rbacuml.plugin.RBACUserrBACRoleRBACRole" adviceClassName="RBACUserrBACRoleRBACRoleEditHelperAdvice" matcherClassName="RBACUserrBACRoleRBACRoleMatcher" specializesId="org.eclipse.gmf.runtime.emf.type.core.null" source="_jVWvkHjMEeGvz59xscDb_g _jVU6YHjMEeGvz59xscDb_g _jVWIgHjMEeGvz59xscDb_g" target="_jVX9sHjMEeGvz59xscDb_g _jVYkwHjMEeGvz59xscDb_g" sourceFeature="rBACRole"/>
+  <DSLToolProfile:LinkSpecializationElementType xmi:id="_jVn1UHjMEeGvz59xscDb_g" base_Class="_jVmnMXjMEeGvz59xscDb_g" displayName="RBACUser aliasUser" icon="/icons/default.gif" id="uk.ac.open.rbacuml.plugin.RBACUseraliasUserRBACUser" adviceClassName="RBACUseraliasUserRBACUserEditHelperAdvice" matcherClassName="RBACUseraliasUserRBACUserMatcher" specializesId="org.eclipse.gmf.runtime.emf.type.core.null" source="_jVWvkHjMEeGvz59xscDb_g _jVU6YHjMEeGvz59xscDb_g _jVWIgHjMEeGvz59xscDb_g" target="_jVWvkHjMEeGvz59xscDb_g _jVU6YHjMEeGvz59xscDb_g _jVWIgHjMEeGvz59xscDb_g" sourceFeature="aliasUser"/>
+  <DSLToolProfile:LinkSpecializationElementType xmi:id="_jVocYHjMEeGvz59xscDb_g" base_Class="_jVn1UXjMEeGvz59xscDb_g" displayName="RBACRole permission" icon="/icons/default.gif" id="uk.ac.open.rbacuml.plugin.RBACRolepermissionPermission" adviceClassName="RBACRolepermissionPermissionEditHelperAdvice" matcherClassName="RBACRolepermissionPermissionMatcher" specializesId="org.eclipse.gmf.runtime.emf.type.core.null" source="_jVX9sHjMEeGvz59xscDb_g _jVYkwHjMEeGvz59xscDb_g" target="_jVaZ8HjMEeGvz59xscDb_g _jVZy4HjMEeGvz59xscDb_g" sourceFeature="permission"/>
+  <DSLToolProfile:LinkSpecializationElementType xmi:id="_jVpDcHjMEeGvz59xscDb_g" base_Class="_jVocYXjMEeGvz59xscDb_g" displayName="RBACRole ssod1" icon="/icons/default.gif" id="uk.ac.open.rbacuml.plugin.RBACRolessod1RBACRole" adviceClassName="RBACRolessod1RBACRoleEditHelperAdvice" matcherClassName="RBACRolessod1RBACRoleMatcher" specializesId="org.eclipse.gmf.runtime.emf.type.core.null" source="_jVX9sHjMEeGvz59xscDb_g _jVYkwHjMEeGvz59xscDb_g" target="_jVX9sHjMEeGvz59xscDb_g _jVYkwHjMEeGvz59xscDb_g" sourceFeature="ssod1"/>
+  <DSLToolProfile:LinkSpecializationElementType xmi:id="_jVpqgXjMEeGvz59xscDb_g" base_Class="_jVpqgHjMEeGvz59xscDb_g" displayName="RBACRole dsod1" icon="/icons/default.gif" id="uk.ac.open.rbacuml.plugin.RBACRoledsod1RBACRole" adviceClassName="RBACRoledsod1RBACRoleEditHelperAdvice" matcherClassName="RBACRoledsod1RBACRoleMatcher" specializesId="org.eclipse.gmf.runtime.emf.type.core.null" source="_jVX9sHjMEeGvz59xscDb_g _jVYkwHjMEeGvz59xscDb_g" target="_jVX9sHjMEeGvz59xscDb_g _jVYkwHjMEeGvz59xscDb_g" sourceFeature="dsod1"/>
+  <DSLToolProfile:LinkSpecializationElementType xmi:id="_jVq4oHjMEeGvz59xscDb_g" base_Class="_jVqRkHjMEeGvz59xscDb_g" displayName="Restricted permission" icon="/icons/default.gif" id="uk.ac.open.rbacuml.plugin.RestrictedpermissionPermission" adviceClassName="RestrictedpermissionPermissionEditHelperAdvice" matcherClassName="RestrictedpermissionPermissionMatcher" specializesId="org.eclipse.gmf.runtime.emf.type.core.null" source="_jVcPIHjMEeGvz59xscDb_g _jVbBAXjMEeGvz59xscDb_g" target="_jVaZ8HjMEeGvz59xscDb_g _jVZy4HjMEeGvz59xscDb_g" sourceFeature="permission"/>
+  <DSLToolProfile:MetaclassLinkSpecializationElementType xmi:id="_jVst0HjMEeGvz59xscDb_g" base_Class="_jVsGwHjMEeGvz59xscDb_g" displayName="Granted operation" icon="/icons/default.gif" id="uk.ac.open.rbacuml.plugin.GrantedoperationOperation" adviceClassName="GrantedoperationOperationEditHelperAdvice" matcherClassName="GrantedoperationOperationMatcher" specializesId="org.eclipse.gmf.runtime.emf.type.core.null" source="_jVeEUHjMEeGvz59xscDb_g _jVc2MXjMEeGvz59xscDb_g _jVerYHjMEeGvz59xscDb_g" sourceFeature="operation">
+    <target href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
+  </DSLToolProfile:MetaclassLinkSpecializationElementType>
+  <DSLToolProfile:MetaclassLinkSpecializationElementType xmi:id="_jVt78HjMEeGvz59xscDb_g" base_Class="_jVtU4HjMEeGvz59xscDb_g" displayName="Granted interaction" icon="/icons/default.gif" id="uk.ac.open.rbacuml.plugin.GrantedinteractionInteraction" adviceClassName="GrantedinteractionInteractionEditHelperAdvice" matcherClassName="GrantedinteractionInteractionMatcher" specializesId="org.eclipse.gmf.runtime.emf.type.core.null" source="_jVeEUHjMEeGvz59xscDb_g _jVc2MXjMEeGvz59xscDb_g _jVerYHjMEeGvz59xscDb_g" sourceFeature="interaction">
+    <target href="pathmap://UML_METAMODELS/UML.metamodel.uml#Interaction"/>
+  </DSLToolProfile:MetaclassLinkSpecializationElementType>
+  <DSLToolProfile:MetaclassLinkSpecializationElementType xmi:id="_jVvxIHjMEeGvz59xscDb_g" base_Class="_jVujAHjMEeGvz59xscDb_g" displayName="Forbidden operation" icon="/icons/default.gif" id="uk.ac.open.rbacuml.plugin.ForbiddenoperationOperation" adviceClassName="ForbiddenoperationOperationEditHelperAdvice" matcherClassName="ForbiddenoperationOperationMatcher" specializesId="org.eclipse.gmf.runtime.emf.type.core.null" source="_jVggkHjMEeGvz59xscDb_g _jVfScHjMEeGvz59xscDb_g _jVf5gHjMEeGvz59xscDb_g" sourceFeature="operation">
+    <target href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
+  </DSLToolProfile:MetaclassLinkSpecializationElementType>
+  <DSLToolProfile:MetaclassLinkSpecializationElementType xmi:id="_jVw_QHjMEeGvz59xscDb_g" base_Class="_jVwYMHjMEeGvz59xscDb_g" displayName="Forbidden interaction" icon="/icons/default.gif" id="uk.ac.open.rbacuml.plugin.ForbiddeninteractionInteraction" adviceClassName="ForbiddeninteractionInteractionEditHelperAdvice" matcherClassName="ForbiddeninteractionInteractionMatcher" specializesId="org.eclipse.gmf.runtime.emf.type.core.null" source="_jVggkHjMEeGvz59xscDb_g _jVfScHjMEeGvz59xscDb_g _jVf5gHjMEeGvz59xscDb_g" sourceFeature="interaction">
+    <target href="pathmap://UML_METAMODELS/UML.metamodel.uml#Interaction"/>
+  </DSLToolProfile:MetaclassLinkSpecializationElementType>
+  <DSLToolProfile:LinkSpecializationElementType xmi:id="_jVyNYHjMEeGvz59xscDb_g" base_Class="_jVxmUHjMEeGvz59xscDb_g" displayName="ActivateRoles rBACRole" icon="/icons/default.gif" id="uk.ac.open.rbacuml.plugin.ActivateRolesrBACRoleRBACRole" adviceClassName="ActivateRolesrBACRoleRBACRoleEditHelperAdvice" matcherClassName="ActivateRolesrBACRoleRBACRoleMatcher" specializesId="org.eclipse.gmf.runtime.emf.type.core.null" source="_jVi80XjMEeGvz59xscDb_g _jVhusHjMEeGvz59xscDb_g _jViVwHjMEeGvz59xscDb_g" target="_jVX9sHjMEeGvz59xscDb_g _jVYkwHjMEeGvz59xscDb_g" sourceFeature="rBACRole"/>
+  <DSLToolProfile:LinkSpecializationElementType xmi:id="_jVy0cHjMEeGvz59xscDb_g" base_Class="_jVyNYXjMEeGvz59xscDb_g" displayName="DeactivateRoles rBACRole" icon="/icons/default.gif" id="uk.ac.open.rbacuml.plugin.DeactivateRolesrBACRoleRBACRole" adviceClassName="DeactivateRolesrBACRoleRBACRoleEditHelperAdvice" matcherClassName="DeactivateRolesrBACRoleRBACRoleMatcher" specializesId="org.eclipse.gmf.runtime.emf.type.core.null" source="_jVkyAHjMEeGvz59xscDb_g _jVmAIHjMEeGvz59xscDb_g _jVkK8HjMEeGvz59xscDb_g" target="_jVX9sHjMEeGvz59xscDb_g _jVYkwHjMEeGvz59xscDb_g" sourceFeature="rBACRole"/>
+  <DSLToolProfile:Menus xmi:id="_jV0CkHjMEeGvz59xscDb_g" base_Package="_jVzbgHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuActions xmi:id="_jV2e0HjMEeGvz59xscDb_g" base_Package="_jV0poHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV3s8HjMEeGvz59xscDb_g" base_Class="_jV3F4HjMEeGvz59xscDb_g" id="_RBACUser__ActivityPartition" elementType="_jVU6YHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV47EHjMEeGvz59xscDb_g" base_Class="_jV4UAHjMEeGvz59xscDb_g" id="_RBACUser__Class" elementType="_jVWIgHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV5iIHjMEeGvz59xscDb_g" base_Class="_jV47EXjMEeGvz59xscDb_g" id="_RBACUser__Stereotype" elementType="_jVWvkHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV6JMHjMEeGvz59xscDb_g" base_Class="_jV5iIXjMEeGvz59xscDb_g" id="_RBACRole__Class" elementType="_jVX9sHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV6wQHjMEeGvz59xscDb_g" base_Class="_jV6JMXjMEeGvz59xscDb_g" id="_RBACRole__Stereotype" elementType="_jVYkwHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV7XUHjMEeGvz59xscDb_g" base_Class="_jV6wQXjMEeGvz59xscDb_g" id="_Permission__Class" elementType="_jVZy4HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV7-YXjMEeGvz59xscDb_g" base_Class="_jV7-YHjMEeGvz59xscDb_g" id="_Permission__Stereotype" elementType="_jVaZ8HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV8lcHjMEeGvz59xscDb_g" base_Class="_jV7-YnjMEeGvz59xscDb_g" id="_Restricted__Operation" elementType="_jVbBAXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV9MgHjMEeGvz59xscDb_g" base_Class="_jV8lcXjMEeGvz59xscDb_g" id="_Granted__OpaqueAction" elementType="_jVc2MXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV9zkHjMEeGvz59xscDb_g" base_Class="_jV9MgXjMEeGvz59xscDb_g" id="_Granted__CallOperationAction" elementType="_jVeEUHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV-aoHjMEeGvz59xscDb_g" base_Class="_jV9zkXjMEeGvz59xscDb_g" id="_Granted__CallBehaviorAction" elementType="_jVerYHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV_BsHjMEeGvz59xscDb_g" base_Class="_jV-aoXjMEeGvz59xscDb_g" id="_Forbidden__OpaqueAction" elementType="_jVfScHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jV_owHjMEeGvz59xscDb_g" base_Class="_jV_BsXjMEeGvz59xscDb_g" id="_Forbidden__CallOperationAction" elementType="_jVf5gHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jWAP0HjMEeGvz59xscDb_g" base_Class="_jV_owXjMEeGvz59xscDb_g" id="_Forbidden__CallBehaviorAction" elementType="_jVggkHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jWA24HjMEeGvz59xscDb_g" base_Class="_jWAP0XjMEeGvz59xscDb_g" id="_ActivateRoles__OpaqueAction" elementType="_jVhusHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jWBd8HjMEeGvz59xscDb_g" base_Class="_jWA24XjMEeGvz59xscDb_g" id="_ActivateRoles__CallOperationAction" elementType="_jViVwHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jWCFAHjMEeGvz59xscDb_g" base_Class="_jWBd8XjMEeGvz59xscDb_g" id="_ActivateRoles__CallBehaviorAction" elementType="_jVi80XjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jWCsEHjMEeGvz59xscDb_g" base_Class="_jWCFAXjMEeGvz59xscDb_g" id="_DeactivateRoles__OpaqueAction" elementType="_jVkK8HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jWCsEnjMEeGvz59xscDb_g" base_Class="_jWCsEXjMEeGvz59xscDb_g" id="_DeactivateRoles__CallOperationAction" elementType="_jVkyAHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuCreationAction xmi:id="_jWDTIXjMEeGvz59xscDb_g" base_Class="_jWDTIHjMEeGvz59xscDb_g" id="_DeactivateRoles__CallBehaviorAction" elementType="_jVmAIHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuGroups xmi:id="_jWFIUHjMEeGvz59xscDb_g" base_Package="_jWD6MHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:MenuGroup xmi:id="_jWG9gHjMEeGvz59xscDb_g" base_Class="_jWFIUXjMEeGvz59xscDb_g" id="defaultGroup" children="_jV3s8HjMEeGvz59xscDb_g _jWCsEnjMEeGvz59xscDb_g _jWCsEHjMEeGvz59xscDb_g _jWA24HjMEeGvz59xscDb_g _jV47EHjMEeGvz59xscDb_g _jV7XUHjMEeGvz59xscDb_g _jV5iIHjMEeGvz59xscDb_g _jV9MgHjMEeGvz59xscDb_g _jWBd8HjMEeGvz59xscDb_g _jV_owHjMEeGvz59xscDb_g _jV-aoHjMEeGvz59xscDb_g _jV8lcHjMEeGvz59xscDb_g _jWDTIXjMEeGvz59xscDb_g _jV9zkHjMEeGvz59xscDb_g _jWCFAHjMEeGvz59xscDb_g _jWAP0HjMEeGvz59xscDb_g _jV_BsHjMEeGvz59xscDb_g _jV6wQHjMEeGvz59xscDb_g _jV6JMHjMEeGvz59xscDb_g _jV7-YXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:FlyoutMenu xmi:id="_jW_HQHjMEeGvz59xscDb_g" base_Class="_jW95IHjMEeGvz59xscDb_g" id="Add_rbacUML" children="_jWG9gHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:ContextMenu xmi:id="_jXDYsHjMEeGvz59xscDb_g" base_Class="_jXCKkHjMEeGvz59xscDb_g" children="_jW_HQHjMEeGvz59xscDb_g" context="com.ibm.xtools.uml.model"/>
+  <DSLToolProfile:Palettes xmi:id="_jXI4QHjMEeGvz59xscDb_g" base_Package="_jXHqIHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteTools xmi:id="_jXKtcHjMEeGvz59xscDb_g" base_Package="_jXJfUHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXL7kHjMEeGvz59xscDb_g" base_Class="_jXLUgHjMEeGvz59xscDb_g" description="Creates a ActivityPartition with stereotype RBACUser" id="RbacUML._RBACUser__ActivityPartition" elementType="_jVU6YHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXMioHjMEeGvz59xscDb_g" base_Class="_jXL7kXjMEeGvz59xscDb_g" description="Creates a Class with stereotype RBACUser" id="RbacUML._RBACUser__Class" elementType="_jVWIgHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXNJsHjMEeGvz59xscDb_g" base_Class="_jXMioXjMEeGvz59xscDb_g" description="Creates a Stereotype with stereotype RBACUser" id="RbacUML._RBACUser__Stereotype" elementType="_jVWvkHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXNwwHjMEeGvz59xscDb_g" base_Class="_jXNJsXjMEeGvz59xscDb_g" description="Creates a Class with stereotype RBACRole" id="RbacUML._RBACRole__Class" elementType="_jVX9sHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXOX0HjMEeGvz59xscDb_g" base_Class="_jXNwwXjMEeGvz59xscDb_g" description="Creates a Stereotype with stereotype RBACRole" id="RbacUML._RBACRole__Stereotype" elementType="_jVYkwHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXO-4HjMEeGvz59xscDb_g" base_Class="_jXOX0XjMEeGvz59xscDb_g" description="Creates a Class with stereotype Permission" id="RbacUML._Permission__Class" elementType="_jVZy4HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXPl8HjMEeGvz59xscDb_g" base_Class="_jXO-4XjMEeGvz59xscDb_g" description="Creates a Stereotype with stereotype Permission" id="RbacUML._Permission__Stereotype" elementType="_jVaZ8HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXQ0EHjMEeGvz59xscDb_g" base_Class="_jXQNAHjMEeGvz59xscDb_g" description="Creates a Operation with stereotype Restricted" id="RbacUML._Restricted__Operation" elementType="_jVbBAXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXRbIHjMEeGvz59xscDb_g" base_Class="_jXQ0EXjMEeGvz59xscDb_g" description="Creates a Message with stereotype Restricted" id="RbacUML._Restricted__Message" elementType="_jVcPIHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXSpQHjMEeGvz59xscDb_g" base_Class="_jXSCMHjMEeGvz59xscDb_g" description="Creates a OpaqueAction with stereotype Granted" id="RbacUML._Granted__OpaqueAction" elementType="_jVc2MXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXTQUHjMEeGvz59xscDb_g" base_Class="_jXSpQXjMEeGvz59xscDb_g" description="Creates a CallOperationAction with stereotype Granted" id="RbacUML._Granted__CallOperationAction" elementType="_jVeEUHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXT3YXjMEeGvz59xscDb_g" base_Class="_jXT3YHjMEeGvz59xscDb_g" description="Creates a CallBehaviorAction with stereotype Granted" id="RbacUML._Granted__CallBehaviorAction" elementType="_jVerYHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXUecHjMEeGvz59xscDb_g" base_Class="_jXT3YnjMEeGvz59xscDb_g" description="Creates a OpaqueAction with stereotype Forbidden" id="RbacUML._Forbidden__OpaqueAction" elementType="_jVfScHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXVFgHjMEeGvz59xscDb_g" base_Class="_jXUecXjMEeGvz59xscDb_g" description="Creates a CallOperationAction with stereotype Forbidden" id="RbacUML._Forbidden__CallOperationAction" elementType="_jVf5gHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXVskHjMEeGvz59xscDb_g" base_Class="_jXVFgXjMEeGvz59xscDb_g" description="Creates a CallBehaviorAction with stereotype Forbidden" id="RbacUML._Forbidden__CallBehaviorAction" elementType="_jVggkHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXWToHjMEeGvz59xscDb_g" base_Class="_jXVskXjMEeGvz59xscDb_g" description="Creates a OpaqueAction with stereotype ActivateRoles" id="RbacUML._ActivateRoles__OpaqueAction" elementType="_jVhusHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXWTonjMEeGvz59xscDb_g" base_Class="_jXWToXjMEeGvz59xscDb_g" description="Creates a CallOperationAction with stereotype ActivateRoles" id="RbacUML._ActivateRoles__CallOperationAction" elementType="_jViVwHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXW6sXjMEeGvz59xscDb_g" base_Class="_jXW6sHjMEeGvz59xscDb_g" description="Creates a CallBehaviorAction with stereotype ActivateRoles" id="RbacUML._ActivateRoles__CallBehaviorAction" elementType="_jVi80XjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXXhwXjMEeGvz59xscDb_g" base_Class="_jXXhwHjMEeGvz59xscDb_g" description="Creates a OpaqueAction with stereotype DeactivateRoles" id="RbacUML._DeactivateRoles__OpaqueAction" elementType="_jVkK8HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXYI0HjMEeGvz59xscDb_g" base_Class="_jXXhwnjMEeGvz59xscDb_g" description="Creates a CallOperationAction with stereotype DeactivateRoles" id="RbacUML._DeactivateRoles__CallOperationAction" elementType="_jVkyAHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXZW8HjMEeGvz59xscDb_g" base_Class="_jXYv4HjMEeGvz59xscDb_g" description="Creates a CallBehaviorAction with stereotype DeactivateRoles" id="RbacUML._DeactivateRoles__CallBehaviorAction" elementType="_jVmAIHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXZ-AHjMEeGvz59xscDb_g" base_Class="_jXZW8XjMEeGvz59xscDb_g" description="Creates a RBACUser rBACRole" id="RbacUML.RBACUser_rBACRole" elementType="_jVmnMHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXZ-AnjMEeGvz59xscDb_g" base_Class="_jXZ-AXjMEeGvz59xscDb_g" description="Creates a RBACUser aliasUser" id="RbacUML.RBACUser_aliasUser" elementType="_jVn1UHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXalEHjMEeGvz59xscDb_g" base_Class="_jXZ-A3jMEeGvz59xscDb_g" description="Creates a RBACRole permission" id="RbacUML.RBACRole_permission" elementType="_jVocYHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXbMIHjMEeGvz59xscDb_g" base_Class="_jXalEXjMEeGvz59xscDb_g" description="Creates a RBACRole ssod1" id="RbacUML.RBACRole_ssod1" elementType="_jVpDcHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXbzMHjMEeGvz59xscDb_g" base_Class="_jXbMIXjMEeGvz59xscDb_g" description="Creates a RBACRole dsod1" id="RbacUML.RBACRole_dsod1" elementType="_jVpqgXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXcaQHjMEeGvz59xscDb_g" base_Class="_jXbzMXjMEeGvz59xscDb_g" description="Creates a Restricted permission" id="RbacUML.Restricted_permission" elementType="_jVq4oHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXdBUHjMEeGvz59xscDb_g" base_Class="_jXcaQXjMEeGvz59xscDb_g" description="Creates a Granted operation" id="RbacUML.Granted_operation" elementType="_jVst0HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXePcHjMEeGvz59xscDb_g" base_Class="_jXdoYHjMEeGvz59xscDb_g" description="Creates a Granted interaction" id="RbacUML.Granted_interaction" elementType="_jVt78HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXe2gHjMEeGvz59xscDb_g" base_Class="_jXePcXjMEeGvz59xscDb_g" description="Creates a Forbidden operation" id="RbacUML.Forbidden_operation" elementType="_jVvxIHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXfdkHjMEeGvz59xscDb_g" base_Class="_jXe2gXjMEeGvz59xscDb_g" description="Creates a Forbidden interaction" id="RbacUML.Forbidden_interaction" elementType="_jVw_QHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXgEoHjMEeGvz59xscDb_g" base_Class="_jXfdkXjMEeGvz59xscDb_g" description="Creates a ActivateRoles rBACRole" id="RbacUML.ActivateRoles_rBACRole" elementType="_jVyNYHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteCreationToolEntry xmi:id="_jXgrsHjMEeGvz59xscDb_g" base_Class="_jXgEoXjMEeGvz59xscDb_g" description="Creates a DeactivateRoles rBACRole" id="RbacUML.DeactivateRoles_rBACRole" elementType="_jVy0cHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteStacks xmi:id="_jXig4HjMEeGvz59xscDb_g" base_Package="_jXhSwHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteStack xmi:id="_jXkWEHjMEeGvz59xscDb_g" base_Class="_jXjvAHjMEeGvz59xscDb_g" description="Forbidden" id="Forbidden" children="_jXUecHjMEeGvz59xscDb_g _jXVFgHjMEeGvz59xscDb_g _jXVskHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteStack xmi:id="_jXk9IHjMEeGvz59xscDb_g" base_Class="_jXkWEXjMEeGvz59xscDb_g" description="Granted" id="Granted" children="_jXSpQHjMEeGvz59xscDb_g _jXTQUHjMEeGvz59xscDb_g _jXT3YXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteStack xmi:id="_jXlkMHjMEeGvz59xscDb_g" base_Class="_jXk9IXjMEeGvz59xscDb_g" description="DeactivateRoles" id="DeactivateRoles" children="_jXXhwXjMEeGvz59xscDb_g _jXYI0HjMEeGvz59xscDb_g _jXZW8HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteStack xmi:id="_jXmyUHjMEeGvz59xscDb_g" base_Class="_jXlkMXjMEeGvz59xscDb_g" description="RBACUser" id="RBACUser" children="_jXL7kHjMEeGvz59xscDb_g _jXMioHjMEeGvz59xscDb_g _jXNJsHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteStack xmi:id="_jXnZYHjMEeGvz59xscDb_g" base_Class="_jXmyUXjMEeGvz59xscDb_g" description="RBACRole" id="RBACRole" children="_jXNwwHjMEeGvz59xscDb_g _jXOX0HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteStack xmi:id="_jXoAcHjMEeGvz59xscDb_g" base_Class="_jXnZYXjMEeGvz59xscDb_g" description="Restricted" id="Restricted" children="_jXQ0EHjMEeGvz59xscDb_g _jXRbIHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteStack xmi:id="_jXongHjMEeGvz59xscDb_g" base_Class="_jXoAcXjMEeGvz59xscDb_g" description="ActivateRoles" id="ActivateRoles" children="_jXWToHjMEeGvz59xscDb_g _jXWTonjMEeGvz59xscDb_g _jXW6sXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteStack xmi:id="_jXp1oHjMEeGvz59xscDb_g" base_Class="_jXongXjMEeGvz59xscDb_g" description="Permission" id="Permission" children="_jXO-4HjMEeGvz59xscDb_g _jXPl8HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteGroups xmi:id="_jXsR4HjMEeGvz59xscDb_g" base_Package="_jXqcsHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PaletteDrawer xmi:id="_jXtgAHjMEeGvz59xscDb_g" base_Class="_jXsR4XjMEeGvz59xscDb_g" description="rbacUML" id="RbacUML" largeIcon="/icons/default.gif" smallIcon="/icons/default.gif" children="_jXgEoHjMEeGvz59xscDb_g _jXbzMHjMEeGvz59xscDb_g _jXgrsHjMEeGvz59xscDb_g _jXZ-AHjMEeGvz59xscDb_g _jXalEHjMEeGvz59xscDb_g _jXe2gHjMEeGvz59xscDb_g _jXfdkHjMEeGvz59xscDb_g _jXePcHjMEeGvz59xscDb_g _jXbMIHjMEeGvz59xscDb_g _jXdBUHjMEeGvz59xscDb_g _jXcaQHjMEeGvz59xscDb_g _jXZ-AnjMEeGvz59xscDb_g _jXkWEHjMEeGvz59xscDb_g _jXongHjMEeGvz59xscDb_g _jXk9IHjMEeGvz59xscDb_g _jXoAcHjMEeGvz59xscDb_g _jXnZYHjMEeGvz59xscDb_g _jXlkMHjMEeGvz59xscDb_g _jXp1oHjMEeGvz59xscDb_g _jXmyUHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:Palette xmi:id="_jYj0kHjMEeGvz59xscDb_g" base_Class="_jYimcHjMEeGvz59xscDb_g" description="rbacUML" id="rbacUML" largeIcon="/icons/default.gif" smallIcon="/icons/default.gif" children="_jXtgAHjMEeGvz59xscDb_g" factoryClassName="RbacUMLPaletteFactory" providerClassName="RbacUMLPaletteProvider">
+    <diagramKind>Class</diagramKind>
+    <diagramKind>Freeform</diagramKind>
+    <editorId>ModelerDiagramEditor</editorId>
+  </DSLToolProfile:Palette>
+  <DSLToolProfile:Shapes xmi:id="_jYqiQHjMEeGvz59xscDb_g" base_Package="_jYpUIHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jYrJUHjMEeGvz59xscDb_g" base_Class="_jYqiQXjMEeGvz59xscDb_g" elementType="_jVU6YHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="RBACUserActivityPartitionViewCustomizer"/>
+  <DSLToolProfile:Styles xmi:id="_jYuMoHjMEeGvz59xscDb_g" base_Package="_jYtlkHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:Style xmi:id="_jYuzsHjMEeGvz59xscDb_g" base_Class="_jYuMoXjMEeGvz59xscDb_g" styleClass="UMLShapeStyle" styleFeatureValues="_jYvawHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:StyleFeatureValue xmi:id="_jYvawHjMEeGvz59xscDb_g" base_Class="_jYuzsXjMEeGvz59xscDb_g" structuralFeature="showStereotype">
+    <value>Image</value>
+  </DSLToolProfile:StyleFeatureValue>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jYwB0HjMEeGvz59xscDb_g" base_Class="_jYvawXjMEeGvz59xscDb_g" elementType="_jVWIgHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="RBACUserClassViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jYwo4HjMEeGvz59xscDb_g" base_Class="_jYwB0XjMEeGvz59xscDb_g" elementType="_jVWvkHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="RBACUserStereotypeViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jYxP8HjMEeGvz59xscDb_g" base_Class="_jYwo4XjMEeGvz59xscDb_g" elementType="_jVX9sHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="RBACRoleClassViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jYx3AHjMEeGvz59xscDb_g" base_Class="_jYxP8XjMEeGvz59xscDb_g" elementType="_jVYkwHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="RBACRoleStereotypeViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jYx3AnjMEeGvz59xscDb_g" base_Class="_jYx3AXjMEeGvz59xscDb_g" elementType="_jVZy4HjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="PermissionClassViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jYyeEXjMEeGvz59xscDb_g" base_Class="_jYyeEHjMEeGvz59xscDb_g" elementType="_jVaZ8HjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="PermissionStereotypeViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jYzFIXjMEeGvz59xscDb_g" base_Class="_jYzFIHjMEeGvz59xscDb_g" elementType="_jVbBAXjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="RestrictedOperationViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jYzsMHjMEeGvz59xscDb_g" base_Class="_jYzFInjMEeGvz59xscDb_g" elementType="_jVcPIHjMEeGvz59xscDb_g" viewCustomizerClassName="RestrictedMessageViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jY0TQHjMEeGvz59xscDb_g" base_Class="_jYzsMXjMEeGvz59xscDb_g" elementType="_jVc2MXjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="GrantedOpaqueActionViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jY0TQnjMEeGvz59xscDb_g" base_Class="_jY0TQXjMEeGvz59xscDb_g" elementType="_jVeEUHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="GrantedCallOperationActionViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jY06UHjMEeGvz59xscDb_g" base_Class="_jY0TQ3jMEeGvz59xscDb_g" elementType="_jVerYHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="GrantedCallBehaviorActionViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jY1hYHjMEeGvz59xscDb_g" base_Class="_jY06UXjMEeGvz59xscDb_g" elementType="_jVfScHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="ForbiddenOpaqueActionViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jY2IcHjMEeGvz59xscDb_g" base_Class="_jY1hYXjMEeGvz59xscDb_g" elementType="_jVf5gHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="ForbiddenCallOperationActionViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jY2IcnjMEeGvz59xscDb_g" base_Class="_jY2IcXjMEeGvz59xscDb_g" elementType="_jVggkHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="ForbiddenCallBehaviorActionViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jY2vgHjMEeGvz59xscDb_g" base_Class="_jY2Ic3jMEeGvz59xscDb_g" elementType="_jVhusHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="ActivateRolesOpaqueActionViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jY3WkHjMEeGvz59xscDb_g" base_Class="_jY2vgXjMEeGvz59xscDb_g" elementType="_jViVwHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="ActivateRolesCallOperationActionViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jY39oXjMEeGvz59xscDb_g" base_Class="_jY39oHjMEeGvz59xscDb_g" elementType="_jVi80XjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="ActivateRolesCallBehaviorActionViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jY5LwHjMEeGvz59xscDb_g" base_Class="_jY4ksHjMEeGvz59xscDb_g" elementType="_jVkK8HjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="DeactivateRolesOpaqueActionViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jY5y0HjMEeGvz59xscDb_g" base_Class="_jY5LwXjMEeGvz59xscDb_g" elementType="_jVkyAHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="DeactivateRolesCallOperationActionViewCustomizer"/>
+  <DSLToolProfile:DefaultEditPart xmi:id="_jY6Z4HjMEeGvz59xscDb_g" base_Class="_jY5y0XjMEeGvz59xscDb_g" elementType="_jVmAIHjMEeGvz59xscDb_g" styles="_jYuzsHjMEeGvz59xscDb_g" viewCustomizerClassName="DeactivateRolesCallBehaviorActionViewCustomizer"/>
+  <DSLToolProfile:LinkEditPart xmi:id="_jY7A8HjMEeGvz59xscDb_g" base_Class="_jY6Z4XjMEeGvz59xscDb_g" elementType="_jVmnMHjMEeGvz59xscDb_g" styles="_jY8PEHjMEeGvz59xscDb_g _jY82IHjMEeGvz59xscDb_g _jY9dMHjMEeGvz59xscDb_g" editPartClassName="RBACUserrBACRoleRBACRoleEditPart" semanticHint="RbacUMLRBACUserrBACRoleRBACRoleEditPart" viewFactoryClassName="RBACUserrBACRoleRBACRoleViewFactory" children="_jY-EQHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:Style xmi:id="_jY8PEHjMEeGvz59xscDb_g" base_Class="_jY7oAHjMEeGvz59xscDb_g" styleClass="FontStyle"/>
+  <DSLToolProfile:Style xmi:id="_jY82IHjMEeGvz59xscDb_g" base_Class="_jY8PEXjMEeGvz59xscDb_g" styleClass="LineStyle"/>
+  <DSLToolProfile:Style xmi:id="_jY9dMHjMEeGvz59xscDb_g" base_Class="_jY82IXjMEeGvz59xscDb_g" styleClass="RoutingStyle"/>
+  <DSLToolProfile:LabelEditPart xmi:id="_jY-EQHjMEeGvz59xscDb_g" base_Class="_jY9dMXjMEeGvz59xscDb_g" editPartClassName="RBACUserrBACRoleRBACRoleLabelEditPart" semanticHint="RbacUMLRBACUserrBACRoleRBACRoleLabelEditPart" viewFactoryClassName="RBACUserrBACRoleRBACRoleLabelViewFactory" children="_jY-rUXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:TextEditPart xmi:id="_jY-rUXjMEeGvz59xscDb_g" base_Class="_jY-rUHjMEeGvz59xscDb_g" editPartClassName="RBACUserrBACRoleRBACRoleTextEditPart" semanticHint="RbacUMLRBACUserrBACRoleRBACRoleTextEditPart" viewFactoryClassName="RBACUserrBACRoleRBACRoleTextViewFactory"/>
+  <DSLToolProfile:LinkEditPart xmi:id="_jY_5cHjMEeGvz59xscDb_g" base_Class="_jY_SYHjMEeGvz59xscDb_g" elementType="_jVn1UHjMEeGvz59xscDb_g" styles="_jY8PEHjMEeGvz59xscDb_g _jY82IHjMEeGvz59xscDb_g _jY9dMHjMEeGvz59xscDb_g" editPartClassName="RBACUseraliasUserRBACUserEditPart" semanticHint="RbacUMLRBACUseraliasUserRBACUserEditPart" viewFactoryClassName="RBACUseraliasUserRBACUserViewFactory" children="_jZAggHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:LabelEditPart xmi:id="_jZAggHjMEeGvz59xscDb_g" base_Class="_jY_5cXjMEeGvz59xscDb_g" editPartClassName="RBACUseraliasUserRBACUserLabelEditPart" semanticHint="RbacUMLRBACUseraliasUserRBACUserLabelEditPart" viewFactoryClassName="RBACUseraliasUserRBACUserLabelViewFactory" children="_jZAggnjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:TextEditPart xmi:id="_jZAggnjMEeGvz59xscDb_g" base_Class="_jZAggXjMEeGvz59xscDb_g" editPartClassName="RBACUseraliasUserRBACUserTextEditPart" semanticHint="RbacUMLRBACUseraliasUserRBACUserTextEditPart" viewFactoryClassName="RBACUseraliasUserRBACUserTextViewFactory"/>
+  <DSLToolProfile:LinkEditPart xmi:id="_jZBuoHjMEeGvz59xscDb_g" base_Class="_jZBHkHjMEeGvz59xscDb_g" elementType="_jVocYHjMEeGvz59xscDb_g" styles="_jY8PEHjMEeGvz59xscDb_g _jY82IHjMEeGvz59xscDb_g _jY9dMHjMEeGvz59xscDb_g" editPartClassName="RBACRolepermissionPermissionEditPart" semanticHint="RbacUMLRBACRolepermissionPermissionEditPart" viewFactoryClassName="RBACRolepermissionPermissionViewFactory" children="_jZCVsHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:LabelEditPart xmi:id="_jZCVsHjMEeGvz59xscDb_g" base_Class="_jZBuoXjMEeGvz59xscDb_g" editPartClassName="RBACRolepermissionPermissionLabelEditPart" semanticHint="RbacUMLRBACRolepermissionPermissionLabelEditPart" viewFactoryClassName="RBACRolepermissionPermissionLabelViewFactory" children="_jZC8wHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:TextEditPart xmi:id="_jZC8wHjMEeGvz59xscDb_g" base_Class="_jZCVsXjMEeGvz59xscDb_g" editPartClassName="RBACRolepermissionPermissionTextEditPart" semanticHint="RbacUMLRBACRolepermissionPermissionTextEditPart" viewFactoryClassName="RBACRolepermissionPermissionTextViewFactory"/>
+  <DSLToolProfile:LinkEditPart xmi:id="_jZDj0HjMEeGvz59xscDb_g" base_Class="_jZC8wXjMEeGvz59xscDb_g" elementType="_jVpDcHjMEeGvz59xscDb_g" styles="_jY8PEHjMEeGvz59xscDb_g _jY82IHjMEeGvz59xscDb_g _jY9dMHjMEeGvz59xscDb_g" editPartClassName="RBACRolessod1RBACRoleEditPart" semanticHint="RbacUMLRBACRolessod1RBACRoleEditPart" viewFactoryClassName="RBACRolessod1RBACRoleViewFactory" children="_jZDj0njMEeGvz59xscDb_g"/>
+  <DSLToolProfile:LabelEditPart xmi:id="_jZDj0njMEeGvz59xscDb_g" base_Class="_jZDj0XjMEeGvz59xscDb_g" editPartClassName="RBACRolessod1RBACRoleLabelEditPart" semanticHint="RbacUMLRBACRolessod1RBACRoleLabelEditPart" viewFactoryClassName="RBACRolessod1RBACRoleLabelViewFactory" children="_jZEK4XjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:TextEditPart xmi:id="_jZEK4XjMEeGvz59xscDb_g" base_Class="_jZEK4HjMEeGvz59xscDb_g" editPartClassName="RBACRolessod1RBACRoleTextEditPart" semanticHint="RbacUMLRBACRolessod1RBACRoleTextEditPart" viewFactoryClassName="RBACRolessod1RBACRoleTextViewFactory"/>
+  <DSLToolProfile:LinkEditPart xmi:id="_jZFZAHjMEeGvz59xscDb_g" base_Class="_jZEx8HjMEeGvz59xscDb_g" elementType="_jVpqgXjMEeGvz59xscDb_g" styles="_jY8PEHjMEeGvz59xscDb_g _jY82IHjMEeGvz59xscDb_g _jY9dMHjMEeGvz59xscDb_g" editPartClassName="RBACRoledsod1RBACRoleEditPart" semanticHint="RbacUMLRBACRoledsod1RBACRoleEditPart" viewFactoryClassName="RBACRoledsod1RBACRoleViewFactory" children="_jZGAEHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:LabelEditPart xmi:id="_jZGAEHjMEeGvz59xscDb_g" base_Class="_jZFZAXjMEeGvz59xscDb_g" editPartClassName="RBACRoledsod1RBACRoleLabelEditPart" semanticHint="RbacUMLRBACRoledsod1RBACRoleLabelEditPart" viewFactoryClassName="RBACRoledsod1RBACRoleLabelViewFactory" children="_jZGAEnjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:TextEditPart xmi:id="_jZGAEnjMEeGvz59xscDb_g" base_Class="_jZGAEXjMEeGvz59xscDb_g" editPartClassName="RBACRoledsod1RBACRoleTextEditPart" semanticHint="RbacUMLRBACRoledsod1RBACRoleTextEditPart" viewFactoryClassName="RBACRoledsod1RBACRoleTextViewFactory"/>
+  <DSLToolProfile:LinkEditPart xmi:id="_jZHOMHjMEeGvz59xscDb_g" base_Class="_jZGnIHjMEeGvz59xscDb_g" elementType="_jVq4oHjMEeGvz59xscDb_g" styles="_jY8PEHjMEeGvz59xscDb_g _jY82IHjMEeGvz59xscDb_g _jY9dMHjMEeGvz59xscDb_g" editPartClassName="RestrictedpermissionPermissionEditPart" semanticHint="RbacUMLRestrictedpermissionPermissionEditPart" viewFactoryClassName="RestrictedpermissionPermissionViewFactory" children="_jZH1QHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:LabelEditPart xmi:id="_jZH1QHjMEeGvz59xscDb_g" base_Class="_jZHOMXjMEeGvz59xscDb_g" editPartClassName="RestrictedpermissionPermissionLabelEditPart" semanticHint="RbacUMLRestrictedpermissionPermissionLabelEditPart" viewFactoryClassName="RestrictedpermissionPermissionLabelViewFactory" children="_jZIcUXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:TextEditPart xmi:id="_jZIcUXjMEeGvz59xscDb_g" base_Class="_jZIcUHjMEeGvz59xscDb_g" editPartClassName="RestrictedpermissionPermissionTextEditPart" semanticHint="RbacUMLRestrictedpermissionPermissionTextEditPart" viewFactoryClassName="RestrictedpermissionPermissionTextViewFactory"/>
+  <DSLToolProfile:LinkEditPart xmi:id="_jZJDYXjMEeGvz59xscDb_g" base_Class="_jZJDYHjMEeGvz59xscDb_g" elementType="_jVst0HjMEeGvz59xscDb_g" styles="_jY8PEHjMEeGvz59xscDb_g _jY82IHjMEeGvz59xscDb_g _jY9dMHjMEeGvz59xscDb_g" editPartClassName="GrantedoperationOperationEditPart" semanticHint="RbacUMLGrantedoperationOperationEditPart" viewFactoryClassName="GrantedoperationOperationViewFactory" children="_jZJqcXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:LabelEditPart xmi:id="_jZJqcXjMEeGvz59xscDb_g" base_Class="_jZJqcHjMEeGvz59xscDb_g" editPartClassName="GrantedoperationOperationLabelEditPart" semanticHint="RbacUMLGrantedoperationOperationLabelEditPart" viewFactoryClassName="GrantedoperationOperationLabelViewFactory" children="_jZKRgXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:TextEditPart xmi:id="_jZKRgXjMEeGvz59xscDb_g" base_Class="_jZKRgHjMEeGvz59xscDb_g" editPartClassName="GrantedoperationOperationTextEditPart" semanticHint="RbacUMLGrantedoperationOperationTextEditPart" viewFactoryClassName="GrantedoperationOperationTextViewFactory"/>
+  <DSLToolProfile:LinkEditPart xmi:id="_jZK4kHjMEeGvz59xscDb_g" base_Class="_jZKRgnjMEeGvz59xscDb_g" elementType="_jVt78HjMEeGvz59xscDb_g" styles="_jY8PEHjMEeGvz59xscDb_g _jY82IHjMEeGvz59xscDb_g _jY9dMHjMEeGvz59xscDb_g" editPartClassName="GrantedinteractionInteractionEditPart" semanticHint="RbacUMLGrantedinteractionInteractionEditPart" viewFactoryClassName="GrantedinteractionInteractionViewFactory" children="_jZLfoHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:LabelEditPart xmi:id="_jZLfoHjMEeGvz59xscDb_g" base_Class="_jZK4kXjMEeGvz59xscDb_g" editPartClassName="GrantedinteractionInteractionLabelEditPart" semanticHint="RbacUMLGrantedinteractionInteractionLabelEditPart" viewFactoryClassName="GrantedinteractionInteractionLabelViewFactory" children="_jZMGsHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:TextEditPart xmi:id="_jZMGsHjMEeGvz59xscDb_g" base_Class="_jZLfoXjMEeGvz59xscDb_g" editPartClassName="GrantedinteractionInteractionTextEditPart" semanticHint="RbacUMLGrantedinteractionInteractionTextEditPart" viewFactoryClassName="GrantedinteractionInteractionTextViewFactory"/>
+  <DSLToolProfile:LinkEditPart xmi:id="_jZMtwHjMEeGvz59xscDb_g" base_Class="_jZMGsXjMEeGvz59xscDb_g" elementType="_jVvxIHjMEeGvz59xscDb_g" styles="_jY8PEHjMEeGvz59xscDb_g _jY82IHjMEeGvz59xscDb_g _jY9dMHjMEeGvz59xscDb_g" editPartClassName="ForbiddenoperationOperationEditPart" semanticHint="RbacUMLForbiddenoperationOperationEditPart" viewFactoryClassName="ForbiddenoperationOperationViewFactory" children="_jZNU0HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:LabelEditPart xmi:id="_jZNU0HjMEeGvz59xscDb_g" base_Class="_jZMtwXjMEeGvz59xscDb_g" editPartClassName="ForbiddenoperationOperationLabelEditPart" semanticHint="RbacUMLForbiddenoperationOperationLabelEditPart" viewFactoryClassName="ForbiddenoperationOperationLabelViewFactory" children="_jZNU0njMEeGvz59xscDb_g"/>
+  <DSLToolProfile:TextEditPart xmi:id="_jZNU0njMEeGvz59xscDb_g" base_Class="_jZNU0XjMEeGvz59xscDb_g" editPartClassName="ForbiddenoperationOperationTextEditPart" semanticHint="RbacUMLForbiddenoperationOperationTextEditPart" viewFactoryClassName="ForbiddenoperationOperationTextViewFactory"/>
+  <DSLToolProfile:LinkEditPart xmi:id="_jZqAwHjMEeGvz59xscDb_g" base_Class="_jZN74HjMEeGvz59xscDb_g" elementType="_jVw_QHjMEeGvz59xscDb_g" styles="_jY8PEHjMEeGvz59xscDb_g _jY82IHjMEeGvz59xscDb_g _jY9dMHjMEeGvz59xscDb_g" editPartClassName="ForbiddeninteractionInteractionEditPart" semanticHint="RbacUMLForbiddeninteractionInteractionEditPart" viewFactoryClassName="ForbiddeninteractionInteractionViewFactory" children="_jZrO4HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:LabelEditPart xmi:id="_jZrO4HjMEeGvz59xscDb_g" base_Class="_jZqn0HjMEeGvz59xscDb_g" editPartClassName="ForbiddeninteractionInteractionLabelEditPart" semanticHint="RbacUMLForbiddeninteractionInteractionLabelEditPart" viewFactoryClassName="ForbiddeninteractionInteractionLabelViewFactory" children="_jZr18HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:TextEditPart xmi:id="_jZr18HjMEeGvz59xscDb_g" base_Class="_jZrO4XjMEeGvz59xscDb_g" editPartClassName="ForbiddeninteractionInteractionTextEditPart" semanticHint="RbacUMLForbiddeninteractionInteractionTextEditPart" viewFactoryClassName="ForbiddeninteractionInteractionTextViewFactory"/>
+  <DSLToolProfile:LinkEditPart xmi:id="_jZsdAHjMEeGvz59xscDb_g" base_Class="_jZr18XjMEeGvz59xscDb_g" elementType="_jVyNYHjMEeGvz59xscDb_g" styles="_jY8PEHjMEeGvz59xscDb_g _jY82IHjMEeGvz59xscDb_g _jY9dMHjMEeGvz59xscDb_g" editPartClassName="ActivateRolesrBACRoleRBACRoleEditPart" semanticHint="RbacUMLActivateRolesrBACRoleRBACRoleEditPart" viewFactoryClassName="ActivateRolesrBACRoleRBACRoleViewFactory" children="_jZsdAnjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:LabelEditPart xmi:id="_jZsdAnjMEeGvz59xscDb_g" base_Class="_jZsdAXjMEeGvz59xscDb_g" editPartClassName="ActivateRolesrBACRoleRBACRoleLabelEditPart" semanticHint="RbacUMLActivateRolesrBACRoleRBACRoleLabelEditPart" viewFactoryClassName="ActivateRolesrBACRoleRBACRoleLabelViewFactory" children="_jZtEEXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:TextEditPart xmi:id="_jZtEEXjMEeGvz59xscDb_g" base_Class="_jZtEEHjMEeGvz59xscDb_g" editPartClassName="ActivateRolesrBACRoleRBACRoleTextEditPart" semanticHint="RbacUMLActivateRolesrBACRoleRBACRoleTextEditPart" viewFactoryClassName="ActivateRolesrBACRoleRBACRoleTextViewFactory"/>
+  <DSLToolProfile:LinkEditPart xmi:id="_jZtrIXjMEeGvz59xscDb_g" base_Class="_jZtrIHjMEeGvz59xscDb_g" elementType="_jVy0cHjMEeGvz59xscDb_g" styles="_jY8PEHjMEeGvz59xscDb_g _jY82IHjMEeGvz59xscDb_g _jY9dMHjMEeGvz59xscDb_g" editPartClassName="DeactivateRolesrBACRoleRBACRoleEditPart" semanticHint="RbacUMLDeactivateRolesrBACRoleRBACRoleEditPart" viewFactoryClassName="DeactivateRolesrBACRoleRBACRoleViewFactory" children="_jZu5QHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:LabelEditPart xmi:id="_jZu5QHjMEeGvz59xscDb_g" base_Class="_jZuSMHjMEeGvz59xscDb_g" editPartClassName="DeactivateRolesrBACRoleRBACRoleLabelEditPart" semanticHint="RbacUMLDeactivateRolesrBACRoleRBACRoleLabelEditPart" viewFactoryClassName="DeactivateRolesrBACRoleRBACRoleLabelViewFactory" children="_jZvgUHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:TextEditPart xmi:id="_jZvgUHjMEeGvz59xscDb_g" base_Class="_jZu5QXjMEeGvz59xscDb_g" editPartClassName="DeactivateRolesrBACRoleRBACRoleTextEditPart" semanticHint="RbacUMLDeactivateRolesrBACRoleRBACRoleTextEditPart" viewFactoryClassName="DeactivateRolesrBACRoleRBACRoleTextViewFactory"/>
+  <DSLToolProfile:Properties xmi:id="_jZxVgHjMEeGvz59xscDb_g" base_Package="_jZvgUXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySections xmi:id="_jZ8UoHjMEeGvz59xscDb_g" base_Package="_jZ7tkHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jZ87sHjMEeGvz59xscDb_g" base_Class="_jZ8UoXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.RBACUserActivityPartitionPropertySection" propertySectionClassName="RBACUserActivityPartitionPropertySection" filterClassName="RBACUserActivityPartitionPropertyFilter" elementType="_jVU6YHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="RBACUserActivityPartitionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTabs xmi:id="_jZ9iwHjMEeGvz59xscDb_g" base_Package="_jZ87sXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jZ-J0HjMEeGvz59xscDb_g" base_Class="_jZ9iwXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.RBACUserActivityPartitionPropertyTab" sections="_jZ87sHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jZ-w4XjMEeGvz59xscDb_g" base_Class="_jZ-w4HjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.RBACUserClassPropertySection" propertySectionClassName="RBACUserClassPropertySection" filterClassName="RBACUserClassPropertyFilter" elementType="_jVWIgHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="RBACUserClassPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jZ_X8XjMEeGvz59xscDb_g" base_Class="_jZ_X8HjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.RBACUserClassPropertyTab" sections="_jZ-w4XjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jZ__AHjMEeGvz59xscDb_g" base_Class="_jZ_X8njMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.RBACUserStereotypePropertySection" propertySectionClassName="RBACUserStereotypePropertySection" filterClassName="RBACUserStereotypePropertyFilter" elementType="_jVWvkHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="RBACUserStereotypePropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaAmEHjMEeGvz59xscDb_g" base_Class="_jZ__AXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.RBACUserStereotypePropertyTab" sections="_jZ__AHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaBNIHjMEeGvz59xscDb_g" base_Class="_jaAmEXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.RBACRoleClassPropertySection" propertySectionClassName="RBACRoleClassPropertySection" filterClassName="RBACRoleClassPropertyFilter" elementType="_jVX9sHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="RBACRoleClassPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaBNInjMEeGvz59xscDb_g" base_Class="_jaBNIXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.RBACRoleClassPropertyTab" sections="_jaBNIHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaB0MHjMEeGvz59xscDb_g" base_Class="_jaBNI3jMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.RBACRoleStereotypePropertySection" propertySectionClassName="RBACRoleStereotypePropertySection" filterClassName="RBACRoleStereotypePropertyFilter" elementType="_jVYkwHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="RBACRoleStereotypePropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaCbQHjMEeGvz59xscDb_g" base_Class="_jaB0MXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.RBACRoleStereotypePropertyTab" sections="_jaB0MHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaDCUHjMEeGvz59xscDb_g" base_Class="_jaCbQXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.PermissionClassPropertySection" propertySectionClassName="PermissionClassPropertySection" filterClassName="PermissionClassPropertyFilter" elementType="_jVZy4HjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="PermissionClassPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaDpYHjMEeGvz59xscDb_g" base_Class="_jaDCUXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.PermissionClassPropertyTab" sections="_jaDCUHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaEQcHjMEeGvz59xscDb_g" base_Class="_jaDpYXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.PermissionStereotypePropertySection" propertySectionClassName="PermissionStereotypePropertySection" filterClassName="PermissionStereotypePropertyFilter" elementType="_jVaZ8HjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="PermissionStereotypePropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaEQcnjMEeGvz59xscDb_g" base_Class="_jaEQcXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.PermissionStereotypePropertyTab" sections="_jaEQcHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaE3gXjMEeGvz59xscDb_g" base_Class="_jaE3gHjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.RestrictedOperationPropertySection" propertySectionClassName="RestrictedOperationPropertySection" filterClassName="RestrictedOperationPropertyFilter" elementType="_jVbBAXjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="RestrictedOperationPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaFekHjMEeGvz59xscDb_g" base_Class="_jaE3gnjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.RestrictedOperationPropertyTab" sections="_jaE3gXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaFeknjMEeGvz59xscDb_g" base_Class="_jaFekXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.RestrictedMessagePropertySection" propertySectionClassName="RestrictedMessagePropertySection" filterClassName="RestrictedMessagePropertyFilter" elementType="_jVcPIHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="RestrictedMessagePropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaGFoXjMEeGvz59xscDb_g" base_Class="_jaGFoHjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.RestrictedMessagePropertyTab" sections="_jaFeknjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaGssXjMEeGvz59xscDb_g" base_Class="_jaGssHjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.GrantedOpaqueActionPropertySection" propertySectionClassName="GrantedOpaqueActionPropertySection" filterClassName="GrantedOpaqueActionPropertyFilter" elementType="_jVc2MXjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="GrantedOpaqueActionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaHTwXjMEeGvz59xscDb_g" base_Class="_jaHTwHjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.GrantedOpaqueActionPropertyTab" sections="_jaGssXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaH60HjMEeGvz59xscDb_g" base_Class="_jaHTwnjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.GrantedCallOperationActionPropertySection" propertySectionClassName="GrantedCallOperationActionPropertySection" filterClassName="GrantedCallOperationActionPropertyFilter" elementType="_jVeEUHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="GrantedCallOperationActionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaIh4HjMEeGvz59xscDb_g" base_Class="_jaH60XjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.GrantedCallOperationActionPropertyTab" sections="_jaH60HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaJI8HjMEeGvz59xscDb_g" base_Class="_jaIh4XjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.GrantedCallBehaviorActionPropertySection" propertySectionClassName="GrantedCallBehaviorActionPropertySection" filterClassName="GrantedCallBehaviorActionPropertyFilter" elementType="_jVerYHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="GrantedCallBehaviorActionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaJwAHjMEeGvz59xscDb_g" base_Class="_jaJI8XjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.GrantedCallBehaviorActionPropertyTab" sections="_jaJI8HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaKXEHjMEeGvz59xscDb_g" base_Class="_jaJwAXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.ForbiddenOpaqueActionPropertySection" propertySectionClassName="ForbiddenOpaqueActionPropertySection" filterClassName="ForbiddenOpaqueActionPropertyFilter" elementType="_jVfScHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="ForbiddenOpaqueActionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaK-IXjMEeGvz59xscDb_g" base_Class="_jaK-IHjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.ForbiddenOpaqueActionPropertyTab" sections="_jaKXEHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaLlMXjMEeGvz59xscDb_g" base_Class="_jaLlMHjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.ForbiddenCallOperationActionPropertySection" propertySectionClassName="ForbiddenCallOperationActionPropertySection" filterClassName="ForbiddenCallOperationActionPropertyFilter" elementType="_jVf5gHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="ForbiddenCallOperationActionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaMMQHjMEeGvz59xscDb_g" base_Class="_jaLlMnjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.ForbiddenCallOperationActionPropertyTab" sections="_jaLlMXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaMzUHjMEeGvz59xscDb_g" base_Class="_jaMMQXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.ForbiddenCallBehaviorActionPropertySection" propertySectionClassName="ForbiddenCallBehaviorActionPropertySection" filterClassName="ForbiddenCallBehaviorActionPropertyFilter" elementType="_jVggkHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="ForbiddenCallBehaviorActionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaMzUnjMEeGvz59xscDb_g" base_Class="_jaMzUXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.ForbiddenCallBehaviorActionPropertyTab" sections="_jaMzUHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaNaYXjMEeGvz59xscDb_g" base_Class="_jaNaYHjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.ActivateRolesOpaqueActionPropertySection" propertySectionClassName="ActivateRolesOpaqueActionPropertySection" filterClassName="ActivateRolesOpaqueActionPropertyFilter" elementType="_jVhusHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="ActivateRolesOpaqueActionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaOBcHjMEeGvz59xscDb_g" base_Class="_jaNaYnjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.ActivateRolesOpaqueActionPropertyTab" sections="_jaNaYXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaOogHjMEeGvz59xscDb_g" base_Class="_jaOBcXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.ActivateRolesCallOperationActionPropertySection" propertySectionClassName="ActivateRolesCallOperationActionPropertySection" filterClassName="ActivateRolesCallOperationActionPropertyFilter" elementType="_jViVwHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="ActivateRolesCallOperationActionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaPPkHjMEeGvz59xscDb_g" base_Class="_jaOogXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.ActivateRolesCallOperationActionPropertyTab" sections="_jaOogHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaPPknjMEeGvz59xscDb_g" base_Class="_jaPPkXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.ActivateRolesCallBehaviorActionPropertySection" propertySectionClassName="ActivateRolesCallBehaviorActionPropertySection" filterClassName="ActivateRolesCallBehaviorActionPropertyFilter" elementType="_jVi80XjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="ActivateRolesCallBehaviorActionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaP2oXjMEeGvz59xscDb_g" base_Class="_jaP2oHjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.ActivateRolesCallBehaviorActionPropertyTab" sections="_jaPPknjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaQdsHjMEeGvz59xscDb_g" base_Class="_jaP2onjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.DeactivateRolesOpaqueActionPropertySection" propertySectionClassName="DeactivateRolesOpaqueActionPropertySection" filterClassName="DeactivateRolesOpaqueActionPropertyFilter" elementType="_jVkK8HjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="DeactivateRolesOpaqueActionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaREwHjMEeGvz59xscDb_g" base_Class="_jaQdsXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.DeactivateRolesOpaqueActionPropertyTab" sections="_jaQdsHjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaRr0HjMEeGvz59xscDb_g" base_Class="_jaREwXjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.DeactivateRolesCallOperationActionPropertySection" propertySectionClassName="DeactivateRolesCallOperationActionPropertySection" filterClassName="DeactivateRolesCallOperationActionPropertyFilter" elementType="_jVkyAHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="DeactivateRolesCallOperationActionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaSS4HjMEeGvz59xscDb_g" base_Class="_jaRr0XjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.DeactivateRolesCallOperationActionPropertyTab" sections="_jaRr0HjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertySection xmi:id="_jaSS4njMEeGvz59xscDb_g" base_Class="_jaSS4XjMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.sections.DeactivateRolesCallBehaviorActionPropertySection" propertySectionClassName="DeactivateRolesCallBehaviorActionPropertySection" filterClassName="DeactivateRolesCallBehaviorActionPropertyFilter" elementType="_jVmAIHjMEeGvz59xscDb_g" propertySourceFactoryDelegateClassName="DeactivateRolesCallBehaviorActionPropertySourceFactoryDelegate"/>
+  <DSLToolProfile:PropertyTab xmi:id="_jaS58HjMEeGvz59xscDb_g" base_Class="_jaSS43jMEeGvz59xscDb_g" id="uk.ac.open.rbacuml.plugin.properties.tabs.DeactivateRolesCallBehaviorActionPropertyTab" sections="_jaSS4njMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertyCategories xmi:id="_jaUIEHjMEeGvz59xscDb_g" base_Package="_jaS58XjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertyCategory xmi:id="_jaVWMHjMEeGvz59xscDb_g" base_Class="_jaUIEXjMEeGvz59xscDb_g" tabs="_jaAmEHjMEeGvz59xscDb_g _jaSS4HjMEeGvz59xscDb_g _jaPPkHjMEeGvz59xscDb_g _jaCbQHjMEeGvz59xscDb_g _jaS58HjMEeGvz59xscDb_g _jaFekHjMEeGvz59xscDb_g _jaBNInjMEeGvz59xscDb_g _jaDpYHjMEeGvz59xscDb_g _jaOBcHjMEeGvz59xscDb_g _jaGFoXjMEeGvz59xscDb_g _jaEQcnjMEeGvz59xscDb_g _jaIh4HjMEeGvz59xscDb_g _jaHTwXjMEeGvz59xscDb_g _jaMMQHjMEeGvz59xscDb_g _jaJwAHjMEeGvz59xscDb_g _jaREwHjMEeGvz59xscDb_g _jZ_X8XjMEeGvz59xscDb_g _jZ-J0HjMEeGvz59xscDb_g _jaP2oXjMEeGvz59xscDb_g _jaMzUnjMEeGvz59xscDb_g _jaK-IXjMEeGvz59xscDb_g"/>
+  <DSLToolProfile:PropertyContributor xmi:id="_jbIncHjMEeGvz59xscDb_g" base_Class="_jbHZUHjMEeGvz59xscDb_g" categories="_jaVWMHjMEeGvz59xscDb_g" contributorId="com.ibm.xtools.modeler.ui.properties"/>
+</xmi:XMI>

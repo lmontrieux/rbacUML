@@ -1,0 +1,8 @@
+
+name=rbacUML Model
+description=Create a rbacUML Model
+modelName=rbacUML Model
+
+id=uk.ac.open.rbacuml.plugin.core.templates.RbacUMLModel
+templateFile=RbacUMLModel.emx
+icon=RbacUMLModel.gif
