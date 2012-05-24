@@ -1,0 +1,236 @@
+This is a list of the OCL queries contained in the rbacUML profile. Queries are ordered by context element.
+
+Context: rbacUML.ActivateRoles
+------------------------------
+WF Activated Role not already active
+self.base_Action.inPartition.extension_RBACUser.rBACRole->intersection(self.rBACRole)->isEmpty()
+
+WF Activated Roles are assigned to RBACUser
+self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole
+	->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)
+->includesAll(self.rBACRole)
+
+WF ActivateRoles inside RBACUser Partition
+self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') <> null
+
+WF ActivateRoles only on Granted or Forbidden Action
+(self.base_Action.getAppliedStereotype('rbacUML::Granted') <> null) 
+or (self.base_Action.getAppliedStereotype('rbacUML::Forbidden') <> null)
+
+WF At least one Role is activated
+self.rBACRole->size() > 0
+
+
+Context: rbacUML.DeactivateRoles
+--------------------------------
+WF At least one Role is deactivated
+self.rBACRole->size() > 0
+
+WF Deactivated Roles are assigned to User
+self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole
+	->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)
+->includesAll(self.rBACRole)
+
+WF Deactivated Roles were active
+self.base_Action.inPartition.extension_RBACUser.rBACRole
+	->includesAll(self.rBACRole)
+
+WF DeactivateRoles inside User Partition
+self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') <> null
+
+WF DeactivateRoles only on Granted or Forbidden Action
+(self.base_Action.getAppliedStereotype('rbacUML::Granted') <> null) 
+or (self.base_Action.getAppliedStereotype('rbacUML::Forbidden') <> null)
+
+
+Context: rbacUML.Forbidden
+--------------------------
+VAL Forbidden validation
+self.base_Action.inPartition.extension_RBACUser.rBACRole
+	->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)
+	->union(if (self.base_Action.extension_ActivateRoles = null) then Set{} else self.base_Action.extension_ActivateRoles.rBACRole endif)->asSet()
+	->symmetricDifference(if (self.base_Action.extension_DeactivateRoles = null) then Set{} else self.base_Action.extension_DeactivateRoles.rBACRole endif).permission
+->includesAll(self.operation.extension_Restricted.permission->asSet()) = false
+
+WF Action inside a RBACUser Partition
+self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') <> null
+
+WF At least one Restrict Operation
+self.operation->exists(op | op.getAppliedStereotype('rbacUML::Restricted') <> null)
+
+WF Can't both Activate and Deactivate the same RBACRole
+((self.getAppliedStereotype('rbacUML::ActivateRoles') <> null) 
+and (self.getAppliedStereotype('rbacUML::DeactivateRoles') <> null)) 
+	implies self.base_Action.extension_ActivateRoles.rBACRole
+		->intersection(self.base_Action.extension_DeactivateRoles.rBACRole)
+			->isEmpty()
+
+WF Interaction and Operations
+self.interaction <> null implies
+self.interaction.allOwnedElements()
+	->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)
+	->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') <> null).signature->asSet()
+= (self.operation)
+
+
+Context: rbacUML.Granted
+------------------------
+SAT Action cannot be performed
+self.getNearestPackage().allOwnedElements()
+	->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') <> null).oclAsType(Class)
+	->exists(usr | usr.oclAsType(Class).extension_RBACUser.rBACRole.permission->asSet()
+	->includesAll(self.operation.extension_Restricted.permission->asSet()))
+
+VAL Granted validation
+self.base_Action.inPartition.extension_RBACUser.rBACRole
+	->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)
+	->union(if (self.base_Action.extension_ActivateRoles = null) then Set{} else self.base_Action.extension_ActivateRoles.rBACRole endif)->asSet()
+	->symmetricDifference(if (self.base_Action.extension_DeactivateRoles = null) then Set{} else self.base_Action.extension_DeactivateRoles.rBACRole endif).permission
+->includesAll(self.operation.extension_Restricted.permission->asSet())
+
+WF Action inside a RBACUser partition
+self.base_Action.inPartition.extension_RBACUser <> null
+
+WF Action not both Granted and Forbidden
+self.base_Action.getAppliedStereotype('rbacUML::Forbidden') = null
+
+WF At least one Restricted Operations
+self.operation->exists(op | op.getAppliedStereotype('rbacUML::Restricted') <> null)
+
+WF Can't Activate and Deactivate the same RBACRole
+((self.getAppliedStereotype('rbacUML::ActivateRoles') <> null) 
+and (self.getAppliedStereotype('rbacUML::DeactivateRoles') <> null)) 
+	implies self.base_Action.extension_ActivateRoles.rBACRole
+		->intersection(self.base_Action.extension_DeactivateRoles.rBACRole)->isEmpty()
+
+WF Interaction and Operations
+self.interaction <> null implies
+self.interaction.allOwnedElements()
+	->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)
+	->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') <> null).signature->asSet()
+= (self.operation)
+
+
+Context: rbacUML.Permission
+---------------------------
+COMP Permission has no RBACRoles
+self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()
+	->select(rl | rl.oclIsTypeOf(Class) and rl.getAppliedStereotype('rbacUML::RBACRole') <> null).oclAsType(Class)
+	->select(rl | rl.extension_RBACRole.permission->exists(per | per.base_Class.name = self.name))
+->size() > 0
+
+COMP Permission is not used by any Operations
+self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()
+	->select(op | op.oclIsTypeOf(Operation) and op.getAppliedStereotype('rbacUML::Restricted') <> null).oclAsType(Operation)
+	->select(op | op.extension_Restricted.permission->exists(base_Class.name = self.name))
+->size() > 0
+
+WF Only one of RBACUser, RBACRole or Permission
+self.getAppliedStereotype('rbacUML::RBACUser') = null
+and
+self.getAppliedStereotype('rbacUML::RBACRole') = null
+
+
+Context: rbacUML.RBACRole
+-------------------------
+COMP RBACRole has no Permission
+self.permission->size() > 0
+
+COMP RBACRole has no RBACUser
+self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()
+	->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') <> null).oclAsType(Class)
+	->select(usr | usr.extension_RBACUser.rBACRole->exists(rl | rl.base_Class.name = self.name))
+->size() > 0
+
+RED Redundant RBACRoles
+self.permission->size() > 0 implies
+self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()
+	->select(rl | rl.oclIsTypeOf(Class) and rl.getAppliedStereotype('rbacUML::RBACRole') <> null).oclAsType(Class).extension_RBACRole
+	->select(rl | rl.permission->includesAll(self.permission) 
+			and rl.permission->size() = self.permission->size()
+			and rl.base_Class.name <> self.base_Class.name)
+->size() = 0
+
+WF Only one of RBACUser, RBACRole or Permission
+self.getAppliedStereotype('rbacUML::RBACUser') = null
+and
+self.getAppliedStereotype('rbacUML::Permission') = null
+
+
+Context: rbacUML.RBACUser
+-------------------------
+COMP RBACUser has no Partition
+self.base_Class <> null implies
+self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()
+	->select(act | act.oclIsKindOf(ActivityPartition) and act.getAppliedStereotype('rbacUML::RBACUser') <> null).oclAsType(ActivityPartition)
+	->select(act | (act.name = self.name) and (act.extension_RBACUser.aliasUser.base_Class = self))
+->size() > 0
+
+COMP RBACUser has no RBACRole
+(self.base_Class <> null) implies (self.rBACRole->size() > 0)
+
+RED Redundant RBACUsers
+self.rBACRole->size() > 0 and self.base_Class <> null implies
+self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()
+	->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') <> null).oclAsType(Class).extension_RBACUser
+	->select(usr | usr.rBACRole->includesAll(self.rBACRole) 
+			and usr.rBACRole->size() = self.rBACRole->size()
+			and usr.base_Class.name <> self.base_Class.name)
+->size() = 0
+
+WF Only one of RBACUser, RBACRole or Permission
+self.getAppliedStereotype('rbacUML::RBACRole') = null
+and
+self.getAppliedStereotype('rbacUML::Permission') = null
+
+WF Partition and RBACUser have the same name
+(self.base_ActivityPartition <> null) 
+	implies (self.aliasUser
+		->forAll(base_Class.name = self.base_ActivityPartition.name))
+
+WF RBACRoles activated on Partition are assigned to RBACUser
+(self.base_ActivityPartition <> null) 
+	implies (self.aliasUser.rBACRole
+		->union(self.aliasUser.rBACRole.base_Class->asSet().allParents().oclAsType(Class).extension_RBACRole)->asSet()
+		->includesAll(self.rBACRole.base_Class.extension_RBACRole))
+
+WF RBACUser on Class has no aliasUser
+(self.base_Class <> null) 
+implies (self.aliasUser->size() = 0)
+
+WF RBACUser on Partition has exactly one aliasUser
+(self.base_ActivityPartition <> null) 
+	implies (self.aliasUser->size() = 1 and self.aliasUser
+		->forAll(base_Class <> null))
+
+
+Context: rbacUML.Restricted
+---------------------------
+COMP Restricted Operation not used
+self.base_Operation <> null implies
+self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()
+	->select(act | act.oclIsKindOf(Action) and act.getAppliedStereotype('rbacUML::Granted') <> null).oclAsType(Action)
+	->select(act | act.extension_Granted.operation->exists(name = self.name))
+->union(
+self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()
+	->select(act | act.oclIsKindOf(Action) and act.getAppliedStereotype('rbacUML::Forbidden') <> null).oclAsType(Action)
+	->select(act | act.extension_Forbidden.operation->exists(name = self.name))
+)->size() > 0
+
+SAT Restricted Operation cannot be executed
+self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()
+	->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') <> null).oclAsType(Class)
+	->exists(usr | usr.oclAsType(Class).extension_RBACUser.rBACRole.permission->asSet()->includesAll(self.permission))
+
+WF All Messages referring to Restricted Operation are Restricted
+(self.base_Operation <> null) implies (self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)
+	->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') = null).oclAsType(Message).signature.oclAsType(Operation)
+	->select(op | op = self)->size() = 0)
+
+WF At least one Permission assignment
+(self.base_Operation <> null) implies (self.permission->size() > 0)
+
+WF Restricted Messages refer to Restricted Operations
+(self.base_Message <> null)
+implies
+(self.base_Message.signature.getAppliedStereotype('rbacUML::Restricted') <> null)
