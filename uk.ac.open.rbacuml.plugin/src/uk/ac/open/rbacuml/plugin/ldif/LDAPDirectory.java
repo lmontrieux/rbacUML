@@ -78,8 +78,14 @@ public class LDAPDirectory extends AbstractUserDirectory {
 				} else if (line.startsWith("memberOf: ") && line.contains("Group")) {
 					//it's a group! We create a new Role!
 					line = line.substring(10);
-					IRole role = new SimpleRole(line, UUID.randomUUID().toString());
-					user.addRole(role);
+					IRole role = null;
+					if (hasRole(line)) {
+						role = getRole(line);
+						user.addRole(role);
+					} else {
+						role = new SimpleRole(line, UUID.randomUUID().toString());
+						user.addRole(role);
+					}
 					addRole(role);
 				}
 			}

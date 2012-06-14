@@ -234,7 +234,7 @@ public abstract class AbstractUserDirectory {
 					log.debug("Users " + user.getName() + " and " 
 							+ candidate.getName() + " are duplicate.");
 					duplicates.add(candidate);
-					this.users.remove(candidate);
+					this.users.remove(candidate.getName());
 				}
 			}
 		}
@@ -248,10 +248,14 @@ public abstract class AbstractUserDirectory {
 	 * have been found
 	 */
 	public List<IUser> removeAllDuplicates() {
+		log.trace("Before removing duplicates, there are " 
+				+ this.users.size() + " users");
 		List<IUser> duplicates = new ArrayList<IUser>();
 		for (IUser user:this.users.values()) {
 			duplicates.addAll(removeDuplicates(user));
 		}
+		log.trace("After removing duplicates, there are " 
+				+ this.users.size() + " users left");
 		return duplicates;
 	}
 }
