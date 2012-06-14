@@ -93,7 +93,8 @@ public abstract class AbstractUserDirectory {
 		assert(role != null);
 		if (roles.containsKey(role.getName())) {
 			// the role is already there
-			IRole current = roles.get(role.getName());
+			log.debug("addRole(IRole role): Role " + role.getName() 
+					+ " is already in the list");
 		} else {
 			roles.put(role.getName(), role);
 		}
@@ -159,6 +160,7 @@ public abstract class AbstractUserDirectory {
 				// then the users and user-role associations
 				for (IUser user: this.users.values()) {
 					newClass = createClass(user.getName(), user.getUuid());
+					newClass = addRedundantUsers(newClass, user.getDuplicates(), user.getUuid());
 					elt.addContent(newClass);
 					Element rbacUser = createUser(newClass.getAttribute("id", xmiNS).getValue());
 					addAllUserRoleAssignments(rbacUser, user.getRoles());
@@ -169,9 +171,27 @@ public abstract class AbstractUserDirectory {
 		}
 		catch (ConcurrentModificationException cme1) {
 			log.fatal(cme1.getMessage() + cme1.getCause());
+			cme1.printStackTrace();
 		}
 	}
 	
+	private Element addRedundantUsers(Element user, List<String> duplicates, String parentUUID) {
+		if (duplicates.isEmpty())
+			return user;
+		org.jdom.Element comment = new org.jdom.Element("ownedComment");
+		comment.setAttribute("id", UUID.randomUUID().toString(), xmiNS);
+		comment.setAttribute("annotatedElement", parentUUID);
+		String cmtStr = "<body><p>redundant users: {";
+		for (String duplicate:duplicates) {
+			cmtStr = cmtStr + duplicate + ",";
+		}
+		cmtStr = cmtStr.substring(0, cmtStr.length() - 2);
+		cmtStr = cmtStr + "}</p></body>";
+		comment.addContent(cmtStr);
+		user.setContent(comment);
+		return user;
+	}
+
 	private org.jdom.Element createUser(String baseUuid) {
 		return createRBACUMLStereotype("RBACUser", "base_Class", baseUuid);
 	}
@@ -210,7 +230,8 @@ public abstract class AbstractUserDirectory {
 	}
 	
 	/**
-	 * Remove all duplicates of a user in the users list. Two users are 
+	 * Remove all duplicates of a user in the users list and adds them to the 
+	 * first of the duplicate users' list of duplicates. Two users are 
 	 * duplicates if they have the same set of roles.
 	 * @param user the user whose duplicates we want to remove. Must be in the 
 	 * list
@@ -234,6 +255,7 @@ public abstract class AbstractUserDirectory {
 					log.debug("Users " + user.getName() + " and " 
 							+ candidate.getName() + " are duplicate.");
 					duplicates.add(candidate);
+					user.addDuplicate(candidate.getName());
 					this.users.remove(candidate.getName());
 				}
 			}
@@ -242,7 +264,8 @@ public abstract class AbstractUserDirectory {
 	}
 	
 	/**
-	 * Finds and remove all duplicates from the list of users. The first of the 
+	 * Finds and remove all duplicates from the list of users, and adds them 
+	 * to the first duplicate's list of duplicates. The first of the 
 	 * duplicate items stays on the list
 	 * @return a list of the removed users, or an empty list if no duplicates 
 	 * have been found

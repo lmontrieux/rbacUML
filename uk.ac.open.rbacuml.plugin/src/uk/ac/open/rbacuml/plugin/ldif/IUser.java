@@ -21,4 +21,8 @@ public interface IUser {
 	public boolean hasRole(IRole role);
 	
 	public boolean hasRole(String name);
+	
+	public List<String> getDuplicates();
+	
+	public void addDuplicate(String name);
 }

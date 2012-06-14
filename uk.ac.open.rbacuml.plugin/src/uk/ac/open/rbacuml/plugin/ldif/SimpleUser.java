@@ -8,11 +8,13 @@ public class SimpleUser implements IUser {
 	private String name;
 	private String uuid;
 	private List<IRole> roles;
+	private List<String> duplicates;
 	
 	public SimpleUser(String name, String uuid) {
 		this.name = name;
 		this.uuid = uuid;
 		this.roles = new ArrayList<IRole>();
+		this.duplicates = new ArrayList<String>();
 	}
 
 
@@ -75,5 +77,27 @@ public class SimpleUser implements IUser {
 
 	public List<IRole> getRoles() {
 		return this.roles;
+	}
+
+
+	/**
+	 * Returns a list of duplicate users. Duplicate users have exactly the same 
+	 * role assignments, and therefore they can be safely aggregated without 
+	 * any impact on the security of the model. If there are no duplicates, 
+	 * returns an empty list.
+	 */
+	public List<String> getDuplicates() {
+		return this.duplicates;
+	}
+
+
+	/**
+	 * Adds a user name to the list of duplicates. Duplicate users have exactly 
+	 * the same role assignments, and therefore they can be safely aggregated 
+	 * without any impact on the security of the model.
+	 */
+	public void addDuplicate(String name) {
+		assert(name != null);
+		this.duplicates.add(name);
 	}
 }
