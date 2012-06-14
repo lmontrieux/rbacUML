@@ -26,6 +26,7 @@ import org.eclipse.swt.widgets.Text;
 public class ModelSelectionPage extends WizardPage {	
 	private Text text1;
 	private Button button1;
+	private Button redundantButton;
 	private Composite container;
 
 	public ModelSelectionPage() {
@@ -81,6 +82,14 @@ public class ModelSelectionPage extends WizardPage {
 			}
 
 		});
+		
+		// Does the user want to have the redundant users detected and 
+		// merged?
+		Label redundantLabel = new Label(container, SWT.NULL);
+		redundantLabel.setText("Detect and merge redundant users");
+		redundantButton = new Button(container, SWT.CHECK);
+		redundantButton.setSelection(false);
+		
 		GridData gd = new GridData(GridData.FILL_HORIZONTAL);
 		text1.setLayoutData(gd);
 		// Required to avoid an error in the system
@@ -92,6 +101,10 @@ public class ModelSelectionPage extends WizardPage {
 	
 	public String getModelFile() {
 		return text1.getText();
+	}
+	
+	public boolean hasRedundancyDetection() {
+		return redundantButton.getSelection();
 	}
 
 }

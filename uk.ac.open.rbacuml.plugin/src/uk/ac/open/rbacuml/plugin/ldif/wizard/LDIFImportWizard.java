@@ -5,13 +5,16 @@ package uk.ac.open.rbacuml.plugin.ldif.wizard;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWizard;
 
 import uk.ac.open.rbacuml.plugin.ldif.AbstractUserDirectory;
+import uk.ac.open.rbacuml.plugin.ldif.IUser;
 import uk.ac.open.rbacuml.plugin.ldif.LDAPDirectory;
 
 /**
@@ -22,6 +25,8 @@ public class LDIFImportWizard extends Wizard implements IWorkbenchWizard {
 
 	protected DirectorySelectionPage dirPage;
 	protected ModelSelectionPage modelPage;
+	
+	static Logger log = Logger.getLogger(LDIFImportWizard.class);
 	
 	/**
 	 * Creates a new wizard to import the contents of an LDIF file into a 
@@ -44,20 +49,30 @@ public class LDIFImportWizard extends Wizard implements IWorkbenchWizard {
 	 */
 	@Override
 	public boolean performFinish() {
-		System.out.println("Selected user directory: " + dirPage.getDirectoryFile());
-		System.out.println("Selected model: " + modelPage.getModelFile());
+		log.debug("Selected user directory: " + dirPage.getDirectoryFile());
+		log.debug("Selected model: " + modelPage.getModelFile());
+		if (modelPage.hasRedundancyDetection())
+			log.debug("Redundant users will be merged");
+		else
+			log.debug("Redundant users will NOT be merged");
 		
 		AbstractUserDirectory dir = new LDAPDirectory();
 		File ldif = new File(dirPage.getDirectoryFile());
 		
 		// extracting users and roles from the user directory
 		try {
-			System.out.println("populating...");
+			log.trace("populating...");
 			dir.populate(ldif);
 		} catch (FileNotFoundException e) {
-			System.out.println("File not found: " + e.getMessage());
+			log.trace("File not found: " + e.getMessage());
 			e.printStackTrace();
 			return false;
+		}
+		// if selected, removing redundant users
+		// TODO: should provide GUI feedback on which users are removed
+		if (modelPage.hasRedundancyDetection()) {
+			List<IUser> duplicates = dir.removeAllDuplicates();
+			log.debug("Removed " + duplicates.size() + " duplicate users");
 		}
 		// writing user directory into the model
 		dir.openXMI(modelPage.getModelFile());

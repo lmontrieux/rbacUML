@@ -4,12 +4,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
+import org.apache.log4j.Logger;
 import org.jdom.Document;
 import org.jdom.JDOMException;
 import org.jdom.Namespace;
@@ -25,6 +27,8 @@ public abstract class AbstractUserDirectory {
 	private Namespace xmiNS;
 	
 	private Document xmiFile;
+	
+	static Logger log = Logger.getLogger(AbstractUserDirectory.class);
 	
 
 	public AbstractUserDirectory() {
@@ -141,7 +145,6 @@ public abstract class AbstractUserDirectory {
 		List packages = xmiFile.getRootElement().getChildren();
 		Element newClass = null;
 		Element newRole = null;
-		System.out.println("Here");
 		try {
 		for (Iterator<Element> iterNS = packages.iterator(); iterNS.hasNext(); ) {
 			Element elt = iterNS.next();
@@ -165,12 +168,12 @@ public abstract class AbstractUserDirectory {
 		}
 		}
 		catch (ConcurrentModificationException cme1) {
-			System.out.println(cme1.getMessage() + cme1.getCause());
+			log.fatal(cme1.getMessage() + cme1.getCause());
 		}
 	}
 	
 	private org.jdom.Element createUser(String baseUuid) {
-		return createRBACUMLStereotype("User", "base_Class", baseUuid);
+		return createRBACUMLStereotype("RBACUser", "base_Class", baseUuid);
 	}
 	
 	private org.jdom.Element createRole(String baseUuid) {
@@ -204,5 +207,51 @@ public abstract class AbstractUserDirectory {
 		elt.setAttribute("id", uuid, xmiNS);
 		elt.setAttribute("name", name);
 		return elt;
+	}
+	
+	/**
+	 * Remove all duplicates of a user in the users list. Two users are 
+	 * duplicates if they have the same set of roles.
+	 * @param user the user whose duplicates we want to remove. Must be in the 
+	 * list
+	 * @return a list of the removed users, or an empty list if no duplicates 
+	 * have been found
+	 * 
+	 */
+	private List<IUser> removeDuplicates(IUser user) {
+		assert(this.users.containsValue(user));
+		log.trace("Finding duplicates from user " + user.toString());
+		List<IRole> uRoles = user.getRoles();
+		List<IUser> duplicates = new ArrayList<IUser>();
+		for (IUser candidate:this.users.values()) {
+			if (!candidate.getName().equals(user.getName())) {
+				log.trace("User roles are " + uRoles.toString() 
+						+ "\t candidate roles are " 
+						+ candidate.getRoles().toString());
+				if (uRoles.containsAll(candidate.getRoles()) 
+						&& (uRoles.size() == candidate.getRoles().size())) {
+					// we found a duplicate
+					log.debug("Users " + user.getName() + " and " 
+							+ candidate.getName() + " are duplicate.");
+					duplicates.add(candidate);
+					this.users.remove(candidate);
+				}
+			}
+		}
+		return duplicates;
+	}
+	
+	/**
+	 * Finds and remove all duplicates from the list of users. The first of the 
+	 * duplicate items stays on the list
+	 * @return a list of the removed users, or an empty list if no duplicates 
+	 * have been found
+	 */
+	public List<IUser> removeAllDuplicates() {
+		List<IUser> duplicates = new ArrayList<IUser>();
+		for (IUser user:this.users.values()) {
+			duplicates.addAll(removeDuplicates(user));
+		}
+		return duplicates;
 	}
 }

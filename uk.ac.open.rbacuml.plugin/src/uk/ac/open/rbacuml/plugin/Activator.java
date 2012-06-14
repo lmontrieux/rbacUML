@@ -1,5 +1,8 @@
 package uk.ac.open.rbacuml.plugin;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
@@ -15,6 +18,9 @@ public class Activator extends AbstractUIPlugin {
 	// The shared instance
 	private static Activator plugin;
 	
+	// The Log4j logger
+	static Logger log = Logger.getLogger(PLUGIN_ID);
+	
 	/**
 	 * The constructor
 	 */
@@ -27,6 +33,7 @@ public class Activator extends AbstractUIPlugin {
 	 */
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
+		configure();
 		plugin = this;
 	}
 
@@ -57,5 +64,14 @@ public class Activator extends AbstractUIPlugin {
 	 */
 	public static ImageDescriptor getImageDescriptor(String path) {
 		return imageDescriptorFromPlugin(PLUGIN_ID, path);
+	}
+	
+	/**
+	 * Configures log4j
+	 */
+	private static void configure() {
+		BasicConfigurator.configure();
+		log.setLevel(Level.DEBUG);
+		log.trace("Log4j configured");
 	}
 }
