@@ -51,7 +51,7 @@ public class LDIFImportWizard extends Wizard implements IWorkbenchWizard {
 	public boolean performFinish() {
 		log.debug("Selected user directory: " + dirPage.getDirectoryFile());
 		log.debug("Selected model: " + modelPage.getModelFile());
-		if (modelPage.hasRedundancyDetection())
+		if (dirPage.hasRedundancyDetection())
 			log.debug("Redundant users will be merged");
 		else
 			log.debug("Redundant users will NOT be merged");
@@ -70,7 +70,7 @@ public class LDIFImportWizard extends Wizard implements IWorkbenchWizard {
 		}
 		// if selected, removing redundant users
 		// TODO: should provide GUI feedback on which users are removed
-		if (modelPage.hasRedundancyDetection()) {
+		if (dirPage.hasRedundancyDetection()) {
 			List<IUser> duplicates = dir.removeAllDuplicates();
 			log.debug("Removed " + duplicates.size() + " duplicate users");
 		}

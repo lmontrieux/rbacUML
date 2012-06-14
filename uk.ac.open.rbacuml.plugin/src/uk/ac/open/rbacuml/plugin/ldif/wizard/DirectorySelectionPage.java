@@ -26,6 +26,7 @@ public class DirectorySelectionPage extends WizardPage {
 	private Text text1;
 	private Composite container;
 	private Button button1;
+	private Button redundantButton;
 	private FileDialog fd;
 
 	protected DirectorySelectionPage() {
@@ -79,6 +80,14 @@ public class DirectorySelectionPage extends WizardPage {
 			}
 
 		});
+		
+		// Does the user want to have the redundant users detected and 
+		// merged?
+		Label redundantLabel = new Label(container, SWT.NULL);
+		redundantLabel.setText("Detect and merge redundant users");
+		redundantButton = new Button(container, SWT.CHECK);
+		redundantButton.setSelection(false);
+		
 		GridData gd = new GridData(GridData.FILL_HORIZONTAL);
 		text1.setLayoutData(gd);
 		// Required to avoid an error in the system
@@ -89,6 +98,10 @@ public class DirectorySelectionPage extends WizardPage {
 	
 	public String getDirectoryFile() {
 		return text1.getText();
+	}
+	
+	public boolean hasRedundancyDetection() {
+		return redundantButton.getSelection();
 	}
 
 }
