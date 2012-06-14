@@ -4,11 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import org.apache.log4j.Logger;
+
 public class SimpleUser implements IUser {
 	private String name;
 	private String uuid;
 	private List<IRole> roles;
 	private List<String> duplicates;
+	
+	static Logger log = Logger.getLogger(SimpleUser.class);
 	
 	public SimpleUser(String name, String uuid) {
 		this.name = name;
@@ -68,10 +72,13 @@ public class SimpleUser implements IUser {
 	public void addRole(IRole newRole) {
 		for (IRole role: this.roles) {
 			// If there's already a role with that name, we don't add it again
-			if (role.getName().equals(newRole.getName()))
+			if (role.getName().equals(newRole.getName())) {
+				log.debug("addRole: this role already exists, we don't add it again");
 				return;
+			}
 		}
 		this.roles.add(newRole);
+		log.debug("addRole: added new role: " + newRole.getName());
 	}
 
 

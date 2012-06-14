@@ -75,9 +75,11 @@ public class LDIFImportWizard extends Wizard implements IWorkbenchWizard {
 			log.debug("Removed " + duplicates.size() + " duplicate users");
 		}
 		// writing user directory into the model
+		log.trace("Starting writing XMI file");
 		dir.openXMI(modelPage.getModelFile());
 		dir.addToXMI();
 		dir.writeXMI(modelPage.getModelFile());
+		log.trace("XMI file written");
 		return true;
 	}
 
