@@ -1246,6 +1246,12 @@
              label="rbacUML ordered validation"
              menubarPath="additions">
        </action>
+       <action
+             class="uk.ac.open.rbacuml.plugin.validation.ConstraintSelectionAction"
+             id="uk.ac.open.rbacuml.plugin.validation.constraintsAction"
+             label="Validate rbacUML constraints"
+             menubarPath="additions">
+       </action>
     </viewerContribution>
 	</extension>
 	<extension id="profiledModelActionFilter"

@@ -4,6 +4,206 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ProfileBase="http:///schemas/ProfileBase/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xsi:schemaLocation="http:///schemas/ProfileBase/1 pathmap://UML2_MSL_PROFILES/ProfileBase.epx#_IfFYQMmBEdqBcN1R6EvWUw?ProfileBase/ProfileBase?">
   <uml:Profile xmi:id="_ANA3MHioEeGfYppGxhP38A" name="rbacUML" metamodelReference="_AU7dEHioEeGfYppGxhP38A">
     <eAnnotations xmi:id="_AVpOwHioEeGfYppGxhP38A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <contents xmi:type="ecore:EPackage" xmi:id="_fsUo4LnyEeGbfYXZ9oSuCQ" name="rbacUML" nsURI="http:///schemas/rbacUML/_fsUB0LnyEeGbfYXZ9oSuCQ/64" nsPrefix="rbacUML">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_fsUo4bnyEeGbfYXZ9oSuCQ" name="RBACUser">
+          <eAnnotations xmi:id="_fsUo4rnyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bbn9kHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_fsUo47nyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_fsUo5LnyEeGbfYXZ9oSuCQ" key="documentation" value="self.getAppliedStereotype('rbacUML::RBACRole') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::Permission') = null&#xA;(self.base_ActivityPartition &lt;> null) &#xA;&#x9;implies (self.aliasUser&#xA;&#x9;&#x9;->forAll(base_Class.name = self.base_ActivityPartition.name))&#xA;(self.base_ActivityPartition &lt;> null) &#xA;&#x9;implies (self.aliasUser.rBACRole&#xA;&#x9;&#x9;->union(self.aliasUser.rBACRole.base_Class->asSet().allParents().oclAsType(Class).extension_RBACRole)->asSet()&#xA;&#x9;&#x9;->includesAll(self.rBACRole.base_Class.extension_RBACRole))&#xA;(self.base_ActivityPartition &lt;> null) &#xA;&#x9;implies (self.aliasUser->size() = 1 and self.aliasUser&#xA;&#x9;&#x9;->forAll(base_Class &lt;> null))&#xA;(self.base_Class &lt;> null) &#xA;implies (self.aliasUser->size() = 0)&#xA;self.base_Class &lt;> null implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(act | act.oclIsKindOf(ActivityPartition) and act.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(ActivityPartition)&#xA;&#x9;->select(act | (act.name = self.name) and (act.extension_RBACUser.aliasUser.base_Class = self))&#xA;->size() > 0&#xA;(self.base_Class &lt;> null) implies (self.rBACRole->size() > 0)&#xA;self.rBACRole->size() > 0 and self.base_Class &lt;> null implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class).extension_RBACUser&#xA;&#x9;->select(usr | usr.rBACRole->includesAll(self.rBACRole) &#xA;&#x9;&#x9;&#x9;and usr.rBACRole->size() = self.rBACRole->size()&#xA;&#x9;&#x9;&#x9;and usr.base_Class.name &lt;> self.base_Class.name)&#xA;->size() = 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUo5bnyEeGbfYXZ9oSuCQ" name="rBACRole" ordered="false" upperBound="-1" eType="_fsUo7bnyEeGbfYXZ9oSuCQ"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUo57nyEeGbfYXZ9oSuCQ" name="aliasUser" ordered="false" eType="_fsUo4bnyEeGbfYXZ9oSuCQ"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUo6bnyEeGbfYXZ9oSuCQ" name="base_ActivityPartition" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//ActivityPartition"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUo67nyEeGbfYXZ9oSuCQ" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_fsUo7bnyEeGbfYXZ9oSuCQ" name="RBACRole">
+          <eAnnotations xmi:id="_fsUo7rnyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_cGgGkHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_fsUo77nyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_fsUo8LnyEeGbfYXZ9oSuCQ" key="documentation" value="self.getAppliedStereotype('rbacUML::RBACUser') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::Permission') = null&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->select(usr | usr.extension_RBACUser.rBACRole->exists(rl | rl.base_Class.name = self.name))&#xA;->size() > 0&#xA;self.permission->size() > 0&#xA;self.permission->size() > 0 implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(rl | rl.oclIsTypeOf(Class) and rl.getAppliedStereotype('rbacUML::RBACRole') &lt;> null).oclAsType(Class).extension_RBACRole&#xA;&#x9;->select(rl | rl.permission->includesAll(self.permission) &#xA;&#x9;&#x9;&#x9;and rl.permission->size() = self.permission->size()&#xA;&#x9;&#x9;&#x9;and rl.base_Class.name &lt;> self.base_Class.name)&#xA;->size() = 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUo8bnyEeGbfYXZ9oSuCQ" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUo87nyEeGbfYXZ9oSuCQ" name="permission" ordered="false" upperBound="-1" eType="_fsUo-bnyEeGbfYXZ9oSuCQ"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUo9bnyEeGbfYXZ9oSuCQ" name="ssod1" ordered="false" upperBound="-1" eType="_fsUo7bnyEeGbfYXZ9oSuCQ"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUo97nyEeGbfYXZ9oSuCQ" name="dsod1" ordered="false" upperBound="-1" eType="_fsUo7bnyEeGbfYXZ9oSuCQ"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_fsUo-bnyEeGbfYXZ9oSuCQ" name="Permission">
+          <eAnnotations xmi:id="_fsUo-rnyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ewmVUHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_fsUo-7nyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_fsUo_LnyEeGbfYXZ9oSuCQ" key="documentation" value="self.getAppliedStereotype('rbacUML::RBACUser') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::RBACRole') = null&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(rl | rl.oclIsTypeOf(Class) and rl.getAppliedStereotype('rbacUML::RBACRole') &lt;> null).oclAsType(Class)&#xA;&#x9;->select(rl | rl.extension_RBACRole.permission->exists(per | per.base_Class.name = self.name))&#xA;->size() > 0&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(op | op.oclIsTypeOf(Operation) and op.getAppliedStereotype('rbacUML::Restricted') &lt;> null).oclAsType(Operation)&#xA;&#x9;->select(op | op.extension_Restricted.permission->exists(base_Class.name = self.name))&#xA;->size() > 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUo_bnyEeGbfYXZ9oSuCQ" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_fsUo_7nyEeGbfYXZ9oSuCQ" name="Restricted">
+          <eAnnotations xmi:id="_fsUpALnyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3JImcHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_fsUpAbnyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_fsUpArnyEeGbfYXZ9oSuCQ" key="documentation" value="(self.base_Operation &lt;> null) implies (self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)&#xA;&#x9;->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') = null).oclAsType(Message).signature.oclAsType(Operation)&#xA;&#x9;->select(op | op = self)->size() = 0)&#xA;(self.base_Operation &lt;> null) implies (self.permission->size() > 0)&#xA;(self.base_Message &lt;> null)&#xA;implies&#xA;(self.base_Message.signature.getAppliedStereotype('rbacUML::Restricted') &lt;> null)&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->exists(usr | usr.oclAsType(Class).extension_RBACUser.rBACRole.permission->asSet()->includesAll(self.permission))&#xA;self.base_Operation &lt;> null implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(act | act.oclIsKindOf(Action) and act.getAppliedStereotype('rbacUML::Granted') &lt;> null).oclAsType(Action)&#xA;&#x9;->select(act | act.extension_Granted.operation->exists(name = self.name))&#xA;->union(&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(act | act.oclIsKindOf(Action) and act.getAppliedStereotype('rbacUML::Forbidden') &lt;> null).oclAsType(Action)&#xA;&#x9;->select(act | act.extension_Forbidden.operation->exists(name = self.name))&#xA;)->size() > 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpA7nyEeGbfYXZ9oSuCQ" name="base_Operation" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpBbnyEeGbfYXZ9oSuCQ" name="base_Message" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpB7nyEeGbfYXZ9oSuCQ" name="permission" ordered="false" upperBound="-1" eType="_fsUo-bnyEeGbfYXZ9oSuCQ"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_fsUpCbnyEeGbfYXZ9oSuCQ" name="Granted">
+          <eAnnotations xmi:id="_fsUpCrnyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_KEe2IHipEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_fsUpC7nyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_fsUpDLnyEeGbfYXZ9oSuCQ" key="documentation" value="self.base_Action.inPartition.extension_RBACUser &lt;> null&#xA;self.base_Action.getAppliedStereotype('rbacUML::Forbidden') = null&#xA;self.operation->exists(op | op.getAppliedStereotype('rbacUML::Restricted') &lt;> null)&#xA;self.interaction &lt;> null implies&#xA;self.interaction.allOwnedElements()&#xA;&#x9;->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)&#xA;&#x9;->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') &lt;> null).signature->asSet()&#xA;= (self.operation)&#xA;((self.getAppliedStereotype('rbacUML::ActivateRoles') &lt;> null) &#xA;and (self.getAppliedStereotype('rbacUML::DeactivateRoles') &lt;> null)) &#xA;&#x9;implies self.base_Action.extension_ActivateRoles.rBACRole&#xA;&#x9;&#x9;->intersection(self.base_Action.extension_DeactivateRoles.rBACRole)->isEmpty()&#xA;self.getNearestPackage().allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->exists(usr | usr.oclAsType(Class).extension_RBACUser.rBACRole.permission->asSet()&#xA;&#x9;->includesAll(self.operation.extension_Restricted.permission->asSet()))&#xA;self.base_Action.inPartition.extension_RBACUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;&#x9;->union(if (self.base_Action.extension_ActivateRoles = null) then Set{} else self.base_Action.extension_ActivateRoles.rBACRole endif)->asSet()&#xA;&#x9;->symmetricDifference(if (self.base_Action.extension_DeactivateRoles = null) then Set{} else self.base_Action.extension_DeactivateRoles.rBACRole endif).permission&#xA;->includesAll(self.operation.extension_Restricted.permission->asSet())"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpDbnyEeGbfYXZ9oSuCQ" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpD7nyEeGbfYXZ9oSuCQ" name="operation" ordered="false" upperBound="-1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpEbnyEeGbfYXZ9oSuCQ" name="interaction" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Interaction"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_fsUpE7nyEeGbfYXZ9oSuCQ" name="Forbidden">
+          <eAnnotations xmi:id="_fsUpFLnyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_K47x4HipEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_fsUpFbnyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_fsUpFrnyEeGbfYXZ9oSuCQ" key="documentation" value="self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') &lt;> null&#xA;self.operation->exists(op | op.getAppliedStereotype('rbacUML::Restricted') &lt;> null)&#xA;self.interaction &lt;> null implies&#xA;self.interaction.allOwnedElements()&#xA;&#x9;->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)&#xA;&#x9;->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') &lt;> null).signature->asSet()&#xA;= (self.operation)&#xA;((self.getAppliedStereotype('rbacUML::ActivateRoles') &lt;> null) &#xA;and (self.getAppliedStereotype('rbacUML::DeactivateRoles') &lt;> null)) &#xA;&#x9;implies self.base_Action.extension_ActivateRoles.rBACRole&#xA;&#x9;&#x9;->intersection(self.base_Action.extension_DeactivateRoles.rBACRole)&#xA;&#x9;&#x9;&#x9;->isEmpty()&#xA;self.base_Action.inPartition.extension_RBACUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;&#x9;->union(if (self.base_Action.extension_ActivateRoles = null) then Set{} else self.base_Action.extension_ActivateRoles.rBACRole endif)->asSet()&#xA;&#x9;->symmetricDifference(if (self.base_Action.extension_DeactivateRoles = null) then Set{} else self.base_Action.extension_DeactivateRoles.rBACRole endif).permission&#xA;->includesAll(self.operation.extension_Restricted.permission->asSet()) = false"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpF7nyEeGbfYXZ9oSuCQ" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpGbnyEeGbfYXZ9oSuCQ" name="operation" ordered="false" upperBound="-1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpG7nyEeGbfYXZ9oSuCQ" name="interaction" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Interaction"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_fsUpHbnyEeGbfYXZ9oSuCQ" name="ActivateRoles">
+          <eAnnotations xmi:id="_fsUpHrnyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AC61IHiqEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_fsUpH7nyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_fsUpILnyEeGbfYXZ9oSuCQ" key="documentation" value="self.base_Action.inPartition.extension_RBACUser.rBACRole->intersection(self.rBACRole)->isEmpty()&#xA;self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;->includesAll(self.rBACRole)&#xA;self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') &lt;> null&#xA;(self.base_Action.getAppliedStereotype('rbacUML::Granted') &lt;> null) &#xA;or (self.base_Action.getAppliedStereotype('rbacUML::Forbidden') &lt;> null)&#xA;self.rBACRole->size() > 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpIbnyEeGbfYXZ9oSuCQ" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpI7nyEeGbfYXZ9oSuCQ" name="rBACRole" ordered="false" upperBound="-1" eType="_fsUo7bnyEeGbfYXZ9oSuCQ"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_fsUpJbnyEeGbfYXZ9oSuCQ" name="DeactivateRoles">
+          <eAnnotations xmi:id="_fsUpJrnyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Ce4hQHiqEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_fsUpJ7nyEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_fsUpKLnyEeGbfYXZ9oSuCQ" key="documentation" value="self.rBACRole->size() > 0&#xA;self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;->includesAll(self.rBACRole)&#xA;self.base_Action.inPartition.extension_RBACUser.rBACRole&#xA;&#x9;->includesAll(self.rBACRole)&#xA;self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') &lt;> null&#xA;(self.base_Action.getAppliedStereotype('rbacUML::Granted') &lt;> null) &#xA;or (self.base_Action.getAppliedStereotype('rbacUML::Forbidden') &lt;> null)"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpKbnyEeGbfYXZ9oSuCQ" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_fsUpK7nyEeGbfYXZ9oSuCQ" name="rBACRole" ordered="false" upperBound="-1" eType="_fsUo7bnyEeGbfYXZ9oSuCQ"/>
+        </eClassifiers>
+      </contents>
+      <contents xmi:type="ecore:EPackage" xmi:id="_AFW0cLntEeGbfYXZ9oSuCQ" name="rbacUML" nsURI="http:///schemas/rbacUML/_AFO4oLntEeGbfYXZ9oSuCQ/63" nsPrefix="rbacUML">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_AFW0cbntEeGbfYXZ9oSuCQ" name="RBACUser">
+          <eAnnotations xmi:id="_AFW0crntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bbn9kHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_AFW0c7ntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_AFW0dLntEeGbfYXZ9oSuCQ" key="documentation" value="self.getAppliedStereotype('rbacUML::RBACRole') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::Permission') = null&#xA;(self.base_ActivityPartition &lt;> null) &#xA;&#x9;implies (self.aliasUser&#xA;&#x9;&#x9;->forAll(base_Class.name = self.base_ActivityPartition.name))&#xA;(self.base_ActivityPartition &lt;> null) &#xA;&#x9;implies (self.aliasUser.rBACRole&#xA;&#x9;&#x9;->union(self.aliasUser.rBACRole.base_Class->asSet().allParents().oclAsType(Class).extension_RBACRole)->asSet()&#xA;&#x9;&#x9;->includesAll(self.rBACRole.base_Class.extension_RBACRole))&#xA;(self.base_ActivityPartition &lt;> null) &#xA;&#x9;implies (self.aliasUser->size() = 1 and self.aliasUser&#xA;&#x9;&#x9;->forAll(base_Class &lt;> null))&#xA;(self.base_Class &lt;> null) &#xA;implies (self.aliasUser->size() = 0)&#xA;self.base_Class &lt;> null implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(act | act.oclIsKindOf(ActivityPartition) and act.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(ActivityPartition)&#xA;&#x9;->select(act | (act.name = self.name) and (act.extension_RBACUser.aliasUser.base_Class = self))&#xA;->size() > 0&#xA;(self.base_Class &lt;> null) implies (self.rBACRole->size() > 0)&#xA;self.rBACRole->size() > 0 and self.base_Class &lt;> null implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class).extension_RBACUser&#xA;&#x9;->select(usr | usr.rBACRole->includesAll(self.rBACRole) &#xA;&#x9;&#x9;&#x9;and usr.rBACRole->size() = self.rBACRole->size()&#xA;&#x9;&#x9;&#x9;and usr.base_Class.name &lt;> self.base_Class.name)&#xA;->size() = 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0dbntEeGbfYXZ9oSuCQ" name="rBACRole" ordered="false" upperBound="-1" eType="_AFW0fbntEeGbfYXZ9oSuCQ"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0d7ntEeGbfYXZ9oSuCQ" name="aliasUser" ordered="false" eType="_AFW0cbntEeGbfYXZ9oSuCQ"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0ebntEeGbfYXZ9oSuCQ" name="base_ActivityPartition" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//ActivityPartition"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0e7ntEeGbfYXZ9oSuCQ" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_AFW0fbntEeGbfYXZ9oSuCQ" name="RBACRole">
+          <eAnnotations xmi:id="_AFW0frntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_cGgGkHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_AFW0f7ntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_AFW0gLntEeGbfYXZ9oSuCQ" key="documentation" value="self.getAppliedStereotype('rbacUML::RBACUser') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::Permission') = null&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->select(usr | usr.extension_RBACUser.rBACRole->exists(rl | rl.base_Class.name = self.name))&#xA;->size() > 0&#xA;self.permission->size() > 0&#xA;self.permission->size() > 0 implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(rl | rl.oclIsTypeOf(Class) and rl.getAppliedStereotype('rbacUML::RBACRole') &lt;> null).oclAsType(Class).extension_RBACRole&#xA;&#x9;->select(rl | rl.permission->includesAll(self.permission) &#xA;&#x9;&#x9;&#x9;and rl.permission->size() = self.permission->size()&#xA;&#x9;&#x9;&#x9;and rl.base_Class.name &lt;> self.base_Class.name)&#xA;->size() = 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0gbntEeGbfYXZ9oSuCQ" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0g7ntEeGbfYXZ9oSuCQ" name="permission" ordered="false" upperBound="-1" eType="_AFW0ibntEeGbfYXZ9oSuCQ"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0hbntEeGbfYXZ9oSuCQ" name="ssod1" ordered="false" upperBound="-1" eType="_AFW0fbntEeGbfYXZ9oSuCQ"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0h7ntEeGbfYXZ9oSuCQ" name="dsod1" ordered="false" upperBound="-1" eType="_AFW0fbntEeGbfYXZ9oSuCQ"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_AFW0ibntEeGbfYXZ9oSuCQ" name="Permission">
+          <eAnnotations xmi:id="_AFW0irntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ewmVUHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_AFW0i7ntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_AFW0jLntEeGbfYXZ9oSuCQ" key="documentation" value="self.getAppliedStereotype('rbacUML::RBACUser') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::RBACRole') = null&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(rl | rl.oclIsTypeOf(Class) and rl.getAppliedStereotype('rbacUML::RBACRole') &lt;> null).oclAsType(Class)&#xA;&#x9;->select(rl | rl.extension_RBACRole.permission->exists(per | per.base_Class.name = self.name))&#xA;->size() > 0&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(op | op.oclIsTypeOf(Operation) and op.getAppliedStereotype('rbacUML::Restricted') &lt;> null).oclAsType(Operation)&#xA;&#x9;->select(op | op.extension_Restricted.permission->exists(base_Class.name = self.name))&#xA;->size() > 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0jbntEeGbfYXZ9oSuCQ" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_AFW0j7ntEeGbfYXZ9oSuCQ" name="Restricted">
+          <eAnnotations xmi:id="_AFW0kLntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3JImcHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_AFW0kbntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_AFW0krntEeGbfYXZ9oSuCQ" key="documentation" value="(self.base_Operation &lt;> null) implies (self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)&#xA;&#x9;->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') = null).oclAsType(Message).signature.oclAsType(Operation)&#xA;&#x9;->select(op | op = self)->size() = 0)&#xA;(self.base_Operation &lt;> null) implies (self.permission->size() > 0)&#xA;(self.base_Message &lt;> null)&#xA;implies&#xA;(self.base_Message.signature.getAppliedStereotype('rbacUML::Restricted') &lt;> null)&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->exists(usr | usr.oclAsType(Class).extension_RBACUser.rBACRole.permission->asSet()->includesAll(self.permission))&#xA;self.base_Operation &lt;> null implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(act | act.oclIsKindOf(Action) and act.getAppliedStereotype('rbacUML::Granted') &lt;> null).oclAsType(Action)&#xA;&#x9;->select(act | act.extension_Granted.operation->exists(name = self.name))&#xA;->union(&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(act | act.oclIsKindOf(Action) and act.getAppliedStereotype('rbacUML::Forbidden') &lt;> null).oclAsType(Action)&#xA;&#x9;->select(act | act.extension_Forbidden.operation->exists(name = self.name))&#xA;)->size() > 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0k7ntEeGbfYXZ9oSuCQ" name="base_Operation" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0lbntEeGbfYXZ9oSuCQ" name="base_Message" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0l7ntEeGbfYXZ9oSuCQ" name="permission" ordered="false" upperBound="-1" eType="_AFW0ibntEeGbfYXZ9oSuCQ"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_AFW0mbntEeGbfYXZ9oSuCQ" name="Granted">
+          <eAnnotations xmi:id="_AFW0mrntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_KEe2IHipEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_AFW0m7ntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_AFW0nLntEeGbfYXZ9oSuCQ" key="documentation" value="self.base_Action.inPartition.extension_RBACUser &lt;> null&#xA;self.base_Action.getAppliedStereotype('rbacUML::Forbidden') = null&#xA;self.operation->exists(op | op.getAppliedStereotype('rbacUML::Restricted') &lt;> null)&#xA;self.interaction &lt;> null implies&#xA;self.interaction.allOwnedElements()&#xA;&#x9;->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)&#xA;&#x9;->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') &lt;> null).signature->asSet()&#xA;= (self.operation)&#xA;((self.getAppliedStereotype('rbacUML::ActivateRoles') &lt;> null) &#xA;and (self.getAppliedStereotype('rbacUML::DeactivateRoles') &lt;> null)) &#xA;&#x9;implies self.base_Action.extension_ActivateRoles.rBACRole&#xA;&#x9;&#x9;->intersection(self.base_Action.extension_DeactivateRoles.rBACRole)->isEmpty()&#xA;self.getNearestPackage().allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->exists(usr | usr.oclAsType(Class).extension_RBACUser.rBACRole.permission->asSet()&#xA;&#x9;->includesAll(self.operation.extension_Restricted.permission->asSet()))&#xA;self.base_Action.inPartition.extension_RBACUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;&#x9;->union(if (self.base_Action.extension_ActivateRoles = null) then Set{} else self.base_Action.extension_ActivateRoles.rBACRole endif)->asSet()&#xA;&#x9;->symmetricDifference(if (self.base_Action.extension_DeactivateRoles = null) then Set{} else self.base_Action.extension_DeactivateRoles.rBACRole endif).permission&#xA;->includesAll(self.operation.extension_Restricted.permission->asSet())"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0nbntEeGbfYXZ9oSuCQ" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0n7ntEeGbfYXZ9oSuCQ" name="operation" ordered="false" upperBound="-1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0obntEeGbfYXZ9oSuCQ" name="interaction" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Interaction"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_AFW0o7ntEeGbfYXZ9oSuCQ" name="Forbidden">
+          <eAnnotations xmi:id="_AFW0pLntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_K47x4HipEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_AFW0pbntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_AFW0prntEeGbfYXZ9oSuCQ" key="documentation" value="self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') &lt;> null&#xA;self.operation->exists(op | op.getAppliedStereotype('rbacUML::Restricted') &lt;> null)&#xA;self.interaction &lt;> null implies&#xA;self.interaction.allOwnedElements()&#xA;&#x9;->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)&#xA;&#x9;->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') &lt;> null).signature->asSet()&#xA;= (self.operation)&#xA;((self.getAppliedStereotype('rbacUML::ActivateRoles') &lt;> null) &#xA;and (self.getAppliedStereotype('rbacUML::DeactivateRoles') &lt;> null)) &#xA;&#x9;implies self.base_Action.extension_ActivateRoles.rBACRole&#xA;&#x9;&#x9;->intersection(self.base_Action.extension_DeactivateRoles.rBACRole)&#xA;&#x9;&#x9;&#x9;->isEmpty()&#xA;self.base_Action.inPartition.extension_RBACUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;&#x9;->union(if (self.base_Action.extension_ActivateRoles = null) then Set{} else self.base_Action.extension_ActivateRoles.rBACRole endif)->asSet()&#xA;&#x9;->symmetricDifference(if (self.base_Action.extension_DeactivateRoles = null) then Set{} else self.base_Action.extension_DeactivateRoles.rBACRole endif).permission&#xA;->includesAll(self.operation.extension_Restricted.permission->asSet()) = false"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0p7ntEeGbfYXZ9oSuCQ" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0qbntEeGbfYXZ9oSuCQ" name="operation" ordered="false" upperBound="-1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0q7ntEeGbfYXZ9oSuCQ" name="interaction" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Interaction"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_AFW0rbntEeGbfYXZ9oSuCQ" name="ActivateRoles">
+          <eAnnotations xmi:id="_AFW0rrntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AC61IHiqEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_AFW0r7ntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_AFW0sLntEeGbfYXZ9oSuCQ" key="documentation" value="self.base_Action.inPartition.extension_RBACUser.rBACRole->intersection(self.rBACRole)->isEmpty()&#xA;self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;->includesAll(self.rBACRole)&#xA;self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') &lt;> null&#xA;(self.base_Action.getAppliedStereotype('rbacUML::Granted') &lt;> null) &#xA;or (self.base_Action.getAppliedStereotype('rbacUML::Forbidden') &lt;> null)&#xA;self.rBACRole->size() > 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0sbntEeGbfYXZ9oSuCQ" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0s7ntEeGbfYXZ9oSuCQ" name="rBACRole" ordered="false" upperBound="-1" eType="_AFW0fbntEeGbfYXZ9oSuCQ"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_AFW0tbntEeGbfYXZ9oSuCQ" name="DeactivateRoles">
+          <eAnnotations xmi:id="_AFW0trntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Ce4hQHiqEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_AFW0t7ntEeGbfYXZ9oSuCQ" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_AFW0uLntEeGbfYXZ9oSuCQ" key="documentation" value="self.rBACRole->size() > 0&#xA;self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;->includesAll(self.rBACRole)&#xA;self.base_Action.inPartition.extension_RBACUser.rBACRole&#xA;&#x9;->includesAll(self.rBACRole)&#xA;self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') &lt;> null&#xA;(self.base_Action.getAppliedStereotype('rbacUML::Granted') &lt;> null) &#xA;or (self.base_Action.getAppliedStereotype('rbacUML::Forbidden') &lt;> null)"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0ubntEeGbfYXZ9oSuCQ" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_AFW0u7ntEeGbfYXZ9oSuCQ" name="rBACRole" ordered="false" upperBound="-1" eType="_AFW0fbntEeGbfYXZ9oSuCQ"/>
+        </eClassifiers>
+      </contents>
       <contents xmi:type="ecore:EPackage" xmi:id="_PAT8kHz_EeGuJLuzXyJ7BA" name="rbacUML" nsURI="http:///schemas/rbacUML/_PAF6IHz_EeGuJLuzXyJ7BA/62" nsPrefix="rbacUML">
         <eClassifiers xmi:type="ecore:EClass" xmi:id="_PAT8kXz_EeGuJLuzXyJ7BA" name="RBACUser">
           <eAnnotations xmi:id="_PAT8knz_EeGuJLuzXyJ7BA" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bbn9kHioEeGfYppGxhP38A"/>
@@ -6116,7 +6316,7 @@
           <body>self.getAppliedStereotype('rbacUML::RBACUser') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::Permission') = null</body>
         </specification>
       </ownedRule>
-      <ownedRule xmi:id="__fOiIHi9EeGS4N9LIOgArQ" name="COMP RBACRole has no RBACUser" constrainedElement="_cGgGkHioEeGfYppGxhP38A">
+      <ownedRule xmi:id="__fOiIHi9EeGS4N9LIOgArQ" name="COV RBACRole has no RBACUser" constrainedElement="_cGgGkHioEeGfYppGxhP38A">
         <eAnnotations xmi:id="_Wvotk3i-EeGS4N9LIOgArQ" source="uml2.extensions">
           <details xmi:id="_WvotlHi-EeGS4N9LIOgArQ" key="addedInVersion" value="49"/>
         </eAnnotations>
@@ -6232,7 +6432,7 @@
           <body>self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(rl | rl.oclIsTypeOf(Class) and rl.getAppliedStereotype('rbacUML::RBACRole') &lt;> null).oclAsType(Class)&#xA;&#x9;->select(rl | rl.extension_RBACRole.permission->exists(per | per.base_Class.name = self.name))&#xA;->size() > 0</body>
         </specification>
       </ownedRule>
-      <ownedRule xmi:id="_2kfRMHi8EeGS4N9LIOgArQ" name="COMP Permission is not used by any Operation" constrainedElement="_ewmVUHioEeGfYppGxhP38A">
+      <ownedRule xmi:id="_2kfRMHi8EeGS4N9LIOgArQ" name="COV Permission is not used by any Operation" constrainedElement="_ewmVUHioEeGfYppGxhP38A">
         <eAnnotations xmi:id="_LlSxgHi9EeGS4N9LIOgArQ" source="uml2.extensions">
           <details xmi:id="_LlSxgXi9EeGS4N9LIOgArQ" key="addedInVersion" value="45"/>
         </eAnnotations>
