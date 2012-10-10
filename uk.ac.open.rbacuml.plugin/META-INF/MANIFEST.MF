@@ -3,7 +3,11 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %PluginName
 Bundle-SymbolicName: uk.ac.open.rbacuml.plugin; singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-ClassPath: .,bin
+Bundle-ClassPath: .,
+ bin,
+ lib/sqlite4java.jar,
+ lib/libsqlite4java-linux-amd64.so,
+ lib/libsqlite4java-linux-i386.so
 Bundle-Activator: uk.ac.open.rbacuml.plugin.Activator
 Bundle-Vendor: %ProviderName 
 Bundle-Localization: plugin

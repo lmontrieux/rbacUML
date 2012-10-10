@@ -1252,6 +1252,12 @@
              label="Validate rbacUML constraints"
              menubarPath="additions">
        </action>
+       <action
+             class="uk.ac.open.rbacuml.plugin.validation.BulkEvaluationAction"
+             id="uk.ac.open.rbacuml.plugin.validation.bulkEvaluationAction"
+             label="rbacUML bulk validation"
+             menubarPath="additions">
+       </action>
     </viewerContribution>
 	</extension>
 	<extension id="profiledModelActionFilter"
