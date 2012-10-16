@@ -104,14 +104,12 @@ public class SimpleRbacUMLValidator implements IRbacUMLValidator, Runnable {
 			if (this.types.get("ver") == true)
 				types.add("VER");
 			result.merge(validate(elements, validator, createCategoryFilter(types)));
-			if (!result.isMultiStatus()) {
+			if (!result.isOK()) {
 				if (this.types.get("sat") == true) {
 					// verification has failed and satisfiability is required
 					types = new ArrayList<String>();
 					types.add("SAT");
 					result.merge(validate(elements, validator, createCategoryFilter(types)));
-					this.endTime = System.currentTimeMillis();
-					return result;
 				}
 			}
 			types.clear();
