@@ -1,0 +1,302 @@
+<models>
+	<model name="malformed0001">
+		<well-formedness enforced="false" />
+		<verification enforced="true" />
+		<completeness enforced="true" />
+		<coverage enforced="true" />
+		<redundancy enforced="true" />
+		<satisfiability enforced="true" />
+		<users num="10">
+			<roles min="5" max="5"/>
+		</users>
+		<roles num="10">
+			<ssod min="0" max="0" />
+			<dsod min="0" max="0" />
+			<hierarchies min="0" max="0" />
+			<permissions min="5" max="5" />
+		</roles>
+		<permissions num="10">
+		</permissions>
+		<partitions num="3" />
+		<actions num="10" granted="5" forbidden="5">
+			<operations min="5" max="5" />
+			<restricted-operations min="5" max="5" />
+		</actions>
+		<operations num="10" restricted="10">
+			<permissions min="5" max="5" />
+		</operations>
+		<classes num="3" />
+		<activities num="1" />
+	</model>
+
+	<model name="malformed0002">
+		<well-formedness enforced="false" />
+		<verification enforced="true" />
+		<completeness enforced="true" />
+		<coverage enforced="true" />
+		<redundancy enforced="true" />
+		<satisfiability enforced="true" />
+		<users num="20">
+			<roles min="5" max="5"/>
+		</users>
+		<roles num="20">
+			<ssod min="0" max="0" />
+			<dsod min="0" max="0" />
+			<hierarchies min="0" max="0" />
+			<permissions min="5" max="5" />
+		</roles>
+		<permissions num="20">
+		</permissions>
+		<partitions num="3" />
+		<actions num="20" granted="10" forbidden="10">
+			<operations min="5" max="5" />
+			<restricted-operations min="5" max="5" />
+		</actions>
+		<operations num="20" restricted="20">
+			<permissions min="5" max="5" />
+		</operations>
+		<classes num="3" />
+		<activities num="1" />
+	</model>
+
+	<model name="malformed0003">
+		<well-formedness enforced="false" />
+		<verification enforced="true" />
+		<completeness enforced="true" />
+		<coverage enforced="true" />
+		<redundancy enforced="true" />
+		<satisfiability enforced="true" />
+		<users num="30">
+			<roles min="5" max="5"/>
+		</users>
+		<roles num="30">
+			<ssod min="0" max="0" />
+			<dsod min="0" max="0" />
+			<hierarchies min="0" max="0" />
+			<permissions min="5" max="5" />
+		</roles>
+		<permissions num="30">
+		</permissions>
+		<partitions num="3" />
+		<actions num="30" granted="15" forbidden="15">
+			<operations min="5" max="5" />
+			<restricted-operations min="5" max="5" />
+		</actions>
+		<operations num="30" restricted="30">
+			<permissions min="5" max="5" />
+		</operations>
+		<classes num="3" />
+		<activities num="1" />
+	</model>
+
+	<model name="malformed0004">
+		<well-formedness enforced="false" />
+		<verification enforced="true" />
+		<completeness enforced="true" />
+		<coverage enforced="true" />
+		<redundancy enforced="true" />
+		<satisfiability enforced="true" />
+		<users num="40">
+			<roles min="5" max="5"/>
+		</users>
+		<roles num="40">
+			<ssod min="0" max="0" />
+			<dsod min="0" max="0" />
+			<hierarchies min="0" max="0" />
+			<permissions min="5" max="5" />
+		</roles>
+		<permissions num="40">
+		</permissions>
+		<partitions num="3" />
+		<actions num="40" granted="20" forbidden="20">
+			<operations min="5" max="5" />
+			<restricted-operations min="5" max="5" />
+		</actions>
+		<operations num="40" restricted="40">
+			<permissions min="5" max="5" />
+		</operations>
+		<classes num="3" />
+		<activities num="1" />
+	</model>
+
+	<model name="malformed0005">
+		<well-formedness enforced="false" />
+		<verification enforced="true" />
+		<completeness enforced="true" />
+		<coverage enforced="true" />
+		<redundancy enforced="true" />
+		<satisfiability enforced="true" />
+		<users num="50">
+			<roles min="5" max="5"/>
+		</users>
+		<roles num="50">
+			<ssod min="0" max="0" />
+			<dsod min="0" max="0" />
+			<hierarchies min="0" max="0" />
+			<permissions min="5" max="5" />
+		</roles>
+		<permissions num="50">
+		</permissions>
+		<partitions num="3" />
+		<actions num="50" granted="25" forbidden="25">
+			<operations min="5" max="5" />
+			<restricted-operations min="5" max="5" />
+		</actions>
+		<operations num="50" restricted="50">
+			<permissions min="5" max="5" />
+		</operations>
+		<classes num="3" />
+		<activities num="1" />
+	</model>
+
+	<model name="malformed0006">
+		<well-formedness enforced="false" />
+		<verification enforced="true" />
+		<completeness enforced="true" />
+		<coverage enforced="true" />
+		<redundancy enforced="true" />
+		<satisfiability enforced="true" />
+		<users num="100">
+			<roles min="5" max="5"/>
+		</users>
+		<roles num="100">
+			<ssod min="0" max="0" />
+			<dsod min="0" max="0" />
+			<hierarchies min="0" max="0" />
+			<permissions min="5" max="5" />
+		</roles>
+		<permissions num="100">
+		</permissions>
+		<partitions num="3" />
+		<actions num="100" granted="50" forbidden="50">
+			<operations min="5" max="5" />
+			<restricted-operations min="5" max="5" />
+		</actions>
+		<operations num="100" restricted="100">
+			<permissions min="5" max="5" />
+		</operations>
+		<classes num="3" />
+		<activities num="1" />
+	</model>
+
+	<model name="malformed0007">
+		<well-formedness enforced="false" />
+		<verification enforced="true" />
+		<completeness enforced="true" />
+		<coverage enforced="true" />
+		<redundancy enforced="true" />
+		<satisfiability enforced="true" />
+		<users num="150">
+			<roles min="5" max="5"/>
+		</users>
+		<roles num="150">
+			<ssod min="0" max="0" />
+			<dsod min="0" max="0" />
+			<hierarchies min="0" max="0" />
+			<permissions min="5" max="5" />
+		</roles>
+		<permissions num="150">
+		</permissions>
+		<partitions num="3" />
+		<actions num="150" granted="75" forbidden="75">
+			<operations min="5" max="5" />
+			<restricted-operations min="5" max="5" />
+		</actions>
+		<operations num="150" restricted="150">
+			<permissions min="5" max="5" />
+		</operations>
+		<classes num="3" />
+		<activities num="1" />
+	</model>
+
+	<model name="malformed0008">
+		<well-formedness enforced="false" />
+		<verification enforced="true" />
+		<completeness enforced="true" />
+		<coverage enforced="true" />
+		<redundancy enforced="true" />
+		<satisfiability enforced="true" />
+		<users num="200">
+			<roles min="5" max="5"/>
+		</users>
+		<roles num="200">
+			<ssod min="0" max="0" />
+			<dsod min="0" max="0" />
+			<hierarchies min="0" max="0" />
+			<permissions min="5" max="5" />
+		</roles>
+		<permissions num="200">
+		</permissions>
+		<partitions num="3" />
+		<actions num="200" granted="100" forbidden="100">
+			<operations min="5" max="5" />
+			<restricted-operations min="5" max="5" />
+		</actions>
+		<operations num="200" restricted="200">
+			<permissions min="5" max="5" />
+		</operations>
+		<classes num="3" />
+		<activities num="1" />
+	</model>
+
+	<model name="malformed0009">
+		<well-formedness enforced="false" />
+		<verification enforced="true" />
+		<completeness enforced="true" />
+		<coverage enforced="true" />
+		<redundancy enforced="true" />
+		<satisfiability enforced="true" />
+		<users num="300">
+			<roles min="5" max="5"/>
+		</users>
+		<roles num="300">
+			<ssod min="0" max="0" />
+			<dsod min="0" max="0" />
+			<hierarchies min="0" max="0" />
+			<permissions min="5" max="5" />
+		</roles>
+		<permissions num="300">
+		</permissions>
+		<partitions num="3" />
+		<actions num="300" granted="150" forbidden="150">
+			<operations min="5" max="5" />
+			<restricted-operations min="5" max="5" />
+		</actions>
+		<operations num="300" restricted="300">
+			<permissions min="5" max="5" />
+		</operations>
+		<classes num="3" />
+		<activities num="1" />
+	</model>
+
+	<model name="malformed0010">
+		<well-formedness enforced="false" />
+		<verification enforced="true" />
+		<completeness enforced="true" />
+		<coverage enforced="true" />
+		<redundancy enforced="true" />
+		<satisfiability enforced="true" />
+		<users num="400">
+			<roles min="5" max="5"/>
+		</users>
+		<roles num="400">
+			<ssod min="0" max="0" />
+			<dsod min="0" max="0" />
+			<hierarchies min="0" max="0" />
+			<permissions min="5" max="5" />
+		</roles>
+		<permissions num="400">
+		</permissions>
+		<partitions num="3" />
+		<actions num="400" granted="200" forbidden="200">
+			<operations min="5" max="5" />
+			<restricted-operations min="5" max="5" />
+		</actions>
+		<operations num="400" restricted="400">
+			<permissions min="5" max="5" />
+		</operations>
+		<classes num="3" />
+		<activities num="1" />
+	</model>
+</models>
+		

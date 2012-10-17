@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:rbacUML="http:///schemas/rbacUML/_pNPbMBOnEeKRHbVJmDOoqQ/91" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xmi:version="2.0" xsi:schemaLocation="http:///schemas/rbacUML/_pNPbMBOnEeKRHbVJmDOoqQ/91 pathmap://RBACUML/rbacUML.epx#_pNSegBOnEeKRHbVJmDOoqQ?rbacUML/rbacUML?">
+  <uml:Model xmi:id="_NRAMoAwOEdmFcaeZXPdWAQ" name="empty rbacUML Model">
+    <eAnnotations xmi:id="_NRAMoQwOEdmFcaeZXPdWAQ" source="uml2.diagrams" references="_NRAMogwOEdmFcaeZXPdWAQ">
+      <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_NRAMogwOEdmFcaeZXPdWAQ" type="Freeform" name="Main" />
+    </eAnnotations>
+    <eAnnotations xmi:id="_aBFQwM6gEeGCCreNvZZp-g" source="com.ibm.xtools.common.ui.reduction.editingCapabilities">
+      <details xmi:id="_aBFQwc6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBFunctionTemplateParameter" value="1" />
+      <details xmi:id="_aBFQws6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBPrimitiveTypeTemplateParameter" value="1" />
+      <details xmi:id="_aBFQw86gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBElementImport1" value="1" />
+      <details xmi:id="_aBFQxM6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBFragment" value="1" />
+      <details xmi:id="_aBFQxc6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBElementImport2" value="1" />
+      <details xmi:id="_aBFQxs6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBArtifact" value="1" />
+      <details xmi:id="_aBFQx86gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBInterfaceTemplateParameter" value="1" />
+      <details xmi:id="_aBFQyM6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBFunction" value="1" />
+      <details xmi:id="_aBFQyc6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBProfile" value="1" />
+      <details xmi:id="_aBFQys6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBInteractionOverview" value="1" />
+      <details xmi:id="_aBF30M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBSubsystem" value="1" />
+      <details xmi:id="_aBF30c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBSignal" value="1" />
+      <details xmi:id="_aBF30s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBClass" value="1" />
+      <details xmi:id="_aBF3086gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBRelationship1" value="1" />
+      <details xmi:id="_aBF31M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBRelationship2" value="1" />
+      <details xmi:id="_aBF31c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBStateMachine1" value="1" />
+      <details xmi:id="_aBF31s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBRelationship3" value="1" />
+      <details xmi:id="_aBF3186gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBStateMachine2" value="1" />
+      <details xmi:id="_aBF32M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBComponent" value="1" />
+      <details xmi:id="_aBF32c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBDeploymentSpecification" value="1" />
+      <details xmi:id="_aBF32s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBAbstractionRelation" value="1" />
+      <details xmi:id="_aBF3286gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBActivity1" value="1" />
+      <details xmi:id="_aBF33M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.javaVisualizerActivity" value="1" />
+      <details xmi:id="_aBF33c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBActivity2" value="1" />
+      <details xmi:id="_aBF33s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBAction" value="1" />
+      <details xmi:id="_aBF3386gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBActivity3" value="1" />
+      <details xmi:id="_aBF34M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBActivity4" value="1" />
+      <details xmi:id="_aBF34c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBClassTemplateParameter" value="1" />
+      <details xmi:id="_aBF34s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBPackage" value="1" />
+      <details xmi:id="_aBF3486gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBTemplate" value="1" />
+      <details xmi:id="_aBF35M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBStereotypedDeployment1" value="1" />
+      <details xmi:id="_aBF35c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBSpecificInstanceType1" value="1" />
+      <details xmi:id="_aBF35s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBSequence1" value="1" />
+      <details xmi:id="_aBF3586gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBCollaborationUse" value="1" />
+      <details xmi:id="_aBF36M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBSpecificInstanceType2" value="1" />
+      <details xmi:id="_aBF36c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBSequence2" value="1" />
+      <details xmi:id="_aBF36s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBTiming" value="1" />
+      <details xmi:id="_aBF3686gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBDependancy" value="1" />
+      <details xmi:id="_aBF37M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBLifeLine" value="1" />
+      <details xmi:id="_aBF37c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBComponentTemplateParameter" value="1" />
+      <details xmi:id="_aBF37s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBUsage" value="1" />
+      <details xmi:id="_aBF3786gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBFreeFormDiagram" value="1" />
+      <details xmi:id="_aBF38M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBInstance" value="1" />
+      <details xmi:id="_aBF38c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBStereotypedArtifact" value="1" />
+      <details xmi:id="_aBGe4M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBEvent1" value="1" />
+      <details xmi:id="_aBGe4c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBTypes1" value="1" />
+      <details xmi:id="_aBGe4s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBEvent2" value="1" />
+      <details xmi:id="_aBGe486gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBTypes2" value="1" />
+      <details xmi:id="_aBGe5M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBTypes3" value="1" />
+      <details xmi:id="_aBGe5c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBTypes4" value="1" />
+      <details xmi:id="_aBGe5s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBConstraint" value="1" />
+      <details xmi:id="_aBGe586gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBStereotypedClass" value="1" />
+      <details xmi:id="_aBGe6M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBProfileApplication" value="1" />
+      <details xmi:id="_aBGe6c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBPackageTemplateParameter" value="1" />
+      <details xmi:id="_aBGe6s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBStereotypedComponent" value="1" />
+      <details xmi:id="_aBGe686gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBInterface" value="1" />
+      <details xmi:id="_aBGe7M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBInformationFlow" value="1" />
+      <details xmi:id="_aBGe7c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBComment1" value="1" />
+      <details xmi:id="_aBGe7s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBComment2" value="1" />
+      <details xmi:id="_aBGe786gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBComment3" value="1" />
+      <details xmi:id="_aBGe8M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBCompositeStructure1" value="1" />
+      <details xmi:id="_aBGe8c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBCollaboration" value="1" />
+      <details xmi:id="_aBGe8s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBCompositeStructure2" value="1" />
+      <details xmi:id="_aBGe886gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBRealization" value="1" />
+      <details xmi:id="_aBGe9M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBUseCase1" value="1" />
+      <details xmi:id="_aBGe9c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBUseCase2" value="1" />
+      <details xmi:id="_aBGe9s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBClassDiagram" value="1" />
+      <details xmi:id="_aBGe986gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBDeployment1" value="1" />
+      <details xmi:id="_aBGe-M6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBDeployment2" value="1" />
+      <details xmi:id="_aBGe-c6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBInteraction" value="1" />
+      <details xmi:id="_aBGe-s6gEeGCCreNvZZp-g" key="com.ibm.xtools.activities.umlBBCommunication" value="1" />
+      <details xmi:id="_aBGe-86gEeGCCreNvZZp-g" key="uk.ac.open.rbacuml.plugin.uireduction.activity" value="2" />
+    </eAnnotations>
+    <packageImport xmi:id="_UeIAJtCzEdqK7KjEh4hvHw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0" />
+    </packageImport>
+    <profileApplication xmi:id="_UeIAINCzEdqK7KjEh4hvHw">
+      <eAnnotations xmi:id="_UeIAIdCzEdqK7KjEh4hvHw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w" />
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0" />
+    </profileApplication>
+    <profileApplication xmi:id="_UeIAItCzEdqK7KjEh4hvHw">
+      <eAnnotations xmi:id="_UeIAI9CzEdqK7KjEh4hvHw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default?" />
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?" />
+    </profileApplication>
+    <profileApplication xmi:id="_UeIAJNCzEdqK7KjEh4hvHw">
+      <eAnnotations xmi:id="_UeIAJdCzEdqK7KjEh4hvHw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_IrdAUMmBEdqBcN1R6EvWUw?Deployment/Deployment?" />
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?" />
+    </profileApplication>
+    <profileApplication xmi:id="_aCu2kM6gEeGCCreNvZZp-g">
+      <eAnnotations xmi:id="_aI9aYM6gEeGCCreNvZZp-g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://RBACUML/rbacUML.epx#_pNSegBOnEeKRHbVJmDOoqQ?rbacUML/rbacUML?" />
+      </eAnnotations>
+      <appliedProfile href="pathmap://RBACUML/rbacUML.epx#_ANA3MHioEeGfYppGxhP38A?rbacUML?" />
+    </profileApplication>
+    <packagedElement xmi:type="uml:Class" xmi:id="778dc672-6e5b-4c27-a07c-9be6f23593c2" name="User1" />
+    <packagedElement xmi:type="uml:Class" xmi:id="f995d898-3a62-49a8-bc57-add75065309c" name="User2" />
+    <packagedElement xmi:type="uml:Class" xmi:id="965a2b40-22f5-4a48-900e-1bd4af58d110" name="User3" />
+    <packagedElement xmi:type="uml:Class" xmi:id="83342267-7483-4f2b-a5c7-875464a23c45" name="User4" />
+    <packagedElement xmi:type="uml:Class" xmi:id="65423bcb-6530-48da-9451-7e91dee73cd4" name="User5" />
+    <packagedElement xmi:type="uml:Class" xmi:id="3a0d911d-7bba-47ed-b699-00de81cfaca2" name="User6" />
+    <packagedElement xmi:type="uml:Class" xmi:id="c75649ad-23d6-4c80-ab26-f42c8c0467f5" name="User7" />
+    <packagedElement xmi:type="uml:Class" xmi:id="087aafbd-da11-443f-8a3a-c534d2a366eb" name="User8" />
+    <packagedElement xmi:type="uml:Class" xmi:id="a13f9e75-0ec8-475c-9f41-6efdfbae64c9" name="User9" />
+    <packagedElement xmi:type="uml:Class" xmi:id="6a3db1be-a863-4b43-a037-39fd778c21fb" name="User10" />
+    <packagedElement xmi:type="uml:Class" xmi:id="89a85572-d83f-4f99-90ee-34e95d3f47e0" name="Role1" />
+    <packagedElement xmi:type="uml:Class" xmi:id="873223c5-dea1-4150-ae53-c2e85380e6b0" name="Role2" />
+    <packagedElement xmi:type="uml:Class" xmi:id="3b94b1ee-1678-441e-a38f-df3c12456da3" name="Role3" />
+    <packagedElement xmi:type="uml:Class" xmi:id="f4d42d9c-9ebd-4c6d-8ffa-5518651aa6ce" name="Role4" />
+    <packagedElement xmi:type="uml:Class" xmi:id="a8c07bc3-735f-48fc-aa4d-2a5bc675c3e0" name="Role5" />
+    <packagedElement xmi:type="uml:Class" xmi:id="40188002-93f3-4042-b8eb-1d7751112ac0" name="Role6" />
+    <packagedElement xmi:type="uml:Class" xmi:id="cac9386d-929f-4b2d-b414-48fbb766283e" name="Role7" />
+    <packagedElement xmi:type="uml:Class" xmi:id="9cb97149-955e-453c-a2e0-e33df4501897" name="Role8" />
+    <packagedElement xmi:type="uml:Class" xmi:id="55434677-71d9-4276-8599-14de77a25ca1" name="Role9" />
+    <packagedElement xmi:type="uml:Class" xmi:id="354928e1-2e86-4500-b8b5-d67d980e5786" name="Role10" />
+    <packagedElement xmi:type="uml:Class" xmi:id="5724f27f-93c6-464a-8631-2685692bed33" name="Permission1" />
+    <packagedElement xmi:type="uml:Class" xmi:id="42dad820-e4fc-4893-b94a-e102269d61c3" name="Permission2" />
+    <packagedElement xmi:type="uml:Class" xmi:id="7960227d-876f-4dfa-9c6f-2435338dad62" name="Permission3" />
+    <packagedElement xmi:type="uml:Class" xmi:id="3123eee7-d6d8-4c57-b857-5a7908e49032" name="Permission4" />
+    <packagedElement xmi:type="uml:Class" xmi:id="f78b56e1-66f0-42b6-bb71-2ee323851a29" name="Permission5" />
+    <packagedElement xmi:type="uml:Class" xmi:id="619ccfd5-4231-4dab-8cca-249ea399e9e8" name="Permission6" />
+    <packagedElement xmi:type="uml:Class" xmi:id="8775feba-841a-4a10-8117-cc6ae34f22bf" name="Permission7" />
+    <packagedElement xmi:type="uml:Class" xmi:id="1b5f89d3-b1cf-4e38-9c8f-2c9d1fcac6e0" name="Permission8" />
+    <packagedElement xmi:type="uml:Class" xmi:id="ded43870-8e4b-4b2e-8ecf-03e727665d7e" name="Permission9" />
+    <packagedElement xmi:type="uml:Class" xmi:id="d74c2870-6581-4f2b-94f2-5a4fc9abecc0" name="Permission10" />
+    <packagedElement xmi:type="uml:Class" xmi:id="9623487d-bd59-4798-9a4c-ddd271923efe" name="Class1">
+      <ownedOperation xmi:id="31ed27da-8ab0-4599-b766-3ca968728f59" name="operation3" />
+      <ownedOperation xmi:id="23791b80-68b8-4119-8579-8a68d707015c" name="operation5" />
+      <ownedOperation xmi:id="34af5b4e-1931-467f-9e4a-47986baf6548" name="operation6" />
+      <ownedOperation xmi:id="74659597-09d8-4597-93be-3d62828ae03b" name="operation7" />
+      <ownedOperation xmi:id="ee24e010-cf9f-48e4-aa8a-74bcaea9c681" name="restrictedOperation3" />
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="71e551f4-ead3-42b1-8174-00618e7e5c7f" name="Class2">
+      <ownedOperation xmi:id="82f7c87c-7440-4d20-b53a-7316bb10ddbf" name="operation2" />
+      <ownedOperation xmi:id="d271b260-855d-41e9-be51-e6e84377a6c8" name="operation4" />
+      <ownedOperation xmi:id="7bbb60c7-a7ad-459d-b025-e8937aea87ea" name="operation8" />
+      <ownedOperation xmi:id="f3d5f3f0-9b08-430b-a05a-b8379652cbdb" name="operation9" />
+      <ownedOperation xmi:id="56db4544-e04b-4450-b570-b683980ee9a1" name="restrictedOperation2" />
+      <ownedOperation xmi:id="1859a70d-c4a5-4929-a24b-d33753e35e9c" name="restrictedOperation5" />
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="613c2508-b024-4417-9bc8-6ed6c5dcadbe" name="Class3">
+      <ownedOperation xmi:id="eea44d28-ecec-4f14-adb4-9bae87eeb189" name="operation0" />
+      <ownedOperation xmi:id="47b290da-a70a-456b-9b8b-58212d6fca09" name="operation1" />
+      <ownedOperation xmi:id="9ee86faf-e986-472f-9e33-6c3a257705c8" name="restrictedOperation0" />
+      <ownedOperation xmi:id="fc6f6b59-b539-4b72-8618-a2ab80d56976" name="restrictedOperation1" />
+      <ownedOperation xmi:id="0121ccd7-b66d-4a17-99fc-00d4e4998f32" name="restrictedOperation4" />
+      <ownedOperation xmi:id="508c8dde-6051-4ad3-becb-a3591eaec634" name="restrictedOperation6" />
+      <ownedOperation xmi:id="f3ab9b47-7b23-425f-8387-2484e09ae31c" name="restrictedOperation7" />
+      <ownedOperation xmi:id="90a9f37b-71de-402b-96ae-f4372ccd4daa" name="restrictedOperation8" />
+      <ownedOperation xmi:id="4d5fc9c5-b904-4a00-ae98-b4aabdb1a325" name="restrictedOperation9" />
+    </packagedElement>
+    <packagedElement xmi:type="uml:Activity" xmi:id="cb1ad75a-955a-49ae-98c2-092fdd416501" name="Activity1" partition="3baa5a67-760f-445d-a1a1-ce7c6fc296ee 0023c3d9-e718-458e-99c5-b6dd6e57b32b 65c518c8-ccc0-4ba9-ac0e-8ce59a93fabe">
+      <group xmi:type="uml:ActivityPartition" xmi:id="3baa5a67-760f-445d-a1a1-ce7c6fc296ee" name="User8" node="640d59f4-b2b2-4cc7-a158-70edd3717ac4 abe8d485-d614-4047-b27b-7b0d441901b3" />
+      <group xmi:type="uml:ActivityPartition" xmi:id="0023c3d9-e718-458e-99c5-b6dd6e57b32b" name="User5" node="39238649-49d0-4512-a45a-c2be2e7ad8f8" />
+      <group xmi:type="uml:ActivityPartition" xmi:id="65c518c8-ccc0-4ba9-ac0e-8ce59a93fabe" name="User5" node="" />
+      <node xmi:type="uml:OpaqueAction" xmi:id="39238649-49d0-4512-a45a-c2be2e7ad8f8" name="GrantedAction1" inPartition="0023c3d9-e718-458e-99c5-b6dd6e57b32b" />
+      <node xmi:type="uml:OpaqueAction" xmi:id="640d59f4-b2b2-4cc7-a158-70edd3717ac4" name="GrantedAction4" inPartition="3baa5a67-760f-445d-a1a1-ce7c6fc296ee" />
+      <node xmi:type="uml:OpaqueAction" xmi:id="abe8d485-d614-4047-b27b-7b0d441901b3" name="GrantedAction5" inPartition="3baa5a67-760f-445d-a1a1-ce7c6fc296ee" />
+      <node xmi:type="uml:OpaqueAction" xmi:id="10bdd0f5-3b17-417b-8063-eccda2c7c08c" name="ForbiddenAction1" inPartition="65c518c8-ccc0-4ba9-ac0e-8ce59a93fabe" />
+      <node xmi:type="uml:OpaqueAction" xmi:id="101b831a-0d49-4fc9-9d0c-c5f98b12d69a" name="ForbiddenAction5" inPartition="65c518c8-ccc0-4ba9-ac0e-8ce59a93fabe" />
+    </packagedElement>
+  </uml:Model>
+  <rbacUML:RBACUser xmi:id="91860522-6862-40fd-9308-75f553d38c61" base_Class="778dc672-6e5b-4c27-a07c-9be6f23593c2" rBACRole="d662ee9e-22fd-4e9f-8a4f-1fc26f24f27a c5be068e-9957-4eca-9834-283b097b722e 020dc9b4-9868-46e1-8844-b5bd588c28f4 91fcf57e-6f23-4112-9aab-2a6019d6bb0e f48005d1-a5b8-4b87-a413-e7ec97534cdb" />
+  <rbacUML:RBACUser xmi:id="83822398-9abb-4b11-9a8e-01d54a55bcf1" base_Class="f995d898-3a62-49a8-bc57-add75065309c" rBACRole="4dacfc98-b753-414a-b37d-7e9affca7194 d662ee9e-22fd-4e9f-8a4f-1fc26f24f27a f48005d1-a5b8-4b87-a413-e7ec97534cdb c5be068e-9957-4eca-9834-283b097b722e 2a771dd1-aaff-4432-b4fa-b7887ea22355" />
+  <rbacUML:RBACUser xmi:id="f7d26cfa-a2e5-4912-8267-0eb8235843a1" base_Class="965a2b40-22f5-4a48-900e-1bd4af58d110" rBACRole="d662ee9e-22fd-4e9f-8a4f-1fc26f24f27a 8a7e288b-b703-44b9-b33a-406cff85897c 91fcf57e-6f23-4112-9aab-2a6019d6bb0e 020dc9b4-9868-46e1-8844-b5bd588c28f4 f48005d1-a5b8-4b87-a413-e7ec97534cdb" />
+  <rbacUML:RBACUser xmi:id="00684802-559f-4560-ac67-852640655e9d" base_Class="83342267-7483-4f2b-a5c7-875464a23c45" rBACRole="d662ee9e-22fd-4e9f-8a4f-1fc26f24f27a f48005d1-a5b8-4b87-a413-e7ec97534cdb 91fcf57e-6f23-4112-9aab-2a6019d6bb0e ddadb6b6-770f-4376-b8e6-37b83bdb9385 4dacfc98-b753-414a-b37d-7e9affca7194" />
+  <rbacUML:RBACUser xmi:id="7a7b23ef-bd33-4ff7-962d-15ca2340f2b7" base_Class="65423bcb-6530-48da-9451-7e91dee73cd4" rBACRole="8a7e288b-b703-44b9-b33a-406cff85897c 6fd936b7-6a7c-42cf-8277-baab72cbd9d0 91fcf57e-6f23-4112-9aab-2a6019d6bb0e 020dc9b4-9868-46e1-8844-b5bd588c28f4 c5be068e-9957-4eca-9834-283b097b722e" />
+  <rbacUML:RBACUser xmi:id="675800b2-9981-47c0-8533-548d588cfd4f" base_Class="3a0d911d-7bba-47ed-b699-00de81cfaca2" rBACRole="ddadb6b6-770f-4376-b8e6-37b83bdb9385 4dacfc98-b753-414a-b37d-7e9affca7194 91fcf57e-6f23-4112-9aab-2a6019d6bb0e 2a771dd1-aaff-4432-b4fa-b7887ea22355 020dc9b4-9868-46e1-8844-b5bd588c28f4" />
+  <rbacUML:RBACUser xmi:id="25c0d99a-49f1-45f5-97a6-27f257143a3a" base_Class="c75649ad-23d6-4c80-ab26-f42c8c0467f5" rBACRole="d662ee9e-22fd-4e9f-8a4f-1fc26f24f27a 4dacfc98-b753-414a-b37d-7e9affca7194 c5be068e-9957-4eca-9834-283b097b722e 6fd936b7-6a7c-42cf-8277-baab72cbd9d0 f48005d1-a5b8-4b87-a413-e7ec97534cdb" />
+  <rbacUML:RBACUser xmi:id="77916c5e-c1e1-421d-a607-adf6d7adc4d2" base_Class="087aafbd-da11-443f-8a3a-c534d2a366eb" rBACRole="8a7e288b-b703-44b9-b33a-406cff85897c 91fcf57e-6f23-4112-9aab-2a6019d6bb0e f48005d1-a5b8-4b87-a413-e7ec97534cdb d662ee9e-22fd-4e9f-8a4f-1fc26f24f27a ddadb6b6-770f-4376-b8e6-37b83bdb9385" />
+  <rbacUML:RBACUser xmi:id="5aa2648d-e201-4fd3-b131-469b65be81ba" base_Class="a13f9e75-0ec8-475c-9f41-6efdfbae64c9" rBACRole="8a7e288b-b703-44b9-b33a-406cff85897c c5be068e-9957-4eca-9834-283b097b722e 6fd936b7-6a7c-42cf-8277-baab72cbd9d0 4dacfc98-b753-414a-b37d-7e9affca7194 91fcf57e-6f23-4112-9aab-2a6019d6bb0e" />
+  <rbacUML:RBACUser xmi:id="e030b19a-44b4-4ff1-bd6c-52a9044c8c34" base_Class="6a3db1be-a863-4b43-a037-39fd778c21fb" rBACRole="4dacfc98-b753-414a-b37d-7e9affca7194 f48005d1-a5b8-4b87-a413-e7ec97534cdb 2a771dd1-aaff-4432-b4fa-b7887ea22355 c5be068e-9957-4eca-9834-283b097b722e 91fcf57e-6f23-4112-9aab-2a6019d6bb0e" />
+  <rbacUML:RBACRole xmi:id="91fcf57e-6f23-4112-9aab-2a6019d6bb0e" base_Class="89a85572-d83f-4f99-90ee-34e95d3f47e0" permission="038384ab-bcf3-41ff-b1b0-f382efbc3343 a4e173d4-f772-4b21-ae44-e9ae50d7961f ff397772-0bfd-444c-bbdb-894fe5f4d617 6df1ebe9-8eb7-4f46-b85e-ed57098d9360 c5139090-cd00-420e-8619-5ffdc38c8f8d" />
+  <rbacUML:RBACRole xmi:id="2a771dd1-aaff-4432-b4fa-b7887ea22355" base_Class="873223c5-dea1-4150-ae53-c2e85380e6b0" permission="3ec098fd-2b7f-4064-b14c-af32384983b2 a4e173d4-f772-4b21-ae44-e9ae50d7961f ff397772-0bfd-444c-bbdb-894fe5f4d617 9b0db3b2-6f21-4da2-a994-d35e19e17133 6df1ebe9-8eb7-4f46-b85e-ed57098d9360" />
+  <rbacUML:RBACRole xmi:id="4dacfc98-b753-414a-b37d-7e9affca7194" base_Class="3b94b1ee-1678-441e-a38f-df3c12456da3" permission="a4e173d4-f772-4b21-ae44-e9ae50d7961f 85781d21-c3c7-4f42-b34c-5bf0078b93b1 038384ab-bcf3-41ff-b1b0-f382efbc3343 ff397772-0bfd-444c-bbdb-894fe5f4d617 3ec098fd-2b7f-4064-b14c-af32384983b2" />
+  <rbacUML:RBACRole xmi:id="020dc9b4-9868-46e1-8844-b5bd588c28f4" base_Class="f4d42d9c-9ebd-4c6d-8ffa-5518651aa6ce" permission="c5139090-cd00-420e-8619-5ffdc38c8f8d 0f8e46ed-2e3a-4464-8889-464b0b9ba127 a4e173d4-f772-4b21-ae44-e9ae50d7961f 9b0db3b2-6f21-4da2-a994-d35e19e17133 3ec098fd-2b7f-4064-b14c-af32384983b2" />
+  <rbacUML:RBACRole xmi:id="d662ee9e-22fd-4e9f-8a4f-1fc26f24f27a" base_Class="a8c07bc3-735f-48fc-aa4d-2a5bc675c3e0" permission="3ec098fd-2b7f-4064-b14c-af32384983b2 6df1ebe9-8eb7-4f46-b85e-ed57098d9360 ff397772-0bfd-444c-bbdb-894fe5f4d617 de456269-8a09-4c64-aa91-429d9da9acb1 c5139090-cd00-420e-8619-5ffdc38c8f8d" />
+  <rbacUML:RBACRole xmi:id="c5be068e-9957-4eca-9834-283b097b722e" base_Class="40188002-93f3-4042-b8eb-1d7751112ac0" permission="ff397772-0bfd-444c-bbdb-894fe5f4d617 6df1ebe9-8eb7-4f46-b85e-ed57098d9360 3ec098fd-2b7f-4064-b14c-af32384983b2 038384ab-bcf3-41ff-b1b0-f382efbc3343 85781d21-c3c7-4f42-b34c-5bf0078b93b1" />
+  <rbacUML:RBACRole xmi:id="8a7e288b-b703-44b9-b33a-406cff85897c" base_Class="cac9386d-929f-4b2d-b414-48fbb766283e" permission="9b0db3b2-6f21-4da2-a994-d35e19e17133 85781d21-c3c7-4f42-b34c-5bf0078b93b1 0f8e46ed-2e3a-4464-8889-464b0b9ba127 6df1ebe9-8eb7-4f46-b85e-ed57098d9360 038384ab-bcf3-41ff-b1b0-f382efbc3343" />
+  <rbacUML:RBACRole xmi:id="f48005d1-a5b8-4b87-a413-e7ec97534cdb" base_Class="9cb97149-955e-453c-a2e0-e33df4501897" permission="de456269-8a09-4c64-aa91-429d9da9acb1 3ec098fd-2b7f-4064-b14c-af32384983b2 0f8e46ed-2e3a-4464-8889-464b0b9ba127 c5139090-cd00-420e-8619-5ffdc38c8f8d ff397772-0bfd-444c-bbdb-894fe5f4d617" />
+  <rbacUML:RBACRole xmi:id="6fd936b7-6a7c-42cf-8277-baab72cbd9d0" base_Class="55434677-71d9-4276-8599-14de77a25ca1" permission="0f8e46ed-2e3a-4464-8889-464b0b9ba127 3ec098fd-2b7f-4064-b14c-af32384983b2 9b0db3b2-6f21-4da2-a994-d35e19e17133 c5139090-cd00-420e-8619-5ffdc38c8f8d de456269-8a09-4c64-aa91-429d9da9acb1" />
+  <rbacUML:RBACRole xmi:id="ddadb6b6-770f-4376-b8e6-37b83bdb9385" base_Class="354928e1-2e86-4500-b8b5-d67d980e5786" permission="ff397772-0bfd-444c-bbdb-894fe5f4d617 de456269-8a09-4c64-aa91-429d9da9acb1 0f8e46ed-2e3a-4464-8889-464b0b9ba127 85781d21-c3c7-4f42-b34c-5bf0078b93b1 6df1ebe9-8eb7-4f46-b85e-ed57098d9360" />
+  <rbacUML:Permission xmi:id="a4e173d4-f772-4b21-ae44-e9ae50d7961f" base_Class="5724f27f-93c6-464a-8631-2685692bed33" />
+  <rbacUML:Permission xmi:id="038384ab-bcf3-41ff-b1b0-f382efbc3343" base_Class="42dad820-e4fc-4893-b94a-e102269d61c3" />
+  <rbacUML:Permission xmi:id="de456269-8a09-4c64-aa91-429d9da9acb1" base_Class="7960227d-876f-4dfa-9c6f-2435338dad62" />
+  <rbacUML:Permission xmi:id="6df1ebe9-8eb7-4f46-b85e-ed57098d9360" base_Class="3123eee7-d6d8-4c57-b857-5a7908e49032" />
+  <rbacUML:Permission xmi:id="c5139090-cd00-420e-8619-5ffdc38c8f8d" base_Class="f78b56e1-66f0-42b6-bb71-2ee323851a29" />
+  <rbacUML:Permission xmi:id="0f8e46ed-2e3a-4464-8889-464b0b9ba127" base_Class="619ccfd5-4231-4dab-8cca-249ea399e9e8" />
+  <rbacUML:Permission xmi:id="3ec098fd-2b7f-4064-b14c-af32384983b2" base_Class="8775feba-841a-4a10-8117-cc6ae34f22bf" />
+  <rbacUML:Permission xmi:id="9b0db3b2-6f21-4da2-a994-d35e19e17133" base_Class="1b5f89d3-b1cf-4e38-9c8f-2c9d1fcac6e0" />
+  <rbacUML:Permission xmi:id="ff397772-0bfd-444c-bbdb-894fe5f4d617" base_Class="ded43870-8e4b-4b2e-8ecf-03e727665d7e" />
+  <rbacUML:Permission xmi:id="85781d21-c3c7-4f42-b34c-5bf0078b93b1" base_Class="d74c2870-6581-4f2b-94f2-5a4fc9abecc0" />
+  <rbacUML:Restricted xmi:id="64ead65c-9c80-4337-b2ef-5ac3367ad4e3" base_Operation="ee24e010-cf9f-48e4-aa8a-74bcaea9c681" permission="c5139090-cd00-420e-8619-5ffdc38c8f8d ff397772-0bfd-444c-bbdb-894fe5f4d617 0f8e46ed-2e3a-4464-8889-464b0b9ba127 de456269-8a09-4c64-aa91-429d9da9acb1 85781d21-c3c7-4f42-b34c-5bf0078b93b1" />
+  <rbacUML:Restricted xmi:id="440ad9e9-f804-490d-a135-9795477da842" base_Operation="56db4544-e04b-4450-b570-b683980ee9a1" permission="0f8e46ed-2e3a-4464-8889-464b0b9ba127 ff397772-0bfd-444c-bbdb-894fe5f4d617 a4e173d4-f772-4b21-ae44-e9ae50d7961f de456269-8a09-4c64-aa91-429d9da9acb1 c5139090-cd00-420e-8619-5ffdc38c8f8d" />
+  <rbacUML:Restricted xmi:id="32164443-a7ac-4d1d-bc7a-2b114dfa9e0c" base_Operation="1859a70d-c4a5-4929-a24b-d33753e35e9c" permission="0f8e46ed-2e3a-4464-8889-464b0b9ba127 85781d21-c3c7-4f42-b34c-5bf0078b93b1 de456269-8a09-4c64-aa91-429d9da9acb1 6df1ebe9-8eb7-4f46-b85e-ed57098d9360 3ec098fd-2b7f-4064-b14c-af32384983b2" />
+  <rbacUML:Restricted xmi:id="116fa2d9-2556-43da-ba64-933a37ceb78b" base_Operation="9ee86faf-e986-472f-9e33-6c3a257705c8" permission="85781d21-c3c7-4f42-b34c-5bf0078b93b1 de456269-8a09-4c64-aa91-429d9da9acb1 a4e173d4-f772-4b21-ae44-e9ae50d7961f 9b0db3b2-6f21-4da2-a994-d35e19e17133 3ec098fd-2b7f-4064-b14c-af32384983b2" />
+  <rbacUML:Restricted xmi:id="26dad96b-e705-4655-a54e-055d609cea94" base_Operation="fc6f6b59-b539-4b72-8618-a2ab80d56976" permission="0f8e46ed-2e3a-4464-8889-464b0b9ba127 c5139090-cd00-420e-8619-5ffdc38c8f8d ff397772-0bfd-444c-bbdb-894fe5f4d617 3ec098fd-2b7f-4064-b14c-af32384983b2 038384ab-bcf3-41ff-b1b0-f382efbc3343" />
+  <rbacUML:Restricted xmi:id="6dd70a09-87c3-4e72-a248-b418855ffa5c" base_Operation="0121ccd7-b66d-4a17-99fc-00d4e4998f32" permission="3ec098fd-2b7f-4064-b14c-af32384983b2 85781d21-c3c7-4f42-b34c-5bf0078b93b1 ff397772-0bfd-444c-bbdb-894fe5f4d617 6df1ebe9-8eb7-4f46-b85e-ed57098d9360 de456269-8a09-4c64-aa91-429d9da9acb1" />
+  <rbacUML:Restricted xmi:id="9d939f21-1b21-4333-9868-9e664bbf9ebe" base_Operation="508c8dde-6051-4ad3-becb-a3591eaec634" permission="9b0db3b2-6f21-4da2-a994-d35e19e17133 85781d21-c3c7-4f42-b34c-5bf0078b93b1 c5139090-cd00-420e-8619-5ffdc38c8f8d 038384ab-bcf3-41ff-b1b0-f382efbc3343 3ec098fd-2b7f-4064-b14c-af32384983b2" />
+  <rbacUML:Restricted xmi:id="d52a1be5-1ebf-4fd8-b63e-6cd097ab0103" base_Operation="f3ab9b47-7b23-425f-8387-2484e09ae31c" permission="9b0db3b2-6f21-4da2-a994-d35e19e17133 6df1ebe9-8eb7-4f46-b85e-ed57098d9360 3ec098fd-2b7f-4064-b14c-af32384983b2 de456269-8a09-4c64-aa91-429d9da9acb1 ff397772-0bfd-444c-bbdb-894fe5f4d617" />
+  <rbacUML:Restricted xmi:id="c982ef5c-e8cb-4af8-97d6-9570ac59cf0b" base_Operation="90a9f37b-71de-402b-96ae-f4372ccd4daa" permission="ff397772-0bfd-444c-bbdb-894fe5f4d617 6df1ebe9-8eb7-4f46-b85e-ed57098d9360 de456269-8a09-4c64-aa91-429d9da9acb1 9b0db3b2-6f21-4da2-a994-d35e19e17133 c5139090-cd00-420e-8619-5ffdc38c8f8d" />
+  <rbacUML:Restricted xmi:id="8fdfe5fd-a010-4ced-b891-0a2001e5f4fe" base_Operation="4d5fc9c5-b904-4a00-ae98-b4aabdb1a325" permission="6df1ebe9-8eb7-4f46-b85e-ed57098d9360 ff397772-0bfd-444c-bbdb-894fe5f4d617 038384ab-bcf3-41ff-b1b0-f382efbc3343 c5139090-cd00-420e-8619-5ffdc38c8f8d 9b0db3b2-6f21-4da2-a994-d35e19e17133" />
+  <rbacUML:RBACUser xmi:id="d6ac28bc-c1c9-4827-9ea6-e1fa4155f906" base_ActivityPartition="3baa5a67-760f-445d-a1a1-ce7c6fc296ee" rBACRole="d662ee9e-22fd-4e9f-8a4f-1fc26f24f27a f48005d1-a5b8-4b87-a413-e7ec97534cdb 91fcf57e-6f23-4112-9aab-2a6019d6bb0e 8a7e288b-b703-44b9-b33a-406cff85897c" aliasUser="77916c5e-c1e1-421d-a607-adf6d7adc4d2" />
+  <rbacUML:RBACUser xmi:id="d88a65ad-60fb-40d6-9591-ea4f23b26c8a" base_ActivityPartition="0023c3d9-e718-458e-99c5-b6dd6e57b32b" rBACRole="8a7e288b-b703-44b9-b33a-406cff85897c c5be068e-9957-4eca-9834-283b097b722e 6fd936b7-6a7c-42cf-8277-baab72cbd9d0 91fcf57e-6f23-4112-9aab-2a6019d6bb0e" aliasUser="7a7b23ef-bd33-4ff7-962d-15ca2340f2b7" />
+  <rbacUML:RBACUser xmi:id="05639fa5-b68d-4a04-b9e8-df51c16ecf06" base_ActivityPartition="65c518c8-ccc0-4ba9-ac0e-8ce59a93fabe" rBACRole="020dc9b4-9868-46e1-8844-b5bd588c28f4 6fd936b7-6a7c-42cf-8277-baab72cbd9d0" aliasUser="7a7b23ef-bd33-4ff7-962d-15ca2340f2b7" />
+  <rbacUML:Forbidden xmi:id="5b1a8623-ec22-45c6-85ac-e828e045644b" base_Action="39238649-49d0-4512-a45a-c2be2e7ad8f8" operation="90a9f37b-71de-402b-96ae-f4372ccd4daa 4d5fc9c5-b904-4a00-ae98-b4aabdb1a325 9ee86faf-e986-472f-9e33-6c3a257705c8 f3ab9b47-7b23-425f-8387-2484e09ae31c" />
+  <rbacUML:Forbidden xmi:id="c1124bf3-6cca-45ec-9b8b-9d87dcac83ab" base_Action="640d59f4-b2b2-4cc7-a158-70edd3717ac4" operation="508c8dde-6051-4ad3-becb-a3591eaec634" />
+  <rbacUML:Forbidden xmi:id="213fc64a-46fd-4833-8a28-f75a84732eff" base_Action="abe8d485-d614-4047-b27b-7b0d441901b3" operation="508c8dde-6051-4ad3-becb-a3591eaec634 fc6f6b59-b539-4b72-8618-a2ab80d56976 9ee86faf-e986-472f-9e33-6c3a257705c8 f3ab9b47-7b23-425f-8387-2484e09ae31c" />
+  <rbacUML:Granted xmi:id="241eba47-6242-450f-a88a-7ad4968c56f4" base_Action="10bdd0f5-3b17-417b-8063-eccda2c7c08c" operation="0121ccd7-b66d-4a17-99fc-00d4e4998f32 fc6f6b59-b539-4b72-8618-a2ab80d56976" />
+  <rbacUML:Granted xmi:id="e4531b8b-dcbc-4e95-baea-4f4bcc9933f2" base_Action="101b831a-0d49-4fc9-9d0c-c5f98b12d69a" operation="4d5fc9c5-b904-4a00-ae98-b4aabdb1a325 f3ab9b47-7b23-425f-8387-2484e09ae31c" />
+</xmi:XMI>
+
