@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.eclipse.jface.dialogs.Dialog;
-import org.eclipse.jface.dialogs.TitleAreaDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -33,18 +32,10 @@ public class BulkEvaluationDialog extends Dialog {
 	Text dbTableText;
 	Label individualEvaluationLabel;
 	Button individualEvaluationButton;
-	Label wfEvaluationLabel;
-	Button wfEvaluationButton;
 	Label fullEvaluationLabel;
 	Button fullEvaluationButton;
-	Label multiEvaluationLabel;
-	Button multiEvaluationButton;
 	Label lazyEvaluationLabel;
 	Button lazyEvaluationButton;
-	Label verEvaluationLabel;
-	Button verEvaluationButton;
-	Label verLazyEvaluationLabel;
-	Button verLazyEvaluationButton;
 	Button cancelButton;
 	Button okButton;
 	Map<Integer, Boolean> evaluation = null;
@@ -59,26 +50,38 @@ public class BulkEvaluationDialog extends Dialog {
 		Composite composite = (Composite)super.createDialogArea(parent);
 		GridLayout layout = new GridLayout();
 		composite.setLayout(layout);
-		layout.numColumns = 2;
+		layout.numColumns = 1;
 		
-		fileSelectionLabel = new Label(composite, SWT.NULL);
+		// Layout for the files (db and sources) selection part
+		Composite compThreeCol = (Composite)super.createDialogArea(composite);
+		GridLayout layoutThreeCol = new GridLayout();
+		compThreeCol.setLayout(layoutThreeCol);
+		layoutThreeCol.numColumns = 3;
+		
+		fileSelectionLabel = new Label(compThreeCol, SWT.NULL);
 		fileSelectionLabel.setText("Select the model to evaluate");
-		fileSelectionText = new Text(composite, SWT.SINGLE);
-		fileSelectionButton = new Button(composite, SWT.PUSH);
+		fileSelectionText = new Text(compThreeCol, SWT.SINGLE);
+		fileSelectionButton = new Button(compThreeCol, SWT.PUSH);
 		fileSelectionButton.setText("Browse");
 		
-		dbSelectionLabel = new Label(composite, SWT.NULL);
+		dbSelectionLabel = new Label(compThreeCol, SWT.NULL);
 		dbSelectionLabel.setText("Select the SQLite database to export the evaluation results");
-		dbSelectionText = new Text(composite, SWT.SINGLE);
-		dbSelectionButton = new Button(composite, SWT.PUSH);
+		dbSelectionText = new Text(compThreeCol, SWT.SINGLE);
+		dbSelectionButton = new Button(compThreeCol, SWT.PUSH);
 		dbSelectionButton.setText("Browse");
 		
-		dbTableLabel = new Label(composite, SWT.NULL);
-		dbTableLabel.setText("SQLite table");
-		dbTableText = new Text(composite, SWT.SINGLE);
+		// Layout for the evaluation selection part
+		Composite compTwoCol = (Composite)super.createDialogArea(composite);
+		GridLayout layoutTwoCol = new GridLayout();
+		compTwoCol.setLayout(layoutTwoCol);
+		layoutTwoCol.numColumns = 2;
 		
-		individualEvaluationButton = new Button(composite, SWT.CHECK);
-		individualEvaluationLabel = new Label(composite, SWT.NULL);
+		dbTableLabel = new Label(compTwoCol, SWT.NULL);
+		dbTableLabel.setText("SQLite table");
+		dbTableText = new Text(compTwoCol, SWT.SINGLE);
+		
+		individualEvaluationButton = new Button(compTwoCol, SWT.CHECK);
+		individualEvaluationLabel = new Label(compTwoCol, SWT.NULL);
 		individualEvaluationLabel.setText("Individual evaluation of each category");
 		evaluation.put(RbacUMLValidatorUtils.EVAL_WF, false);
 		evaluation.put(RbacUMLValidatorUtils.EVAL_VER, false);
@@ -99,8 +102,8 @@ public class BulkEvaluationDialog extends Dialog {
 			}
 		});
 		
-		fullEvaluationButton = new Button(composite, SWT.CHECK);
-		fullEvaluationLabel = new Label(composite, SWT.NULL);
+		fullEvaluationButton = new Button(compTwoCol, SWT.CHECK);
+		fullEvaluationLabel = new Label(compTwoCol, SWT.NULL);
 		fullEvaluationLabel.setText("Full evaluation");
 		evaluation.put(RbacUMLValidatorUtils.EVAL_FULL, false);
 		fullEvaluationButton.addListener(SWT.Selection, new Listener() {
@@ -111,20 +114,8 @@ public class BulkEvaluationDialog extends Dialog {
 			}
 		});
 		
-		multiEvaluationButton = new Button(composite, SWT.CHECK);
-		multiEvaluationLabel = new Label(composite, SWT.NULL);
-		multiEvaluationLabel.setText("Multithreaded evaluation");
-		evaluation.put(RbacUMLValidatorUtils.EVAL_FULL_MULTI, false);
-		multiEvaluationButton.addListener(SWT.Selection, new Listener() {
-
-			public void handleEvent(Event event) {
-				evaluation.put(RbacUMLValidatorUtils.EVAL_FULL_MULTI, multiEvaluationButton.getSelection());
-				log.info("Multithreaded evaluation set to " + multiEvaluationButton.getSelection());
-			}
-		});
-		
-		lazyEvaluationButton = new Button(composite, SWT.CHECK);
-		lazyEvaluationLabel = new Label(composite, SWT.NULL);
+		lazyEvaluationButton = new Button(compTwoCol, SWT.CHECK);
+		lazyEvaluationLabel = new Label(compTwoCol, SWT.NULL);
 		lazyEvaluationLabel.setText("Lazy evaluation");
 		evaluation.put(RbacUMLValidatorUtils.EVAL_FULL_LAZY, false);
 		lazyEvaluationButton.addListener(SWT.Selection, new Listener() {
@@ -133,44 +124,7 @@ public class BulkEvaluationDialog extends Dialog {
 				evaluation.put(RbacUMLValidatorUtils.EVAL_FULL_LAZY, lazyEvaluationButton.getSelection());
 				log.info("Lazy evaluation set to " + lazyEvaluationButton.getSelection());
 			}
-		});
-		
-		wfEvaluationButton = new Button(composite, SWT.CHECK);
-		wfEvaluationLabel = new Label(composite, SWT.NULL);
-		wfEvaluationLabel.setText("Well-formedness evaluation");
-		evaluation.put(RbacUMLValidatorUtils.EVAL_WF, false);
-		wfEvaluationButton.addListener(SWT.Selection, new Listener() {
-
-			public void handleEvent(Event event) {
-				evaluation.put(RbacUMLValidatorUtils.EVAL_WF, wfEvaluationButton.getSelection());
-				log.warn("WF evaluation set to " + wfEvaluationButton.getSelection());
-			}
-		});
-		
-		verEvaluationButton = new Button(composite, SWT.CHECK);
-		verEvaluationLabel = new Label(composite, SWT.NULL);
-		verEvaluationLabel.setText("Verification evaluation");
-		evaluation.put(RbacUMLValidatorUtils.EVAL_WF_VER, false);
-		verEvaluationButton.addListener(SWT.Selection, new Listener() {
-
-			public void handleEvent(Event event) {
-				evaluation.put(RbacUMLValidatorUtils.EVAL_WF_VER, verEvaluationButton.getSelection());
-				log.warn("VER evaluation set to " + verEvaluationButton.getSelection());
-			}
-		});
-		
-		verLazyEvaluationButton = new Button(composite, SWT.CHECK);
-		verLazyEvaluationLabel = new Label(composite, SWT.NULL);
-		verLazyEvaluationLabel.setText("Lazy verification evaluation");
-		evaluation.put(RbacUMLValidatorUtils.EVAL_WF_VER_LAZY, false);
-		verLazyEvaluationButton.addListener(SWT.Selection, new Listener() {
-
-			public void handleEvent(Event event) {
-				evaluation.put(RbacUMLValidatorUtils.EVAL_WF_VER_LAZY, verLazyEvaluationButton.getSelection());
-				log.warn("Lazy VER evaluation set to " + verLazyEvaluationButton.getSelection());
-			}
-		});
-		
+		});		
 		
 		return composite;
 	}
