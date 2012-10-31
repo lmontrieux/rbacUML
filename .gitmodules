@@ -1,0 +1,3 @@
+[submodule "uk.ac.open.rbacuml.modelgenerator"]
+	path = uk.ac.open.rbacuml.modelgenerator
+	url = ../uk.ac.open.rbacuml.modelgenerator.git
