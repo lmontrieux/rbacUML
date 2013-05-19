@@ -1,0 +1,8 @@
+
+name=rbacDSML Model
+description=Create a rbacDSML Model
+modelName=rbacDSML Model
+
+id=uk.ac.open.rbacuml.dsml.plugin.core.templates.RbacDSMLModel
+templateFile=RbacDSMLModel.emx
+icon=RbacDSMLModel.gif
