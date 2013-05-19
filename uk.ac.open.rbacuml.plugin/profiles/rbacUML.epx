@@ -4,6 +4,206 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ProfileBase="http:///schemas/ProfileBase/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xsi:schemaLocation="http:///schemas/ProfileBase/1 pathmap://UML2_MSL_PROFILES/ProfileBase.epx#_IfFYQMmBEdqBcN1R6EvWUw?ProfileBase/ProfileBase?">
   <uml:Profile xmi:id="_ANA3MHioEeGfYppGxhP38A" name="rbacUML" metamodelReference="_AU7dEHioEeGfYppGxhP38A">
     <eAnnotations xmi:id="_AVpOwHioEeGfYppGxhP38A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <contents xmi:type="ecore:EPackage" xmi:id="_zJ7AsK58EeKY-qkXboR5tw" name="rbacUML" nsURI="http:///schemas/rbacUML/_zJ6ZoK58EeKY-qkXboR5tw/93" nsPrefix="rbacUML">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_zJ7Asa58EeKY-qkXboR5tw" name="RBACUser">
+          <eAnnotations xmi:id="_zJ7Asq58EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bbn9kHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_zJ7As658EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_zJ7AtK58EeKY-qkXboR5tw" key="documentation" value="self.getAppliedStereotype('rbacUML::RBACRole') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::Permission') = null&#xA;(self.base_ActivityPartition &lt;> null) &#xA;&#x9;implies (self.aliasUser&#xA;&#x9;&#x9;->forAll(base_Class.name = self.base_ActivityPartition.name))&#xA;(self.base_ActivityPartition &lt;> null) &#xA;&#x9;implies (self.aliasUser.rBACRole&#xA;&#x9;&#x9;->union(self.aliasUser.rBACRole.base_Class->asSet().allParents().oclAsType(Class).extension_RBACRole)->asSet()&#xA;&#x9;&#x9;->includesAll(self.rBACRole.base_Class.extension_RBACRole))&#xA;(self.base_ActivityPartition &lt;> null) &#xA;&#x9;implies (self.aliasUser->size() = 1 and self.aliasUser&#xA;&#x9;&#x9;->forAll(base_Class &lt;> null))&#xA;(self.base_Class &lt;> null) &#xA;implies (self.aliasUser->size() = 0)&#xA;self.base_Class &lt;> null implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(act | act.oclIsKindOf(ActivityPartition) and act.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(ActivityPartition)&#xA;&#x9;->select(act | (act.name = self.name) and (act.extension_RBACUser.aliasUser.base_Class = self))&#xA;->size() > 0&#xA;(self.base_Class &lt;> null) implies (self.rBACRole->size() > 0)&#xA;self.rBACRole->size() > 0 and self.base_Class &lt;> null implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class).extension_RBACUser&#xA;&#x9;->select(usr | usr.rBACRole->includesAll(self.rBACRole) &#xA;&#x9;&#x9;&#x9;and usr.rBACRole->size() = self.rBACRole->size()&#xA;&#x9;&#x9;&#x9;and usr.base_Class.name &lt;> self.base_Class.name)&#xA;->size() = 0&#xA;self.rBACRole&#xA;&#x9;->union(self.rBACRole.base_Class->asSet().allParents().oclAsType(Class).extension_RBACRole)->asSet()&#xA;->forAll(rle1, rle2 | rle1.ssod1->includes(rle2) = false)&#xA;self.rBACRole->forAll(role1, role2 | role1.dsod1->excludes(role2))"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7Ata58EeKY-qkXboR5tw" name="rBACRole" ordered="false" upperBound="-1" eType="_zJ7Ava58EeKY-qkXboR5tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7At658EeKY-qkXboR5tw" name="aliasUser" ordered="false" eType="_zJ7Asa58EeKY-qkXboR5tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7Aua58EeKY-qkXboR5tw" name="base_ActivityPartition" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//ActivityPartition"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7Au658EeKY-qkXboR5tw" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_zJ7Ava58EeKY-qkXboR5tw" name="RBACRole">
+          <eAnnotations xmi:id="_zJ7Avq58EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_cGgGkHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_zJ7Av658EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_zJ7AwK58EeKY-qkXboR5tw" key="documentation" value="self.getAppliedStereotype('rbacUML::RBACUser') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::Permission') = null&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->select(usr | usr.extension_RBACUser.rBACRole->exists(rl | rl.base_Class.name = self.name))&#xA;->size() > 0&#xA;self.permission->size() > 0&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(rl | rl.oclIsTypeOf(Class) and rl.getAppliedStereotype('rbacUML::RBACRole') &lt;> null).oclAsType(Class).extension_RBACRole&#xA;&#x9;->select(rl | rl.permission->includesAll(self.permission) &#xA;&#x9;&#x9;&#x9;and rl.permission->size() = self.permission->size()&#xA;&#x9;&#x9;&#x9;and rl.base_Class.name &lt;> self.base_Class.name)&#xA;&#x9;->select(rl | rl.allParents() = self.allParents())&#xA;&#x9;->select(rl | rl.ssod1 = self.ssod1)&#xA;&#x9;->select(rl | rl.dsod1 = self.dsod1)&#x9;&#x9;&#xA;->size() = 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7Awa58EeKY-qkXboR5tw" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7Aw658EeKY-qkXboR5tw" name="permission" ordered="false" upperBound="-1" eType="_zJ7Aya58EeKY-qkXboR5tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7Axa58EeKY-qkXboR5tw" name="ssod1" ordered="false" upperBound="-1" eType="_zJ7Ava58EeKY-qkXboR5tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7Ax658EeKY-qkXboR5tw" name="dsod1" ordered="false" upperBound="-1" eType="_zJ7Ava58EeKY-qkXboR5tw"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_zJ7Aya58EeKY-qkXboR5tw" name="Permission">
+          <eAnnotations xmi:id="_zJ7Ayq58EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ewmVUHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_zJ7Ay658EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_zJ7AzK58EeKY-qkXboR5tw" key="documentation" value="self.getAppliedStereotype('rbacUML::RBACUser') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::RBACRole') = null&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(rl | rl.oclIsTypeOf(Class) and rl.getAppliedStereotype('rbacUML::RBACRole') &lt;> null).oclAsType(Class)&#xA;&#x9;->select(rl | rl.extension_RBACRole.permission->exists(per | per.base_Class.name = self.name))&#xA;->size() > 0&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(op | op.oclIsTypeOf(Operation) and op.getAppliedStereotype('rbacUML::Restricted') &lt;> null).oclAsType(Operation)&#xA;&#x9;->select(op | op.extension_Restricted.permission->exists(base_Class.name = self.name))&#xA;->size() > 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7Aza58EeKY-qkXboR5tw" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_zJ7Az658EeKY-qkXboR5tw" name="Restricted">
+          <eAnnotations xmi:id="_zJ7A0K58EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3JImcHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_zJ7A0a58EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_zJ7A0q58EeKY-qkXboR5tw" key="documentation" value="(self.base_Operation &lt;> null) implies (self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)&#xA;&#x9;->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') = null).oclAsType(Message).signature.oclAsType(Operation)&#xA;&#x9;->select(op | op = self)->size() = 0)&#xA;(self.base_Operation &lt;> null) implies (self.permission->size() > 0)&#xA;(self.base_Message &lt;> null)&#xA;implies&#xA;(self.base_Message.signature.getAppliedStereotype('rbacUML::Restricted') &lt;> null)&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->exists(usr | usr.oclAsType(Class).extension_RBACUser.rBACRole.permission->asSet()&#xA;&#x9;&#x9;&#x9;->union(usr.oclAsType(Class).extension_RBACUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole.permission->asSet())&#xA;->includesAll(self.permission))&#xA;self.base_Operation &lt;> null implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(act | act.oclIsKindOf(Action) and act.getAppliedStereotype('rbacUML::Granted') &lt;> null).oclAsType(Action)&#xA;&#x9;->select(act | act.extension_Granted.operation->exists(name = self.name))&#xA;->union(&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(act | act.oclIsKindOf(Action) and act.getAppliedStereotype('rbacUML::Forbidden') &lt;> null).oclAsType(Action)&#xA;&#x9;->select(act | act.extension_Forbidden.operation->exists(name = self.name))&#xA;)->size() > 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A0658EeKY-qkXboR5tw" name="base_Operation" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A1a58EeKY-qkXboR5tw" name="base_Message" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A1658EeKY-qkXboR5tw" name="permission" ordered="false" upperBound="-1" eType="_zJ7Aya58EeKY-qkXboR5tw"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_zJ7A2a58EeKY-qkXboR5tw" name="Granted">
+          <eAnnotations xmi:id="_zJ7A2q58EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_KEe2IHipEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_zJ7A2658EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_zJ7A3K58EeKY-qkXboR5tw" key="documentation" value="self.base_Action.inPartition.extension_RBACUser &lt;> null&#xA;self.base_Action.getAppliedStereotype('rbacUML::Forbidden') = null&#xA;self.operation->exists(op | op.getAppliedStereotype('rbacUML::Restricted') &lt;> null)&#xA;self.interaction &lt;> null implies&#xA;self.interaction.allOwnedElements()&#xA;&#x9;->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)&#xA;&#x9;->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') &lt;> null).signature->asSet()&#xA;= (self.operation)&#xA;((self.getAppliedStereotype('rbacUML::ActivateRoles') &lt;> null) &#xA;and (self.getAppliedStereotype('rbacUML::DeactivateRoles') &lt;> null)) &#xA;&#x9;implies self.base_Action.extension_ActivateRoles.rBACRole&#xA;&#x9;&#x9;->intersection(self.base_Action.extension_DeactivateRoles.rBACRole)->isEmpty()&#xA;self.getNearestPackage().allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->exists(usr | usr.oclAsType(Class).extension_RBACUser.rBACRole.permission->asSet()&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;->union(usr.oclAsType(Class).extension_RBACUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole.permission->asSet())&#xA;&#x9;->includesAll(self.operation.extension_Restricted.permission->asSet()))&#xA;self.base_Action.inPartition.extension_RBACUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;&#x9;->union(if (self.base_Action.extension_ActivateRoles = null) then Set{} else self.base_Action.extension_ActivateRoles.rBACRole endif)->asSet()&#xA;&#x9;->symmetricDifference(if (self.base_Action.extension_DeactivateRoles = null) then Set{} else self.base_Action.extension_DeactivateRoles.rBACRole endif).permission&#xA;->includesAll(self.operation.extension_Restricted.permission->asSet())"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A3a58EeKY-qkXboR5tw" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A3658EeKY-qkXboR5tw" name="operation" ordered="false" upperBound="-1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A4a58EeKY-qkXboR5tw" name="interaction" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Interaction"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_zJ7A4658EeKY-qkXboR5tw" name="Forbidden">
+          <eAnnotations xmi:id="_zJ7A5K58EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_K47x4HipEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_zJ7A5a58EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_zJ7A5q58EeKY-qkXboR5tw" key="documentation" value="self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') &lt;> null&#xA;self.operation->exists(op | op.getAppliedStereotype('rbacUML::Restricted') &lt;> null)&#xA;self.interaction &lt;> null implies&#xA;self.interaction.allOwnedElements()&#xA;&#x9;->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)&#xA;&#x9;->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') &lt;> null).signature->asSet()&#xA;= (self.operation)&#xA;((self.getAppliedStereotype('rbacUML::ActivateRoles') &lt;> null) &#xA;and (self.getAppliedStereotype('rbacUML::DeactivateRoles') &lt;> null)) &#xA;&#x9;implies self.base_Action.extension_ActivateRoles.rBACRole&#xA;&#x9;&#x9;->intersection(self.base_Action.extension_DeactivateRoles.rBACRole)&#xA;&#x9;&#x9;&#x9;->isEmpty()&#xA;self.base_Action.inPartition.extension_RBACUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;&#x9;->union(if (self.base_Action.extension_ActivateRoles = null) then Set{} else self.base_Action.extension_ActivateRoles.rBACRole endif)->asSet()&#xA;&#x9;->symmetricDifference(if (self.base_Action.extension_DeactivateRoles = null) then Set{} else self.base_Action.extension_DeactivateRoles.rBACRole endif).permission&#xA;->includesAll(self.operation.extension_Restricted.permission->asSet()) = false&#xA;self.getNearestPackage().allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->forAll(usr | usr.oclAsType(Class).extension_RBACUser.rBACRole.permission->asSet()&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->union(usr.oclAsType(Class).extension_RBACUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole.permission->asSet())&#xA;&#x9;->includesAll(self.operation.extension_Restricted.permission->asSet()))"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A5658EeKY-qkXboR5tw" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A6a58EeKY-qkXboR5tw" name="operation" ordered="false" upperBound="-1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A6658EeKY-qkXboR5tw" name="interaction" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Interaction"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_zJ7A7a58EeKY-qkXboR5tw" name="ActivateRoles">
+          <eAnnotations xmi:id="_zJ7A7q58EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AC61IHiqEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_zJ7A7658EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_zJ7A8K58EeKY-qkXboR5tw" key="documentation" value="self.base_Action.inPartition.extension_RBACUser.rBACRole->intersection(self.rBACRole)->isEmpty()&#xA;self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;->includesAll(self.rBACRole)&#xA;self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') &lt;> null&#xA;(self.base_Action.getAppliedStereotype('rbacUML::Granted') &lt;> null) &#xA;or (self.base_Action.getAppliedStereotype('rbacUML::Forbidden') &lt;> null)&#xA;self.rBACRole->size() > 0&#xA;(self.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.rBACRole)->asSet()&#xA;&#x9;&#x9;->symmetricDifference(if (self.base_Action.extension_DeactivateRoles = null) then Set{} else self.base_Action.extension_DeactivateRoles.rBACRole endif))&#xA;->forAll(role1, role2 | role1.dsod1->excludes(role2))"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A8a58EeKY-qkXboR5tw" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A8658EeKY-qkXboR5tw" name="rBACRole" ordered="false" upperBound="-1" eType="_zJ7Ava58EeKY-qkXboR5tw"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_zJ7A9a58EeKY-qkXboR5tw" name="DeactivateRoles">
+          <eAnnotations xmi:id="_zJ7A9q58EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Ce4hQHiqEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_zJ7A9658EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_zJ7A-K58EeKY-qkXboR5tw" key="documentation" value="self.rBACRole->size() > 0&#xA;self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;->includesAll(self.rBACRole)&#xA;self.base_Action.inPartition.extension_RBACUser.rBACRole&#xA;&#x9;->includesAll(self.rBACRole)&#xA;self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') &lt;> null&#xA;(self.base_Action.getAppliedStereotype('rbacUML::Granted') &lt;> null) &#xA;or (self.base_Action.getAppliedStereotype('rbacUML::Forbidden') &lt;> null)"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A-a58EeKY-qkXboR5tw" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zJ7A-658EeKY-qkXboR5tw" name="rBACRole" ordered="false" upperBound="-1" eType="_zJ7Ava58EeKY-qkXboR5tw"/>
+        </eClassifiers>
+      </contents>
+      <contents xmi:type="ecore:EPackage" xmi:id="_ra-C4K56EeKY-qkXboR5tw" name="rbacUML" nsURI="http:///schemas/rbacUML/_ra7moK56EeKY-qkXboR5tw/92" nsPrefix="rbacUML">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_ra-C4a56EeKY-qkXboR5tw" name="RBACUser">
+          <eAnnotations xmi:id="_ra-C4q56EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bbn9kHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_ra-C4656EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_ra-C5K56EeKY-qkXboR5tw" key="documentation" value="self.getAppliedStereotype('rbacUML::RBACRole') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::Permission') = null&#xA;(self.base_ActivityPartition &lt;> null) &#xA;&#x9;implies (self.aliasUser&#xA;&#x9;&#x9;->forAll(base_Class.name = self.base_ActivityPartition.name))&#xA;(self.base_ActivityPartition &lt;> null) &#xA;&#x9;implies (self.aliasUser.rBACRole&#xA;&#x9;&#x9;->union(self.aliasUser.rBACRole.base_Class->asSet().allParents().oclAsType(Class).extension_RBACRole)->asSet()&#xA;&#x9;&#x9;->includesAll(self.rBACRole.base_Class.extension_RBACRole))&#xA;(self.base_ActivityPartition &lt;> null) &#xA;&#x9;implies (self.aliasUser->size() = 1 and self.aliasUser&#xA;&#x9;&#x9;->forAll(base_Class &lt;> null))&#xA;(self.base_Class &lt;> null) &#xA;implies (self.aliasUser->size() = 0)&#xA;self.base_Class &lt;> null implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(act | act.oclIsKindOf(ActivityPartition) and act.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(ActivityPartition)&#xA;&#x9;->select(act | (act.name = self.name) and (act.extension_RBACUser.aliasUser.base_Class = self))&#xA;->size() > 0&#xA;(self.base_Class &lt;> null) implies (self.rBACRole->size() > 0)&#xA;self.rBACRole->size() > 0 and self.base_Class &lt;> null implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class).extension_RBACUser&#xA;&#x9;->select(usr | usr.rBACRole->includesAll(self.rBACRole) &#xA;&#x9;&#x9;&#x9;and usr.rBACRole->size() = self.rBACRole->size()&#xA;&#x9;&#x9;&#x9;and usr.base_Class.name &lt;> self.base_Class.name)&#xA;->size() = 0&#xA;self.rBACRole&#xA;&#x9;->union(self.rBACRole.base_Class->asSet().allParents().oclAsType(Class).extension_RBACRole)->asSet()&#xA;->forAll(rle1, rle2 | rle1.ssod1->includes(rle2) = false)&#xA;self.rBACRole->forAll(role1, role2 | role1.dsod1->excludes(role2))"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-C5a56EeKY-qkXboR5tw" name="rBACRole" ordered="false" upperBound="-1" eType="_ra-C7a56EeKY-qkXboR5tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-C5656EeKY-qkXboR5tw" name="aliasUser" ordered="false" eType="_ra-C4a56EeKY-qkXboR5tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-C6a56EeKY-qkXboR5tw" name="base_ActivityPartition" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//ActivityPartition"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-C6656EeKY-qkXboR5tw" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_ra-C7a56EeKY-qkXboR5tw" name="RBACRole">
+          <eAnnotations xmi:id="_ra-C7q56EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_cGgGkHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_ra-C7656EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_ra-C8K56EeKY-qkXboR5tw" key="documentation" value="self.getAppliedStereotype('rbacUML::RBACUser') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::Permission') = null&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->select(usr | usr.extension_RBACUser.rBACRole->exists(rl | rl.base_Class.name = self.name))&#xA;->size() > 0&#xA;self.permission->size() > 0&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(rl | rl.oclIsTypeOf(Class) and rl.getAppliedStereotype('rbacUML::RBACRole') &lt;> null).oclAsType(Class).extension_RBACRole&#xA;&#x9;->select(rl | rl.permission->includesAll(self.permission) &#xA;&#x9;&#x9;&#x9;and rl.permission->size() = self.permission->size()&#xA;&#x9;&#x9;&#x9;and rl.base_Class.name &lt;> self.base_Class.name)&#xA;&#x9;->select(rl | rl.allParents() = self.allParents())&#xA;&#x9;->select(rl | rl.ssod1 = self.ssod1)&#xA;&#x9;->select(rl | rl.dsod1 = self.dsod1)&#x9;&#x9;&#xA;->size() = 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-C8a56EeKY-qkXboR5tw" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-C8656EeKY-qkXboR5tw" name="permission" ordered="false" upperBound="-1" eType="_ra-C-a56EeKY-qkXboR5tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-C9a56EeKY-qkXboR5tw" name="ssod1" ordered="false" upperBound="-1" eType="_ra-C7a56EeKY-qkXboR5tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-C9656EeKY-qkXboR5tw" name="dsod1" ordered="false" upperBound="-1" eType="_ra-C7a56EeKY-qkXboR5tw"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_ra-C-a56EeKY-qkXboR5tw" name="Permission">
+          <eAnnotations xmi:id="_ra-C-q56EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ewmVUHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_ra-C-656EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_ra-C_K56EeKY-qkXboR5tw" key="documentation" value="self.getAppliedStereotype('rbacUML::RBACUser') = null&#xA;and&#xA;self.getAppliedStereotype('rbacUML::RBACRole') = null&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(rl | rl.oclIsTypeOf(Class) and rl.getAppliedStereotype('rbacUML::RBACRole') &lt;> null).oclAsType(Class)&#xA;&#x9;->select(rl | rl.extension_RBACRole.permission->exists(per | per.base_Class.name = self.name))&#xA;->size() > 0&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(op | op.oclIsTypeOf(Operation) and op.getAppliedStereotype('rbacUML::Restricted') &lt;> null).oclAsType(Operation)&#xA;&#x9;->select(op | op.extension_Restricted.permission->exists(base_Class.name = self.name))&#xA;->size() > 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-C_a56EeKY-qkXboR5tw" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_ra-C_656EeKY-qkXboR5tw" name="Restricted">
+          <eAnnotations xmi:id="_ra-DAK56EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_3JImcHioEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_ra-DAa56EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_ra-DAq56EeKY-qkXboR5tw" key="documentation" value="(self.base_Operation &lt;> null) implies (self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)&#xA;&#x9;->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') = null).oclAsType(Message).signature.oclAsType(Operation)&#xA;&#x9;->select(op | op = self)->size() = 0)&#xA;(self.base_Operation &lt;> null) implies (self.permission->size() > 0)&#xA;(self.base_Message &lt;> null)&#xA;implies&#xA;(self.base_Message.signature.getAppliedStereotype('rbacUML::Restricted') &lt;> null)&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->exists(usr | usr.oclAsType(Class).extension_RBACUser.rBACRole.permission->asSet()&#xA;&#x9;&#x9;&#x9;->union(usr.oclAsType(Class).extension_RBACUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole.permission->asSet())&#xA;->includesAll(self.permission))&#xA;self.base_Operation &lt;> null implies&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(act | act.oclIsKindOf(Action) and act.getAppliedStereotype('rbacUML::Granted') &lt;> null).oclAsType(Action)&#xA;&#x9;->select(act | act.extension_Granted.operation->exists(name = self.name))&#xA;->union(&#xA;self.allOwningPackages()->select(pkg | pkg.allOwningPackages()->isEmpty()).allOwnedElements()&#xA;&#x9;->select(act | act.oclIsKindOf(Action) and act.getAppliedStereotype('rbacUML::Forbidden') &lt;> null).oclAsType(Action)&#xA;&#x9;->select(act | act.extension_Forbidden.operation->exists(name = self.name))&#xA;)->size() > 0"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DA656EeKY-qkXboR5tw" name="base_Operation" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DBa56EeKY-qkXboR5tw" name="base_Message" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DB656EeKY-qkXboR5tw" name="permission" ordered="false" upperBound="-1" eType="_ra-C-a56EeKY-qkXboR5tw"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_ra-DCa56EeKY-qkXboR5tw" name="Granted">
+          <eAnnotations xmi:id="_ra-DCq56EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_KEe2IHipEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_ra-DC656EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_ra-DDK56EeKY-qkXboR5tw" key="documentation" value="self.base_Action.inPartition.extension_RBACUser &lt;> null&#xA;self.base_Action.getAppliedStereotype('rbacUML::Forbidden') = null&#xA;self.operation->exists(op | op.getAppliedStereotype('rbacUML::Restricted') &lt;> null)&#xA;self.interaction &lt;> null implies&#xA;self.interaction.allOwnedElements()&#xA;&#x9;->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)&#xA;&#x9;->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') &lt;> null).signature->asSet()&#xA;= (self.operation)&#xA;((self.getAppliedStereotype('rbacUML::ActivateRoles') &lt;> null) &#xA;and (self.getAppliedStereotype('rbacUML::DeactivateRoles') &lt;> null)) &#xA;&#x9;implies self.base_Action.extension_ActivateRoles.rBACRole&#xA;&#x9;&#x9;->intersection(self.base_Action.extension_DeactivateRoles.rBACRole)->isEmpty()&#xA;self.getNearestPackage().allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->exists(usr | usr.oclAsType(Class).extension_RBACUser.rBACRole.permission->asSet()&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;->union(usr.oclAsType(Class).extension_RBACUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole.permission->asSet())&#xA;&#x9;->includesAll(self.operation.extension_Restricted.permission->asSet()))&#xA;self.base_Action.inPartition.extension_RBACUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;&#x9;->union(if (self.base_Action.extension_ActivateRoles = null) then Set{} else self.base_Action.extension_ActivateRoles.rBACRole endif)->asSet()&#xA;&#x9;->symmetricDifference(if (self.base_Action.extension_DeactivateRoles = null) then Set{} else self.base_Action.extension_DeactivateRoles.rBACRole endif).permission&#xA;->includesAll(self.operation.extension_Restricted.permission->asSet())"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DDa56EeKY-qkXboR5tw" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DD656EeKY-qkXboR5tw" name="operation" ordered="false" upperBound="-1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DEa56EeKY-qkXboR5tw" name="interaction" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Interaction"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_ra-DE656EeKY-qkXboR5tw" name="Forbidden">
+          <eAnnotations xmi:id="_ra-DFK56EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_K47x4HipEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_ra-DFa56EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_ra-DFq56EeKY-qkXboR5tw" key="documentation" value="self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') &lt;> null&#xA;self.operation->exists(op | op.getAppliedStereotype('rbacUML::Restricted') &lt;> null)&#xA;self.interaction &lt;> null implies&#xA;self.interaction.allOwnedElements()&#xA;&#x9;->select(elt | elt.oclIsTypeOf(Message)).oclAsType(Message)&#xA;&#x9;->select(msg | msg.getAppliedStereotype('rbacUML::Restricted') &lt;> null).signature->asSet()&#xA;= (self.operation)&#xA;((self.getAppliedStereotype('rbacUML::ActivateRoles') &lt;> null) &#xA;and (self.getAppliedStereotype('rbacUML::DeactivateRoles') &lt;> null)) &#xA;&#x9;implies self.base_Action.extension_ActivateRoles.rBACRole&#xA;&#x9;&#x9;->intersection(self.base_Action.extension_DeactivateRoles.rBACRole)&#xA;&#x9;&#x9;&#x9;->isEmpty()&#xA;self.base_Action.inPartition.extension_RBACUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;&#x9;->union(if (self.base_Action.extension_ActivateRoles = null) then Set{} else self.base_Action.extension_ActivateRoles.rBACRole endif)->asSet()&#xA;&#x9;->symmetricDifference(if (self.base_Action.extension_DeactivateRoles = null) then Set{} else self.base_Action.extension_DeactivateRoles.rBACRole endif).permission&#xA;->includesAll(self.operation.extension_Restricted.permission->asSet()) = false&#xA;self.getNearestPackage().allOwnedElements()&#xA;&#x9;->select(usr | usr.oclIsTypeOf(Class) and usr.getAppliedStereotype('rbacUML::RBACUser') &lt;> null).oclAsType(Class)&#xA;&#x9;->forAll(usr | usr.oclAsType(Class).extension_RBACUser.rBACRole.permission->asSet()&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;->union(usr.oclAsType(Class).extension_RBACUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole.permission->asSet())&#xA;&#x9;->includesAll(self.operation.extension_Restricted.permission->asSet()))"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DF656EeKY-qkXboR5tw" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DGa56EeKY-qkXboR5tw" name="operation" ordered="false" upperBound="-1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DG656EeKY-qkXboR5tw" name="interaction" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Interaction"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_ra-DHa56EeKY-qkXboR5tw" name="ActivateRoles">
+          <eAnnotations xmi:id="_ra-DHq56EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AC61IHiqEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_ra-DH656EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_ra-DIK56EeKY-qkXboR5tw" key="documentation" value="self.base_Action.inPartition.extension_RBACUser.rBACRole->intersection(self.rBACRole)->isEmpty()&#xA;self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;->includesAll(self.rBACRole)&#xA;self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') &lt;> null&#xA;(self.base_Action.getAppliedStereotype('rbacUML::Granted') &lt;> null) &#xA;or (self.base_Action.getAppliedStereotype('rbacUML::Forbidden') &lt;> null)&#xA;self.rBACRole->size() > 0&#xA;(self.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.rBACRole)->asSet()&#xA;&#x9;&#x9;->symmetricDifference(if (self.base_Action.extension_DeactivateRoles = null) then Set{} else self.base_Action.extension_DeactivateRoles.rBACRole endif))&#xA;->forAll(role1, role2 | role1.dsod1->excludes(role2))"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DIa56EeKY-qkXboR5tw" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DI656EeKY-qkXboR5tw" name="rBACRole" ordered="false" upperBound="-1" eType="_ra-C7a56EeKY-qkXboR5tw"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_ra-DJa56EeKY-qkXboR5tw" name="DeactivateRoles">
+          <eAnnotations xmi:id="_ra-DJq56EeKY-qkXboR5tw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Ce4hQHiqEeGfYppGxhP38A"/>
+          <eAnnotations xmi:id="_ra-DJ656EeKY-qkXboR5tw" source="http://www.eclipse.org/emf/2002/GenModel">
+            <details xmi:id="_ra-DKK56EeKY-qkXboR5tw" key="documentation" value="self.rBACRole->size() > 0&#xA;self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole&#xA;&#x9;->union(self.base_Action.inPartition.extension_RBACUser.aliasUser.rBACRole.base_Class.allParents().oclAsType(Class).extension_RBACRole)&#xA;->includesAll(self.rBACRole)&#xA;self.base_Action.inPartition.extension_RBACUser.rBACRole&#xA;&#x9;->includesAll(self.rBACRole)&#xA;self.base_Action.inPartition.getAppliedStereotype('rbacUML::RBACUser') &lt;> null&#xA;(self.base_Action.getAppliedStereotype('rbacUML::Granted') &lt;> null) &#xA;or (self.base_Action.getAppliedStereotype('rbacUML::Forbidden') &lt;> null)"/>
+          </eAnnotations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DKa56EeKY-qkXboR5tw" name="base_Action" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Action"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_ra-DK656EeKY-qkXboR5tw" name="rBACRole" ordered="false" upperBound="-1" eType="_ra-C7a56EeKY-qkXboR5tw"/>
+        </eClassifiers>
+      </contents>
       <contents xmi:type="ecore:EPackage" xmi:id="_pNSegBOnEeKRHbVJmDOoqQ" name="rbacUML" nsURI="http:///schemas/rbacUML/_pNPbMBOnEeKRHbVJmDOoqQ/91" nsPrefix="rbacUML">
         <eClassifiers xmi:type="ecore:EClass" xmi:id="_pNSegROnEeKRHbVJmDOoqQ" name="RBACUser">
           <eAnnotations xmi:id="_pNSeghOnEeKRHbVJmDOoqQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bbn9kHioEeGfYppGxhP38A"/>
@@ -8098,7 +8298,7 @@
           <children xmi:type="notation:BasicDecorationNode" xmi:id="_cGs64XioEeGfYppGxhP38A" type="Parent"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_cGs64nioEeGfYppGxhP38A" type="AttributeCompartment"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_cGs643ioEeGfYppGxhP38A" visible="false" type="OperationCompartment"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cGpQgXioEeGfYppGxhP38A" x="7037" y="6164"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cGpQgXioEeGfYppGxhP38A" x="7022" y="6164"/>
         </children>
         <children xmi:type="umlnotation:UMLShape" xmi:id="_ewqmwHioEeGfYppGxhP38A" element="_ewmVUHioEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
           <children xmi:type="notation:DecorationNode" xmi:id="_ewrN0HioEeGfYppGxhP38A" type="ImageCompartment">
@@ -8124,7 +8324,7 @@
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_1DUwgHioEeGfYppGxhP38A" visible="false" type="SignalCompartment"/>
           <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_1DUwgXioEeGfYppGxhP38A" visible="false" type="StructureCompartment"/>
           <element xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1DSUQXioEeGfYppGxhP38A" x="10032" y="13992"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1DSUQXioEeGfYppGxhP38A" x="7009" y="18216"/>
         </children>
         <children xmi:type="umlnotation:UMLShape" xmi:id="_3JQiQHioEeGfYppGxhP38A" element="_3JImcHioEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
           <children xmi:type="notation:DecorationNode" xmi:id="_3JRJUHioEeGfYppGxhP38A" type="ImageCompartment">
@@ -8136,7 +8336,7 @@
           <children xmi:type="notation:BasicDecorationNode" xmi:id="_3JRwYHioEeGfYppGxhP38A" type="Parent"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_3JRwYXioEeGfYppGxhP38A" type="AttributeCompartment"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_3JRwYnioEeGfYppGxhP38A" visible="false" type="OperationCompartment"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3JQiQXioEeGfYppGxhP38A" x="13068" y="14520"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3JQiQXioEeGfYppGxhP38A" x="13068" y="19272"/>
         </children>
         <children xmi:type="umlnotation:UMLShape" xmi:id="_F65KkHipEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
           <children xmi:type="notation:DecorationNode" xmi:id="_F66YsHipEeGfYppGxhP38A" type="ImageCompartment">
@@ -8150,7 +8350,7 @@
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_F68N4HipEeGfYppGxhP38A" visible="false" type="SignalCompartment"/>
           <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_F68N4XipEeGfYppGxhP38A" visible="false" type="StructureCompartment"/>
           <element xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ActivityPartition"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F65KkXipEeGfYppGxhP38A" x="924" y="1980"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F65KkXipEeGfYppGxhP38A" x="396" y="1980"/>
         </children>
         <children xmi:type="umlnotation:UMLShape" xmi:id="_IuWwsHipEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
           <children xmi:type="notation:DecorationNode" xmi:id="_IuX-0HipEeGfYppGxhP38A" type="ImageCompartment">
@@ -8164,7 +8364,7 @@
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_IuYl4nipEeGfYppGxhP38A" visible="false" type="SignalCompartment"/>
           <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_IuZM8HipEeGfYppGxhP38A" visible="false" type="StructureCompartment"/>
           <element xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Action"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IuWwsXipEeGfYppGxhP38A" x="2376" y="9636"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IuWwsXipEeGfYppGxhP38A" x="7128" y="11352"/>
         </children>
         <children xmi:type="umlnotation:UMLShape" xmi:id="_KEpOMHipEeGfYppGxhP38A" element="_KEe2IHipEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
           <children xmi:type="notation:DecorationNode" xmi:id="_KEp1QHipEeGfYppGxhP38A" type="ImageCompartment">
@@ -8176,7 +8376,7 @@
           <children xmi:type="notation:BasicDecorationNode" xmi:id="_KEqcU3ipEeGfYppGxhP38A" type="Parent"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_KEqcVHipEeGfYppGxhP38A" type="AttributeCompartment"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_KErDYHipEeGfYppGxhP38A" visible="false" type="OperationCompartment"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KEpOMXipEeGfYppGxhP38A" x="10164" y="9372"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KEpOMXipEeGfYppGxhP38A" x="11484" y="13728"/>
         </children>
         <children xmi:type="umlnotation:UMLShape" xmi:id="_K5JNQHipEeGfYppGxhP38A" element="_K47x4HipEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
           <children xmi:type="notation:DecorationNode" xmi:id="_K5J0UHipEeGfYppGxhP38A" type="ImageCompartment">
@@ -8188,7 +8388,7 @@
           <children xmi:type="notation:BasicDecorationNode" xmi:id="_K5KbY3ipEeGfYppGxhP38A" type="Parent"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_K5LCcHipEeGfYppGxhP38A" type="AttributeCompartment"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_K5LCcXipEeGfYppGxhP38A" visible="false" type="OperationCompartment"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_K5JNQXipEeGfYppGxhP38A" x="3036" y="14388"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_K5JNQXipEeGfYppGxhP38A" x="1056" y="13728"/>
         </children>
         <children xmi:type="umlnotation:UMLShape" xmi:id="_SBQfcHipEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
           <children xmi:type="notation:DecorationNode" xmi:id="_SBRGgHipEeGfYppGxhP38A" type="ImageCompartment">
@@ -8202,7 +8402,7 @@
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_SBRtk3ipEeGfYppGxhP38A" visible="false" type="SignalCompartment"/>
           <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_SBSUoHipEeGfYppGxhP38A" visible="false" type="StructureCompartment"/>
           <element xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SBQfcXipEeGfYppGxhP38A" x="13068" y="4092"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SBQfcXipEeGfYppGxhP38A" x="7102" y="20328"/>
         </children>
         <children xmi:type="umlnotation:UMLShape" xmi:id="_ADL64HiqEeGfYppGxhP38A" element="_AC61IHiqEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
           <children xmi:type="notation:DecorationNode" xmi:id="_ADMh8HiqEeGfYppGxhP38A" type="ImageCompartment">
@@ -8214,7 +8414,7 @@
           <children xmi:type="notation:BasicDecorationNode" xmi:id="_ADNJAHiqEeGfYppGxhP38A" type="Parent"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_ADNJAXiqEeGfYppGxhP38A" type="AttributeCompartment"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_ADNJAniqEeGfYppGxhP38A" visible="false" type="OperationCompartment"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ADL64XiqEeGfYppGxhP38A" x="6864" y="10956"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ADL64XiqEeGfYppGxhP38A" x="11088" y="9108"/>
         </children>
         <children xmi:type="umlnotation:UMLShape" xmi:id="_CfK1IHiqEeGfYppGxhP38A" element="_Ce4hQHiqEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
           <children xmi:type="notation:DecorationNode" xmi:id="_CfLcMHiqEeGfYppGxhP38A" type="ImageCompartment">
@@ -8226,7 +8426,7 @@
           <children xmi:type="notation:BasicDecorationNode" xmi:id="_CfMDQ3iqEeGfYppGxhP38A" type="Parent"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_CfMqUHiqEeGfYppGxhP38A" type="AttributeCompartment"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_CfNRYHiqEeGfYppGxhP38A" visible="false" type="OperationCompartment"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CfK1IXiqEeGfYppGxhP38A" x="1980" y="7788"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CfK1IXiqEeGfYppGxhP38A" x="528" y="9108"/>
         </children>
         <children xmi:type="umlnotation:UMLShape" xmi:id="_He76wHiqEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
           <children xmi:type="notation:DecorationNode" xmi:id="_He8h0HiqEeGfYppGxhP38A" type="ImageCompartment">
@@ -8240,7 +8440,7 @@
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_He-XAHiqEeGfYppGxhP38A" visible="false" type="SignalCompartment"/>
           <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_He-XAXiqEeGfYppGxhP38A" visible="false" type="StructureCompartment"/>
           <element xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Interaction"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_He76wXiqEeGfYppGxhP38A" x="6600" y="12672"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_He76wXiqEeGfYppGxhP38A" x="6916" y="15840"/>
         </children>
         <element xsi:nil="true"/>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_h11A4HioEeGfYppGxhP38A" element="_h1lJQHioEeGfYppGxhP38A" source="_cGpQgHioEeGfYppGxhP38A" target="_VM05AHioEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
@@ -8369,7 +8569,7 @@
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_Lu8z4HipEeGfYppGxhP38A" type="ExtensionRequired"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_Lu8M03ipEeGfYppGxhP38A" y="396"/>
           </children>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Lu6-sXipEeGfYppGxhP38A" points="[-42, 7, 237, -55]$[-319, 42, -40, -20]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Lu6-sXipEeGfYppGxhP38A" points="[-1282, -140, 3127, 2077]$[-4062, -140, 347, 2077]$[-4062, -1412, 347, 805]"/>
         </edges>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_MVJ4QHipEeGfYppGxhP38A" element="_MU6AoHipEeGfYppGxhP38A" source="_K5JNQHipEeGfYppGxhP38A" target="_IuWwsHipEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
           <children xmi:type="notation:DecorationNode" xmi:id="_MVLGYHipEeGfYppGxhP38A" visible="false" type="NameLabel">
@@ -8381,7 +8581,7 @@
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_MVLtc3ipEeGfYppGxhP38A" type="ExtensionRequired"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_MVLtcnipEeGfYppGxhP38A" y="396"/>
           </children>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MVJ4QXipEeGfYppGxhP38A" points="[-46, 8, 373, -55]$[-389, 94, 30, 31]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MVJ4QXipEeGfYppGxhP38A" points="[1388, -140, -4526, 2077]$[5203, -140, -711, 2077]$[5203, -1412, -711, 805]"/>
         </edges>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_ThuMoHipEeGfYppGxhP38A" element="_ThbRsHipEeGfYppGxhP38A" source="_3JQiQHioEeGfYppGxhP38A" target="_SBQfcHipEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
           <children xmi:type="notation:DecorationNode" xmi:id="_ThuzsHipEeGfYppGxhP38A" visible="false" type="NameLabel">
@@ -8393,7 +8593,7 @@
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_Thvaw3ipEeGfYppGxhP38A" type="ExtensionRequired"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_ThvawnipEeGfYppGxhP38A" y="396"/>
           </children>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ThuMoXipEeGfYppGxhP38A" points="[719, -646, 706, 11867]$[719, -11708, 706, 805]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ThuMoXipEeGfYppGxhP38A" points="[-76, 647, 6009, -568]$[-76, 1328, 6009, 113]$[-4830, 1328, 1255, 113]"/>
         </edges>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_VgIaEHipEeGfYppGxhP38A" element="_Vf2tQHipEeGfYppGxhP38A" source="_3JQiQHioEeGfYppGxhP38A" target="_ewqmwHioEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
           <children xmi:type="notation:DecorationNode" xmi:id="_VgJBIHipEeGfYppGxhP38A" type="NameLabel">
@@ -8433,7 +8633,7 @@
             <children xmi:type="notation:ListCompartment" xmi:id="_VgMEcnipEeGfYppGxhP38A" type="FromConstraintCompartment"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_VgMEcXipEeGfYppGxhP38A" y="1058"/>
           </children>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VgIaEXipEeGfYppGxhP38A" points="[-76, -646, 690, 7802]$[-76, -7801, 690, 647]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VgIaEXipEeGfYppGxhP38A" points="[321, -646, 1034, 12554]$[321, -12553, 1034, 647]"/>
         </edges>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_XMa8wHipEeGfYppGxhP38A" element="_XMJ3AHipEeGfYppGxhP38A" source="_K5JNQHipEeGfYppGxhP38A" target="_1DSUQHioEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
           <children xmi:type="notation:DecorationNode" xmi:id="_XMbj0HipEeGfYppGxhP38A" type="NameLabel">
@@ -8473,7 +8673,7 @@
             <children xmi:type="notation:ListCompartment" xmi:id="_XMenI3ipEeGfYppGxhP38A" type="FromConstraintCompartment"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_XMenInipEeGfYppGxhP38A" y="1058"/>
           </children>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XMa8wXipEeGfYppGxhP38A" points="[-2, -24, 42, 264]$[2, -285, 46, 3]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XMa8wXipEeGfYppGxhP38A" points="[812, 647, -4956, -4000]$[812, 4623, -4956, -24]$[4421, 4623, -1347, -24]"/>
         </edges>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_YVD_0HipEeGfYppGxhP38A" element="_YUyTAHipEeGfYppGxhP38A" source="_KEpOMHipEeGfYppGxhP38A" target="_1DSUQHioEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
           <children xmi:type="notation:DecorationNode" xmi:id="_YVD_0nipEeGfYppGxhP38A" type="NameLabel">
@@ -8513,7 +8713,7 @@
             <children xmi:type="notation:ListCompartment" xmi:id="_YVHqM3ipEeGfYppGxhP38A" type="FromConstraintCompartment"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_YVHqMnipEeGfYppGxhP38A" y="1058"/>
           </children>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YVD_0XipEeGfYppGxhP38A" points="[711, 647, 738, -6640]$[711, 6482, 738, -805]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YVD_0XipEeGfYppGxhP38A" points="[-448, 647, 4107, -4000]$[-448, 4358, 4107, -289]$[-3207, 4358, 1348, -289]"/>
         </edges>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_ZfFi8HipEeGfYppGxhP38A" element="_ZewLwHipEeGfYppGxhP38A" source="_bbv5YHioEeGfYppGxhP38A" target="_bbv5YHioEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
           <children xmi:type="notation:DecorationNode" xmi:id="_ZfGKAHipEeGfYppGxhP38A" type="NameLabel">
@@ -8605,7 +8805,7 @@
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_DyA9E3iqEeGfYppGxhP38A" type="ExtensionRequired"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_DyA9EniqEeGfYppGxhP38A" y="396"/>
           </children>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Dx_u8XiqEeGfYppGxhP38A" points="[-48, -25, 133, 78]$[-152, -72, 29, 31]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Dx_u8XiqEeGfYppGxhP38A" points="[1601, 647, -4378, -1756]$[1601, 2496, -4378, 93]$[4750, 2496, -1229, 93]"/>
         </edges>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_ElGm4HiqEeGfYppGxhP38A" element="_EkzE4HiqEeGfYppGxhP38A" source="_ADL64HiqEeGfYppGxhP38A" target="_IuWwsHipEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
           <children xmi:type="notation:DecorationNode" xmi:id="_ElHN8HiqEeGfYppGxhP38A" visible="false" type="NameLabel">
@@ -8617,7 +8817,7 @@
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_ElH1AniqEeGfYppGxhP38A" type="ExtensionRequired"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_ElH1AXiqEeGfYppGxhP38A" y="396"/>
           </children>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ElGm4XiqEeGfYppGxhP38A" points="[15, -25, -34, 79]$[49, -73, 0, 31]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ElGm4XiqEeGfYppGxhP38A" points="[-1177, 647, 3219, -1756]$[-1177, 2496, 3219, 93]$[-3167, 2496, 1229, 93]"/>
         </edges>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_RzBZsHiqEeGfYppGxhP38A" element="_RygcUHiqEeGfYppGxhP38A" source="_KEpOMHipEeGfYppGxhP38A" target="_He76wHiqEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
           <children xmi:type="notation:DecorationNode" xmi:id="_RzCAwHiqEeGfYppGxhP38A" type="NameLabel">
@@ -8657,7 +8857,7 @@
             <children xmi:type="notation:ListCompartment" xmi:id="_RzGSMniqEeGfYppGxhP38A" type="FromConstraintCompartment"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_RzGSMXiqEeGfYppGxhP38A" y="1058"/>
           </children>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RzBZsXiqEeGfYppGxhP38A" points="[-850, 647, 2543, -2812]$[-850, 3290, 2543, -169]$[-2111, 3290, 1282, -169]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RzBZsXiqEeGfYppGxhP38A" points="[-1282, 389, 3180, -1882]$[-3533, 389, 929, -1882]$[-3533, 1466, 929, -805]"/>
         </edges>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_SZ_TEHiqEeGfYppGxhP38A" element="_SZe8wHiqEeGfYppGxhP38A" source="_K5JNQHipEeGfYppGxhP38A" target="_He76wHiqEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
           <children xmi:type="notation:DecorationNode" xmi:id="_SZ_6IHiqEeGfYppGxhP38A" type="NameLabel">
@@ -8697,7 +8897,7 @@
             <children xmi:type="notation:ListCompartment" xmi:id="_SaCWZXiqEeGfYppGxhP38A" type="FromConstraintCompartment"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_SaCWZHiqEeGfYppGxhP38A" y="1058"/>
           </children>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SZ_TEXiqEeGfYppGxhP38A" points="[499, -646, -2616, 3155]$[499, -3970, -2616, -169]$[1834, -3970, -1281, -169]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SZ_TEXiqEeGfYppGxhP38A" points="[1388, 389, -4473, -1882]$[4859, 389, -1002, -1882]$[4859, 1466, -1002, -805]"/>
         </edges>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_Rz9YYHirEeGfYppGxhP38A" element="_RzihoHirEeGfYppGxhP38A" source="_cGpQgHioEeGfYppGxhP38A" target="_cGpQgHioEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
           <children xmi:type="notation:DecorationNode" xmi:id="_Rz9_cHirEeGfYppGxhP38A" type="NameLabel">
@@ -8777,7 +8977,7 @@
             <children xmi:type="notation:ListCompartment" xmi:id="_Tx1S8HiuEeGfYppGxhP38A" type="FromConstraintCompartment"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_Tx0r5HiuEeGfYppGxhP38A" y="1058"/>
           </children>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TxxokXiuEeGfYppGxhP38A" points="[-2, -25, 2, 231]$[-50, -247, -46, 9]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TxxokXiuEeGfYppGxhP38A" points="[-1665, 9, 2717, 3217]$[-4181, 9, 201, 3217]$[-4181, -2561, 201, 647]"/>
         </edges>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_UWhUYHiuEeGfYppGxhP38A" element="_UWIS0HiuEeGfYppGxhP38A" source="_CfK1IHiqEeGfYppGxhP38A" target="_cGpQgHioEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
           <children xmi:type="notation:DecorationNode" xmi:id="_UWh7cHiuEeGfYppGxhP38A" type="NameLabel">
@@ -8817,7 +9017,7 @@
             <children xmi:type="notation:ListCompartment" xmi:id="_UWkXs3iuEeGfYppGxhP38A" type="FromConstraintCompartment"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_UWkXsniuEeGfYppGxhP38A" y="1058"/>
           </children>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UWhUYXiuEeGfYppGxhP38A" points="[1639, 9, -3522, 3217]$[4290, 9, -871, 3217]$[4290, -2561, -871, 647]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UWhUYXiuEeGfYppGxhP38A" points="[1851, 9, -4142, 2953]$[5392, 9, -601, 2953]$[5392, -2297, -601, 647]"/>
         </edges>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_9mSL4HivEeGfYppGxhP38A" element="_9loroHivEeGfYppGxhP38A" source="_bbv5YHioEeGfYppGxhP38A" target="_F65KkHipEeGfYppGxhP38A" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
           <children xmi:type="notation:DecorationNode" xmi:id="_9mTaAHivEeGfYppGxhP38A" visible="false" type="NameLabel">

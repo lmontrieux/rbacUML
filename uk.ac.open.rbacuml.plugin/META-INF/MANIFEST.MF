@@ -7,7 +7,8 @@ Bundle-ClassPath: .,
  bin,
  lib/sqlite4java.jar,
  lib/libsqlite4java-linux-amd64.so,
- lib/libsqlite4java-linux-i386.so
+ lib/libsqlite4java-linux-i386.so,
+ lib/
 Bundle-Activator: uk.ac.open.rbacuml.plugin.Activator
 Bundle-Vendor: %ProviderName 
 Bundle-Localization: plugin
