@@ -211,7 +211,8 @@ public class SimpleRbacUMLValidator implements IRbacUMLValidator, Runnable {
 			cat += type + "|";
 		}
 		// removing trailing |
-		cat = cat.substring(0, cat.length() - 1);
+		if (cat.endsWith("|"))
+			cat = cat.substring(0, cat.length() - 1);
 		// closing bracket
 		cat += ")";
 		if (!cat.equals("()"))
