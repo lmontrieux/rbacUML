@@ -42,10 +42,11 @@ public class RDFixingWizard extends Wizard {
 		tree.setRoot(new RbacNode(null, null, tree));
 		tree.fixModel();
 		List<List<Fix>> solutions = ((RbacTree)tree).getSolutions();
+		log.debug("There are " + solutions.size() + " solutions");
 		
-		SolutionsDialog solutionsDialog = new SolutionsDialog(new Shell(), (RbacTree)tree);
-		solutionsDialog.create();
-		solutionsDialog.open();
+		SolutionsDialog solutionsDialog = new SolutionsDialog(new Shell(), solutions);
+		//solutionsDialog.create();
+		//solutionsDialog.open();
 		
 		for (Object solution:solutions) {
 			log.info("Solution: " + solution.toString());

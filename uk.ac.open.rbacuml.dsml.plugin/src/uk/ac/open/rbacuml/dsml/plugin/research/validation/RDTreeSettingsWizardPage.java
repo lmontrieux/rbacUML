@@ -15,6 +15,7 @@ package uk.ac.open.rbacuml.dsml.plugin.research.validation;
 
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
@@ -51,6 +52,7 @@ public class RDTreeSettingsWizardPage extends WizardPage {
 		nameLabel.setText("Name of the statistics file");
 		name = new Text(composite, SWT.BORDER);
 		name.setText("model");
+		name.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_FILL));
 		name.setEditable(true);
 		
 		// max tree height
@@ -58,6 +60,7 @@ public class RDTreeSettingsWizardPage extends WizardPage {
 		maxDLabel.setText("Maximum tree height: ");
 		maxD = new Text(composite, SWT.BORDER);
 		maxD.setText("0");
+		maxD.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_FILL));
 		maxD.setEditable(true);
 		
 		// number of solutions
@@ -65,6 +68,7 @@ public class RDTreeSettingsWizardPage extends WizardPage {
 		numSolLabel.setText("Number of solutions to find: ");
 		maxSol = new Text(composite, SWT.BORDER);
 		maxSol.setText("0");
+		maxSol.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_FILL));
 		maxSol.setEditable(true);
 		
 		// traversal strategy

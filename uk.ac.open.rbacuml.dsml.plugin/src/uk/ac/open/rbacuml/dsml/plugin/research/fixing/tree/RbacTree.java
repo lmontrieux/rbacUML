@@ -61,7 +61,8 @@ public class RbacTree extends Tree {
 	}
 	
 	public List<List<Fix>> getSolutions() {
-		return solutions;
+		log.debug("there are " + this.solutions.size() + " solutions in the tree");
+		return this.solutions;
 	}
 	
 	public String getStats() {
@@ -88,6 +89,7 @@ public class RbacTree extends Tree {
 	public void addSolution(List<Fix> solution, int cost, long time) {
 		this.stats.addSolution(cost, time);
 		this.solutions.add(solution);
+		log.debug("Solution added");
 	}
 	
 	public boolean reachedMaxSolutions() {
