@@ -1241,12 +1241,6 @@
              menubarPath="additions">
        </action>
        <action
-             class="uk.ac.open.rbacuml.plugin.ocl.OCLOrderActionDelegate"
-             id="uk.ac.open.rbacuml.plugin.ocl.action2"
-             label="rbacUML ordered validation"
-             menubarPath="additions">
-       </action>
-       <action
              class="uk.ac.open.rbacuml.plugin.validation.ConstraintSelectionAction"
              id="uk.ac.open.rbacuml.plugin.validation.constraintsAction"
              label="Validate rbacUML constraints"

@@ -197,6 +197,7 @@ public class SimpleRbacUMLValidator implements IRbacUMLValidator, Runnable {
 	 */
 	private IStatus validate(Collection<? extends Element> elements, 
 			IBatchValidator validator, IConstraintFilter filter) {
+		//validator.setReportSuccesses(false);
 		validator.addConstraintFilter(filter);
 		IStatus results = validator.validate(elements);
 		validator.removeConstraintFilter(filter);

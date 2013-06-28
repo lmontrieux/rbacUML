@@ -6,7 +6,9 @@ package uk.ac.open.rbacuml.plugin.validation;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.validation.model.ConstraintStatus;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.window.IShellProvider;
@@ -18,6 +20,7 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.uml2.uml.Element;
+import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Package;
 
 import com.ibm.xtools.modeler.ui.UMLModeler;
@@ -119,11 +122,45 @@ public class ConstraintSelectionDialog extends Dialog {
 		String message = "";
 		if (validator.getResult().isOK())
 			message = "pass in " + time + "ms";
-		else
-			message = "fail in " + time + "ms: " + validator.getResult().toString();
+		else {
+			//message = "fail in " + time + "ms\n" + validator.getResult().toString();
+			message = "fail in " + time + "ms\n" + formatResults(validator.getResult());
+		}
 		String[] buttons = {"OK"};
 		MessageDialog result = new MessageDialog(new Shell(), "rbacUML validation result", null, message, 0, buttons, 0);
 		result.open();
+	}
+	
+	private String formatResults(IStatus result) {
+		String form = "";
+		if (result.isMultiStatus()) {
+			for (IStatus status:result.getChildren()) {
+				ConstraintStatus cs = null;
+				if (status instanceof ConstraintStatus) {
+					cs = (ConstraintStatus)status;
+					if (cs.getSeverity() == IStatus.ERROR) {
+						form += "ERROR (" + ((NamedElement)cs.getTarget()).getName() + "): "+ cs.getMessage() + "\n";
+					}
+					if (cs.getSeverity() == IStatus.WARNING) {
+						form += "WARNING (" + ((NamedElement)cs.getTarget()).getName() + "): " + cs.getMessage() + "\n";
+					}
+					if (cs.getSeverity() == IStatus.INFO) {
+						form += "INFO (" + ((NamedElement)cs.getTarget()).getName() + "): " + cs.getMessage() + "\n";
+					}
+				} else {
+					if (status.getSeverity() == IStatus.ERROR) {
+						form += "ERROR: " + status.getMessage() + "\n";
+					}
+					if (status.getSeverity() == IStatus.WARNING) {
+						form += "WARNING: " + status.getMessage() + "\n";
+					}
+					if (status.getSeverity() == IStatus.INFO) {
+						form += "INFO: " + status.getMessage() + "\n";
+					}
+				}
+			}
+		}
+		return form;
 	}
 	
 	private List<Element> computeElementsList() {

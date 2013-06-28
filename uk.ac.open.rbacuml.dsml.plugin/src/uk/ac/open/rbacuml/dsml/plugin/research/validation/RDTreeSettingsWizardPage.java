@@ -48,12 +48,12 @@ public class RDTreeSettingsWizardPage extends WizardPage {
 		composite.setLayout(gl);
 		
 		// name for stats file
-		Label nameLabel = new Label(composite, SWT.NONE);
-		nameLabel.setText("Name of the statistics file");
-		name = new Text(composite, SWT.BORDER);
-		name.setText("model");
-		name.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_FILL));
-		name.setEditable(true);
+//		Label nameLabel = new Label(composite, SWT.NONE);
+//		nameLabel.setText("Name of the statistics file");
+//		name = new Text(composite, SWT.BORDER);
+//		name.setText("model");
+//		name.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_FILL));
+//		name.setEditable(true);
 		
 		// max tree height
 		Label maxDLabel = new Label(composite, SWT.NONE);
@@ -97,7 +97,8 @@ public class RDTreeSettingsWizardPage extends WizardPage {
 	}
 	
 	String getStatFileName() {
-		return name.getText();
+//		return name.getText();
+		return "model";
 	}
 
 }
