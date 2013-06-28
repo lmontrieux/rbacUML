@@ -26,7 +26,7 @@ public class SolutionsDialog {
 		for (List<Fix> solution:this.solutions) {
 			String solStr = "Solution: ";
 			for (Fix fix:solution) {
-				solStr += "\n" + fix.toString();
+				solStr += System.getProperty("line.separator") + fix.toString();
 			}
 			list.add(solStr);
 		}
